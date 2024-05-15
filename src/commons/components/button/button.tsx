@@ -12,7 +12,7 @@ interface IButton {
     loading?: boolean;
     buttonType?: 'outline' | 'filled' | 'ghost';
     radius?: 'normal' | 'rounded';
-    variant?: 'success' | 'danger' | 'accent';
+    variant?: 'success' | 'danger' | 'accent1' | 'accent2';
     onClick?: () => void;
     className?: string;
     type?: 'submit' | 'button';

@@ -17,44 +17,29 @@ export const ButtonContainer = styled(Button)(
         text-transform: capitalize !important;
 
         &.filled {
-            &.success-color {
+            &.accent1-color {
                 color: white !important;
-                background-color: ${theme.shared.success};
+                background-color: ${theme.colors.background.accent1};
             }
 
-            &.danger-color {
+            &.accent2-color {
                 color: white !important;
-                background-color: ${theme.shared.danger};
-            }
-
-            &.accent-color {
-                color: white !important;
-                background-color: ${theme.shared.secondary};
+                background-color: ${theme.colors.background.accent2};
             }
         }
 
         &.outline {
-            &.success-color {
-                color: ${theme.shared.success}!important;
-                border: 1px solid ${theme.shared.success};
+            &.accent1-color {
+                color: ${theme.colors.text.accent1} !important;
+                border: 1px solid ${theme.colors.text.accent1};
                 background-color: transparent;
             }
 
-            &.danger-color {
-                color: ${theme.shared.danger}!important;
-                border: 1px solid ${theme.shared.danger};
+            &.accent2-color {
+                color: ${theme.colors.text.accent2}!important;
+                border: 1px solid ${theme.colors.text.accent2};
                 background-color: transparent;
             }
-
-            &.accent-color {
-                color: ${theme.shared.secondary}!important;
-                border: 1px solid ${theme.shared.secondary};
-                background-color: transparent;
-            }
-        }
-
-        &.ghost {
-            background-color: ${theme.colors.background.tertiary};
         }
 
         &.radius-normal {

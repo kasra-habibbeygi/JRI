@@ -21,15 +21,6 @@ const GlobalStyles = ({ theme, direction }: { theme: any; direction: 'rtl' | 'lt
                 ::-webkit-scrollbar-thumb:hover {
                     background-color: ${theme.mode === 'light' ? '#ebebeb' : '#5d5d5d'};
                 }
-
-                .container {
-                    background-color: ${theme.colors.background.secondary};
-                    padding: 10px 20px;
-                    border-radius: 8px;
-                    box-shadow:
-                        rgb(0 0 0 / 2%) 0px 1px 3px,
-                        rgb(0 0 0 / 0%) 0px 1px 2px;
-                }
             `}
         />
     );
