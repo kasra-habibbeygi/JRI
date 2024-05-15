@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Product Sans' !important;
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 100;
+    src: local('Product Sans Thin'), local('ProductSans-Thin'), url(https://fonts.gstatic.com/s/productsans/v9/aXL-Qz25m_FkY0KDMUoO01dBB84BqlWy1BjOnCrU9PY.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Product Sans Light'), local('ProductSans-Light'), url(https://fonts.gstatic.com/s/productsans/v9/N0c8y_dasvG2CzM7uYqPLk4GofcKVZz6wtzX_QUIqsI.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Product Sans'), local('ProductSans-Regular'), url(https://fonts.gstatic.com/s/productsans/v9/HYvgU2fE2nRJvZ5JFAumwegdm0LZdjqr5-oayXSOefg.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Product Sans Medium'), local('ProductSans-Medium'), url(https://fonts.gstatic.com/s/productsans/v9/N0c8y_dasvG2CzM7uYqPLs1Lch-SD8r0CsJ60meulZ8.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Product Sans Bold'), local('ProductSans-Bold'), url(https://fonts.gstatic.com/s/productsans/v9/N0c8y_dasvG2CzM7uYqPLnNuWYKPzoeKl5tYj8yhly0.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Product Sans';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Product Sans Black'), local('ProductSans-Black'), url(https://fonts.gstatic.com/s/productsans/v9/N0c8y_dasvG2CzM7uYqPLtDLwwZd-mS_8JqJ_KGXwxs.woff2) format('woff2');
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body,
+html {
+    font-family: "Product Sans", sans-serif;
+}
+
+body {
+    font-size: 1rem;
+    line-height: 1.5;
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
+hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible
+}
+
+:focus-visible {
+    outline: none;
+}
+
+article {
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ebebeb;
+    background-color: transparent;
+    border-radius: 50px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: rgb(197, 197, 197);
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 7px;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+input {
+    font-family: "Product Sans", sans-serif;
+}
