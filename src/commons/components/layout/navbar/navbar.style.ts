@@ -51,5 +51,40 @@ export const NavbarContainer = styled.nav(
                 padding-top: 10px;
             }
         }
+
+        .sandwich-menu {
+            display: none;
+            cursor: pointer;
+        }
+
+        @media (max-width: 1200px) {
+            .right-side {
+                button {
+                    display: none !important;
+                }
+            }
+
+            .sandwich-menu {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                svg {
+                    color: red;
+                    width: 28px;
+                }
+            }
+
+            .left-side {
+                ul {
+                    display: none;
+                }
+            }
+
+            .container {
+                width: 100%;
+                padding: 0;
+            }
+        }
     `
 );

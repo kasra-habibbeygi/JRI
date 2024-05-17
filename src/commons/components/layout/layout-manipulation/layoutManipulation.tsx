@@ -6,6 +6,7 @@ import { FC, ReactNode } from 'react';
 // Components
 import Footer from '../footer';
 import Navbar from '../navbar';
+import MobileNavbar from '../mobile-navbar';
 
 // Types
 interface IMainLayout {
@@ -16,6 +17,7 @@ const MainLayout: FC<IMainLayout> = ({ children }) => {
     return (
         <>
             <Navbar />
+            <MobileNavbar />
             {children}
             <Footer />
         </>

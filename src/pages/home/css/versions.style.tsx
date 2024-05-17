@@ -32,5 +32,32 @@ export const VersionsContainer = styled.section(
                 font-weight: 300 !important;
             }
         }
+
+        @media (max-width: 1200px) {
+            .left-side {
+                padding: 30px 20px;
+            }
+
+            .right-side {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+
+            h3 {
+                font-size: 20px;
+                text-align: left;
+            }
+
+            .left-side {
+                align-items: flex-start;
+                width: 100%;
+                border-right: 0;
+                border-bottom: 8px solid white;
+                height: 200px;
+            }
+        }
     `
 );

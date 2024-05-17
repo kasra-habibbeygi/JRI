@@ -49,5 +49,54 @@ export const HeaderContainer = styled.section(
             align-items: center;
             gap: 54px;
         }
+
+        @media (max-width: 992px) {
+            h2 {
+                font-size: 62px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            padding: 57px 20px;
+
+            h1 {
+                font-size: 36px;
+                width: 100%;
+                line-height: 50px;
+
+                svg {
+                    width: 28px;
+                    height: 28px;
+                    top: -20px;
+                    right: 0px;
+                }
+            }
+
+            h2 {
+                font-size: 60px;
+            }
+
+            .arrow-field {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-top: 16px;
+                gap: 16px;
+            }
+
+            button {
+                width: 150px;
+                height: 55px;
+
+                svg {
+                    width: 84px;
+                }
+            }
+        }
+
+        @media (max-width: 400px) {
+            h2 {
+                font-size: 40px;
+            }
+        }
     `
 );

@@ -39,5 +39,33 @@ export const FAQContainer = styled.section(
             font-weight: 400 !important;
             line-height: 25px;
         }
+
+        @media (max-width: 1200px) {
+            h3 {
+                font-size: 26px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        @media (max-width: 500px) {
+            padding-top: 80px;
+            padding-bottom: 80px;
+
+            h3 {
+                font-size: 20px;
+            }
+
+            .MuiAccordionSummary-content {
+                font-size: 18px !important;
+            }
+
+            .MuiAccordionDetails-root {
+                font-size: 16px !important;
+            }
+        }
     `
 );
