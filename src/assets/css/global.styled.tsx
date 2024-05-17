@@ -7,7 +7,7 @@ const GlobalStyles = ({ theme, direction }: { theme: any; direction: 'rtl' | 'lt
         <Global
             styles={css`
                 * {
-                    font-family: ${direction === 'rtl' ? 'iranSans !important' : 'Product Sans !important'};
+                    font-family: ${direction === 'rtl' ? 'iranSans !important' : 'main !important'};
                 }
 
                 body {

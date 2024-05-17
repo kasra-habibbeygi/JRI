@@ -2,7 +2,6 @@
 import { FC, ReactNode } from 'react';
 
 // Assets
-import { LayoutContainer } from './layoutManipulation.style';
 
 // Components
 import Footer from '../footer';
@@ -15,11 +14,11 @@ interface IMainLayout {
 
 const MainLayout: FC<IMainLayout> = ({ children }) => {
     return (
-        <LayoutContainer>
+        <>
             <Navbar />
             {children}
             <Footer />
-        </LayoutContainer>
+        </>
     );
 };
 
