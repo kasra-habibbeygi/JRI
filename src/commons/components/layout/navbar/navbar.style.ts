@@ -48,6 +48,7 @@ export const NavbarContainer = styled.nav(
                 box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
                 font-size: 16px;
                 padding: 8px 26px;
+                padding-top: 10px;
             }
         }
     `

@@ -3,7 +3,7 @@ import { FAQ, Header, Versions } from './components';
 
 const Home = () => {
     return (
-        <main className='container'>
+        <main>
             <Header />
             <Versions />
             <FAQ />

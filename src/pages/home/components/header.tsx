@@ -7,7 +7,7 @@ import { HeaderContainer } from '../css';
 
 const Header = () => {
     return (
-        <HeaderContainer>
+        <HeaderContainer className='container'>
             <h1>
                 No Easy Money, But Assured Gains
                 <ShiningStar />
