@@ -1,5 +1,13 @@
+// Components
+import { Contracts, Header } from './components';
+
 const CoolVersion = () => {
-    return <div>CoolVersion</div>;
+    return (
+        <main>
+            <Header />
+            <Contracts />
+        </main>
+    );
 };
 
 export default CoolVersion;
