@@ -89,6 +89,7 @@ export const HeaderContainer = styled.section(
             h3 {
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
                 gap: 5px;
                 font-size: 36px;
                 margin-bottom: 24px;
@@ -137,6 +138,74 @@ export const HeaderContainer = styled.section(
                 color: #bababa !important;
                 border: 2px solid #bababa;
                 box-shadow: #bababa 0px 0px 13px 0px;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            gap: 50px;
+
+            .left-field {
+                min-width: 350px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column-reverse;
+        }
+
+        @media (max-width: 760px) {
+            margin-top: 60px;
+            margin-bottom: 80px;
+            padding-bottom: 60px;
+
+            .right-field {
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                .sub-title {
+                    font-size: 16px;
+                    line-height: 20px;
+                    margin-bottom: 40px;
+                }
+
+                .content {
+                    .animated-text {
+                        top: -34px;
+                        right: 6px;
+                    }
+                }
+
+                .min-button {
+                    margin-top: 36px;
+                    font-size: 16px;
+                    width: 200px;
+                    height: 40px;
+                }
+            }
+
+            .left-field {
+                min-width: 100%;
+
+                h3 {
+                    font-size: 16px;
+                    margin-bottom: 20px;
+                }
+
+                .table-field {
+                    header {
+                        padding: 12px 24px;
+
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+
+                    li {
+                        font-size: 12px;
+                    }
+                }
             }
         }
     `
