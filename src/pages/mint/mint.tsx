@@ -1,5 +1,12 @@
+import { Header, List } from './components';
+
 const Mint = () => {
-    return <div>Mint</div>;
+    return (
+        <>
+            <Header />
+            <List />
+        </>
+    );
 };
 
 export default Mint;

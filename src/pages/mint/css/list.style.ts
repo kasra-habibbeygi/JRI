@@ -1,0 +1,34 @@
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
+export const ListContainer = styled.section(
+    ({ theme }) => css`
+        h3 {
+            font-size: 36px;
+            margin-bottom: 6px;
+            background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 45%, ${theme.colors.background.accent1} 62%);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 64px;
+
+            a {
+                color: ${theme.colors.text.accent1};
+                margin-left: 4px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                svg {
+                    width: 36px;
+                    color: ${theme.colors.text.accent1};
+                }
+            }
+        }
+    `
+);

@@ -40,6 +40,7 @@ export const HeaderContainer = styled.section(
 
             svg {
                 width: 120px;
+                color: white;
             }
         }
 
