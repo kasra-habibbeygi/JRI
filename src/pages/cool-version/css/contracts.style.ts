@@ -73,5 +73,64 @@ export const ContractsContainer = styled.section(
             color: #8d8c8c;
             border-color: #8d8c8c;
         }
+
+        @media (max-width: 1400px) {
+            ol {
+                grid-template-columns: auto auto auto;
+            }
+        }
+
+        @media (max-width: 992px) {
+            ol {
+                grid-template-columns: auto auto;
+            }
+        }
+
+        @media (max-width: 760px) {
+            margin-bottom: 80px;
+            padding-bottom: 60px;
+            margin-top: unset;
+
+            header {
+                margin-bottom: 48px;
+                text-align: center;
+
+                h3 {
+                    font-size: 36px;
+                    margin-bottom: 20px;
+                }
+
+                h4 {
+                    font-size: 20px;
+                    color: ${theme.colors.text.accent2};
+                    margin-bottom: 20px;
+                }
+
+                p {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+
+            ol {
+                grid-template-columns: auto;
+
+                li {
+                    width: 100%;
+
+                    b {
+                        display: block;
+                        font-size: 16px;
+                        margin-bottom: 24px;
+                    }
+
+                    small {
+                        font-size: 12px;
+                        line-height: 18px;
+                        display: flex;
+                    }
+                }
+            }
+        }
     `
 );

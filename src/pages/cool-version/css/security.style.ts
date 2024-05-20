@@ -45,5 +45,26 @@ export const SecurityContainer = styled.section(
                 }
             }
         }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+        }
+
+        @media (max-width: 760px) {
+            gap: 50px;
+
+            .left-side {
+                min-width: unset;
+
+                h3 {
+                    font-size: 20px;
+                    margin-bottom: 20px;
+                }
+
+                small {
+                    font-size: 16px;
+                }
+            }
+        }
     `
 );

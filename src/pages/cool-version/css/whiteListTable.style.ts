@@ -28,5 +28,37 @@ export const WhiteListTableContainer = styled.section(
                 margin-bottom: 12px;
             }
         }
+
+        @media (max-width: 760px) {
+            margin-bottom: 80px;
+            padding-bottom: 60px;
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                list-style: none;
+                font-size: 20px;
+                margin-bottom: 52px;
+
+                li {
+                    flex-direction: column;
+                    gap: 12px;
+                    margin-bottom: 20px;
+
+                    b {
+                        font-size: 16px;
+                        font-weight: 600;
+                    }
+
+                    p {
+                        font-size: 16px;
+                        line-height: 20px;
+                    }
+                }
+            }
+        }
     `
 );

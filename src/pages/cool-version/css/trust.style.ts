@@ -55,6 +55,44 @@ export const TrustContainer = styled.section(
                 margin-bottom: 121px;
             }
         }
+
+        @media (max-width: 760px) {
+            h3 {
+                font-size: 20px;
+                margin-bottom: 26px;
+            }
+
+            p {
+                font-size: 16px;
+                line-height: 20px;
+            }
+
+            .gradient {
+                margin-top: 80px;
+                font-size: 20px;
+            }
+
+            .next-Phase {
+                margin-top: 80px;
+                padding-top: 60px;
+
+                h2 {
+                    font-size: 36px;
+                }
+
+                p {
+                    font-size: 20px;
+                    margin-bottom: 64px;
+                }
+
+                button {
+                    font-size: 16px;
+                    width: 200px;
+                    height: 40px;
+                    margin-bottom: 80px;
+                }
+            }
+        }
     `
 );
 
@@ -69,5 +107,12 @@ export const GradientContainer = styled.div(
         text-align: center;
         margin-bottom: 120px;
         margin-top: 64px;
+
+        @media (max-width: 760px) {
+            font-size: 16px;
+            line-height: 20px;
+            padding: 60px 20px;
+            margin-bottom: 80px;
+        }
     `
 );

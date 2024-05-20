@@ -7,6 +7,11 @@ export const WhiteListContainer = styled.section(
             font-size: 16px;
         }
 
+        .table-field {
+            width: 100%;
+            overflow: auto;
+        }
+
         table {
             width: 100%;
 
@@ -40,6 +45,8 @@ export const WhiteListContainer = styled.section(
             div {
                 display: flex;
                 flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 gap: 8px;
             }
 
@@ -52,6 +59,7 @@ export const WhiteListContainer = styled.section(
                 width: 150px;
                 height: 28px;
                 border-radius: 50px;
+                margin: auto;
 
                 &.black-outline {
                     color: black;
@@ -77,42 +85,66 @@ export const WhiteListContainer = styled.section(
             }
         }
 
-        .progress {
-            height: 25px;
-            position: relative;
-            border: 1px solid ${theme.colors.text.accent1};
-
-            &::before {
-                background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
-                content: '';
-                position: absolute;
-                width: calc(100% + 1px);
-                height: 106%;
-                top: -1px;
-                left: 0;
-                z-index: -1;
-            }
-
-            td {
-                padding: 0;
-                color: white;
-            }
-
-            &.p-10 {
-                td {
-                    color: ${theme.colors.text.accent1};
-                }
-
-                &::before {
-                    width: 10%;
+        @media (max-width: 992px) {
+            table {
+                .title {
+                    font-size: 20px;
                 }
             }
+        }
 
-            &.p-0 {
-                &::before {
-                    width: 0%;
+        @media (max-width: 760px) {
+            .last-update {
+                font-size: 12px;
+            }
+
+            table {
+                min-width: 1200px;
+
+                thead {
+                    tr {
+                        th {
+                            padding: 14px 16px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+
+                tbody {
+                    td {
+                        padding: 26px 20px;
+                        font-size: 16px;
+                    }
+                }
+
+                .title {
+                    font-size: 20px;
                 }
             }
+        }
+    `
+);
+
+export const ProgressBar = styled.tr<{ percent: number }>(
+    ({ theme, percent }) => css`
+        height: 25px;
+        position: relative;
+        border: 1px solid ${theme.colors.text.accent1};
+
+        &::before {
+            background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+            content: '';
+            position: absolute;
+            width: calc(${percent}% + 1px);
+            height: 106%;
+            top: -1px;
+            left: 0;
+            z-index: -1;
+        }
+
+        td {
+            padding: 0 !important;
+            color: ${percent <= 87 ? theme.colors.text.accent1 : 'white'};
         }
     `
 );
