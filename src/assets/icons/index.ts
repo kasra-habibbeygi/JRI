@@ -6,3 +6,4 @@ export { default as CircleArrow } from './circleArrow.svg?react';
 export { default as Twitter } from './twitter.svg?react';
 export { default as Menu } from './menu.svg?react';
 export { default as CurveText } from './curveText.svg?react';
+export { default as Logo } from './logo.svg?react';

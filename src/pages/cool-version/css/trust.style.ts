@@ -3,6 +3,22 @@ import styled from '@emotion/styled';
 
 export const TrustContainer = styled.section(
     ({ theme }) => css`
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+
+        .circle-background {
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background-color: red;
+            border-radius: 100%;
+            background: radial-gradient(circle, rgba(138, 99, 210, 0.15) 0%, rgb(5 45 255 / 0%) 70%);
+        }
+
         h3 {
             font-size: 36px;
             color: ${theme.colors.text.accent1};
@@ -20,7 +36,7 @@ export const TrustContainer = styled.section(
 
         .gradient {
             margin-top: 120px;
-            background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 45%, ${theme.colors.background.accent1} 62%);
+            background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 50%, ${theme.colors.background.accent1});
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -47,12 +63,19 @@ export const TrustContainer = styled.section(
             }
 
             button {
-                background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+                background: linear-gradient(90deg, ${theme.colors.background.accent2} 21%, ${theme.colors.background.accent1} 100%);
                 color: white !important;
                 font-size: 20px;
                 width: 240px;
                 height: 48px;
                 margin-bottom: 121px;
+
+                &:hover {
+                    background: transparent;
+                    color: ${theme.colors.background.accent2} !important;
+                    border: 1px solid ${theme.colors.background.accent2};
+                    box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
+                }
             }
         }
 

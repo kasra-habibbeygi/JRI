@@ -1,5 +1,54 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+
+const mirror = keyframes`
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+`;
+
+const H2Init = keyframes`
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+`;
+
+const ArrowFieldInit = keyframes`
+    0% {
+        width: 80px;
+        transform: rotate(-180deg);
+    }
+    90% {
+        width: 80px;
+    }
+    100% {
+        width: 192px;
+    }
+`;
+
+const ArrowFieldInitResponsive = keyframes`
+    0% {
+        width: 56px;
+        min-width: 56px;
+        transform: rotate(-180deg);
+    }
+    90% {
+        width: 56px;
+        min-width: 56px;
+    }
+    100% {
+        width: 140px;
+        min-width: 140px;
+    }
+`;
 
 export const HeaderContainer = styled.section(
     ({ theme }) => css`
@@ -19,6 +68,7 @@ export const HeaderContainer = styled.section(
                 position: absolute;
                 top: -30px;
                 right: -40px;
+                animation: ${mirror} 4s ease-in infinite;
             }
         }
 
@@ -27,18 +77,24 @@ export const HeaderContainer = styled.section(
             background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 50%, ${theme.colors.background.accent1});
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            opacity: 0;
+            animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 3s forwards;
         }
 
         button {
             background-color: ${theme.colors.background.accent1};
-            width: 210px;
+            width: 192px;
             height: 78px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 200px !important;
+            animation: ${ArrowFieldInit} 3s ease-in-out;
+            overflow: hidden;
 
             svg {
+                position: absolute;
+                left: 40px;
                 width: 120px;
                 color: white;
             }
@@ -85,11 +141,13 @@ export const HeaderContainer = styled.section(
             }
 
             button {
-                width: 150px;
+                width: 140px;
                 height: 55px;
+                animation: ${ArrowFieldInitResponsive} 3s ease-in-out;
 
                 svg {
                     width: 84px;
+                    left: 28px;
                 }
             }
         }

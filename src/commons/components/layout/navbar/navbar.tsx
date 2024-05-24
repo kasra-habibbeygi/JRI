@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 // Assets
 import { NavbarContainer } from './navbar.style';
-import { Menu } from 'assets/icons';
+import { Logo, Menu } from 'assets/icons';
 
 // Components
 import { Button } from 'commons/components';
@@ -16,16 +16,18 @@ const Navbar = () => {
         <NavbarContainer>
             <div className='container'>
                 <div className='left-side'>
-                    <p className='logo'>JRI</p>
+                    <p className='logo'>
+                        <Logo />
+                    </p>
                     <ul>
                         <li>
-                            <NavLink to='/home'>Home</NavLink>
+                            <NavLink to='/'>Home</NavLink>
                         </li>
                         <li>
-                            <NavLink to='/full-version'>Full Version</NavLink>
+                            <NavLink to='/full-version'>Full Version BP</NavLink>
                         </li>
-                        <li>
-                            <NavLink to='/cool-version'>Cool Version</NavLink>
+                        <li className='accent'>
+                            <NavLink to='/cool-version'>Cool Version BP</NavLink>
                         </li>
                         <li>
                             <NavLink to='/Mint'>Mint</NavLink>

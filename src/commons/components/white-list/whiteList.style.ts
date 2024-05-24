@@ -41,7 +41,7 @@ export const WhiteListContainer = styled.section(
             }
         }
 
-        .pill_field {
+        .pill-field {
             div {
                 display: flex;
                 flex-direction: column;
@@ -131,19 +131,21 @@ export const ProgressBar = styled.tr<{ percent: number }>(
         position: relative;
         border: 1px solid ${theme.colors.text.accent1};
 
-        &::before {
+        .progress-line {
             background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
             content: '';
             position: absolute;
-            width: calc(${percent}% + 1px);
-            height: 106%;
-            top: -1px;
-            left: 0;
-            z-index: -1;
+            width: calc(${percent}% + 6px);
+            height: 116%;
+            top: -2px;
+            left: -5px;
+            z-index: 1;
         }
 
         td {
             padding: 0 !important;
+            position: relative;
+            z-index: 2;
             color: ${percent <= 87 ? theme.colors.text.accent1 : 'white'};
         }
     `

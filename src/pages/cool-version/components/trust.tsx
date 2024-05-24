@@ -17,6 +17,7 @@ const Trust = () => {
                 </div>
             </GradientContainer>
             <TrustContainer className='container'>
+                <span className='circle-background'></span>
                 <h3>How to trust the system</h3>
                 <p>
                     To establish trust in our guarantees, <span>no team member participates in NFT minting</span>. Prior to the first day of

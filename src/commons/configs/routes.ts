@@ -12,7 +12,7 @@ interface IRoutesItems {
 export default (): IRoutesItems[] => {
     return [
         {
-            route: 'home',
+            route: '',
             component: home
         },
         {

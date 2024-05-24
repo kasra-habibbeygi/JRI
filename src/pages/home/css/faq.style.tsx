@@ -35,9 +35,16 @@ export const FAQContainer = styled.section(
         }
 
         .MuiAccordionDetails-root {
-            font-size: 16px !important;
+            font-size: 20px !important;
             font-weight: 400 !important;
             line-height: 25px;
+        }
+
+        .MuiAccordionSummary-expandIconWrapper {
+            svg {
+                width: 20px;
+                height: auto;
+            }
         }
 
         @media (max-width: 1200px) {
@@ -64,7 +71,7 @@ export const FAQContainer = styled.section(
             }
 
             .MuiAccordionDetails-root {
-                font-size: 16px !important;
+                font-size: 18px !important;
             }
         }
     `

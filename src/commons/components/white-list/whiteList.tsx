@@ -23,7 +23,7 @@ const WhiteList = () => {
                             <td>0.005 ETH</td>
                             <td>2000</td>
                             <td>111 ETH, 100 Pcs</td>
-                            <td className='pill_field'>
+                            <td className='pill-field'>
                                 <div>
                                     <span className='black-outline'>10 OG</span>
                                     <span className='black-filled'>90 Black Tier</span>
@@ -31,6 +31,7 @@ const WhiteList = () => {
                             </td>
                         </tr>
                         <ProgressBar percent={100}>
+                            <span className='progress-line'></span>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -43,11 +44,12 @@ const WhiteList = () => {
                             <td>0.01 ETH</td>
                             <td>600</td>
                             <td>20 ETH, 40 Pcs</td>
-                            <td className='pill_field'>
+                            <td className='pill-field'>
                                 <span className='gold'>1000 Gold Tier</span>
                             </td>
                         </tr>
                         <ProgressBar percent={40}>
+                            <span className='progress-line'></span>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -60,11 +62,12 @@ const WhiteList = () => {
                             <td>0.02 ETH</td>
                             <td>400</td>
                             <td>40 ETH, 400 Pcs</td>
-                            <td className='pill_field'>
+                            <td className='pill-field'>
                                 <span className='silver'>10000 Silver Tier</span>
                             </td>
                         </tr>
                         <ProgressBar percent={0}>
+                            <span className='progress-line'></span>
                             <td></td>
                             <td></td>
                             <td></td>

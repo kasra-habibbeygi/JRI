@@ -12,6 +12,7 @@ import { useAppSelector } from 'commons/hooks';
 
 // Components
 import { LayoutManipulation } from 'commons/components';
+import NotFound from 'pages/not-found';
 
 // Assets
 import GlobalStyles from 'assets/css/global.styled';
@@ -46,6 +47,7 @@ const App = () => {
                                 />
                             ))}
                         </Route>
+                        <Route path='*' element={<NotFound />} />
                     </Routes>
                 </BrowserRouter>
             </ThemeProvider>

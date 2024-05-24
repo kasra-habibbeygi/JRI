@@ -6,7 +6,7 @@ export const ListContainer = styled.section(
         h3 {
             font-size: 36px;
             margin-bottom: 6px;
-            background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 45%, ${theme.colors.background.accent1} 62%);
+            background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 50%, ${theme.colors.background.accent1});
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
