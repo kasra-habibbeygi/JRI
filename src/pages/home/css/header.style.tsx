@@ -68,7 +68,7 @@ export const HeaderContainer = styled.section(
                 position: absolute;
                 top: -30px;
                 right: -40px;
-                animation: ${mirror} 4s ease-in infinite;
+                animation: ${mirror} 2s ease-in infinite;
             }
         }
 
@@ -78,7 +78,7 @@ export const HeaderContainer = styled.section(
             background-clip: text;
             -webkit-text-fill-color: transparent;
             opacity: 0;
-            animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 3s forwards;
+            animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 2s forwards;
         }
 
         button {
@@ -89,7 +89,7 @@ export const HeaderContainer = styled.section(
             align-items: center;
             justify-content: center;
             border-radius: 200px !important;
-            animation: ${ArrowFieldInit} 3s ease-in-out;
+            animation: ${ArrowFieldInit} 2s ease-in-out;
             overflow: hidden;
 
             svg {

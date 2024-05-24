@@ -9,28 +9,42 @@ export const WhiteListContainer = styled.section(
 
         .table-field {
             width: 100%;
-            overflow: auto;
+            overflow-x: auto;
+            overflow-y: hidden;
         }
 
-        table {
+        .table {
             width: 100%;
 
-            thead {
-                tr {
+            .thead {
+                .tr {
+                    display: flex;
+                    align-items: center;
                     background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
 
-                    th {
+                    .th {
                         padding: 12px 16px;
                         font-size: 16px;
                         color: white;
                         font-weight: 300;
+                        flex-grow: 1;
+                        width: 100%;
+                        text-align: center;
                     }
                 }
             }
 
-            tbody {
-                td {
+            .tbody {
+                .tr {
+                    display: flex;
+                    align-items: center;
+                }
+
+                .td {
                     padding: 20px 16px;
+                    flex-grow: 1;
+                    text-align: center;
+                    width: 100%;
                 }
             }
 
@@ -38,10 +52,23 @@ export const WhiteListContainer = styled.section(
                 color: ${theme.colors.text.accent2};
                 font-size: 36px;
                 font-weight: 500;
+                min-width: max-content;
             }
         }
 
+        .roles {
+            max-width: 182px;
+            min-width: 182px;
+        }
+
+        .u-item {
+            max-width: 333px;
+            min-width: 333px;
+        }
+
         .pill-field {
+            padding: 0 16px;
+
             div {
                 display: flex;
                 flex-direction: column;
@@ -86,7 +113,9 @@ export const WhiteListContainer = styled.section(
         }
 
         @media (max-width: 992px) {
-            table {
+            .table {
+                min-width: 1100px;
+
                 .title {
                     font-size: 20px;
                 }
@@ -98,20 +127,20 @@ export const WhiteListContainer = styled.section(
                 font-size: 12px;
             }
 
-            table {
+            .table {
                 min-width: 1200px;
 
-                thead {
-                    tr {
-                        th {
+                .thead {
+                    .tr {
+                        .th {
                             padding: 14px 16px;
                             font-size: 12px;
                         }
                     }
                 }
 
-                tbody {
-                    td {
+                .tbody {
+                    .td {
                         padding: 26px 20px;
                         font-size: 16px;
                     }
@@ -125,11 +154,13 @@ export const WhiteListContainer = styled.section(
     `
 );
 
-export const ProgressBar = styled.tr<{ percent: number }>(
+export const ProgressBar = styled.div<{ percent: number }>(
     ({ theme, percent }) => css`
         height: 25px;
         position: relative;
         border: 1px solid ${theme.colors.text.accent1};
+        display: flex;
+        align-items: center;
 
         .progress-line {
             background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
@@ -142,7 +173,7 @@ export const ProgressBar = styled.tr<{ percent: number }>(
             z-index: 1;
         }
 
-        td {
+        .td {
             padding: 0 !important;
             position: relative;
             z-index: 2;
