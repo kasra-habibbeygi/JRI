@@ -16,16 +16,24 @@ const MobileNavbar = () => {
             <MobileNavbarContainer status={sideBarStatus}>
                 <ul>
                     <li>
-                        <NavLink to='/home'>Home</NavLink>
+                        <NavLink to='/' onClick={() => dispatch(toggleSideBarStatus())}>
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/full-version'>Full Version</NavLink>
+                        <NavLink to='/full-version' onClick={() => dispatch(toggleSideBarStatus())}>
+                            Full Version
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/cool-version'>Cool Version</NavLink>
+                        <NavLink to='/cool-version' onClick={() => dispatch(toggleSideBarStatus())}>
+                            Cool Version
+                        </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/Mint'>Mint</NavLink>
+                        <NavLink to='/mint' onClick={() => dispatch(toggleSideBarStatus())}>
+                            Mint
+                        </NavLink>
                     </li>
                 </ul>
             </MobileNavbarContainer>

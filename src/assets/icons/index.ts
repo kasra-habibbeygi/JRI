@@ -7,3 +7,4 @@ export { default as Twitter } from './twitter.svg?react';
 export { default as Menu } from './menu.svg?react';
 export { default as CurveText } from './curveText.svg?react';
 export { default as Logo } from './logo.svg?react';
+export { default as LittleArrow } from './littleArrow.svg?react';

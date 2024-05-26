@@ -2,6 +2,7 @@
 import coolVersion from 'pages/cool-version';
 import home from 'pages/home';
 import mint from 'pages/mint';
+import FullVersion from 'pages/full-version';
 
 // Types
 interface IRoutesItems {
@@ -22,6 +23,10 @@ export default (): IRoutesItems[] => {
         {
             route: 'cool-version',
             component: coolVersion
+        },
+        {
+            route: 'full-version',
+            component: FullVersion
         }
     ];
 };
