@@ -36,7 +36,7 @@ export const FAQContainer = styled.section(
 
         .MuiAccordionDetails-root {
             font-size: 20px !important;
-            font-weight: 400 !important;
+            font-weight: 300 !important;
             line-height: 25px;
         }
 

@@ -1,6 +1,3 @@
-// Components
-import { Button } from 'commons/components';
-
 // Assets
 import { BigArrow, ShiningStar } from 'assets/icons';
 import { HeaderContainer } from '../css';
@@ -9,13 +6,13 @@ const Header = () => {
     return (
         <HeaderContainer className='container'>
             <h1>
-                No Easy Money, But Assured Gains
+                No Easy Money, Assured Gains
                 <ShiningStar />
             </h1>
             <div className='arrow-field'>
-                <Button>
+                <div className='arrow-button'>
                     <BigArrow />
-                </Button>
+                </div>
                 <h2>Just Read It</h2>
             </div>
         </HeaderContainer>

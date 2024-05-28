@@ -20,7 +20,10 @@ export const NavbarContainer = styled.nav(
             align-items: center;
 
             .logo {
-                margin-right: 100px;
+                margin-right: 180px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             ul {
@@ -44,10 +47,17 @@ export const NavbarContainer = styled.nav(
                         font-weight: 400;
                         padding: 2px 4px;
                         border-bottom: 2px solid transparent;
+                        transition: all linear 0.1s;
+
+                        &:hover {
+                            color: #1031fb !important;
+                            text-decoration: underline;
+                        }
 
                         &.active {
-                            color: ${theme.colors.text.accent2};
+                            color: ${theme.colors.text.accent2} !important;
                             border-bottom: 2px solid ${theme.colors.text.accent2};
+                            text-decoration: none;
                         }
                     }
                 }

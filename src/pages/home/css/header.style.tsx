@@ -57,7 +57,7 @@ export const HeaderContainer = styled.section(
         h1 {
             font-size: 72px;
             font-weight: 400;
-            width: 700px;
+            width: 560px;
             line-height: 80px;
             position: relative;
 
@@ -79,9 +79,11 @@ export const HeaderContainer = styled.section(
             -webkit-text-fill-color: transparent;
             opacity: 0;
             animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 2s forwards;
+            position: relative;
+            top: 3px;
         }
 
-        button {
+        .arrow-button {
             background-color: ${theme.colors.background.accent1};
             width: 192px;
             height: 78px;
@@ -91,6 +93,7 @@ export const HeaderContainer = styled.section(
             border-radius: 200px !important;
             animation: ${ArrowFieldInit} 2s ease-in-out;
             overflow: hidden;
+            position: relative;
 
             svg {
                 position: absolute;
@@ -104,7 +107,7 @@ export const HeaderContainer = styled.section(
             margin-top: 28px;
             display: flex;
             align-items: center;
-            gap: 54px;
+            gap: 90px;
         }
 
         @media (max-width: 992px) {
@@ -140,7 +143,7 @@ export const HeaderContainer = styled.section(
                 gap: 16px;
             }
 
-            button {
+            .arrow-button {
                 width: 140px;
                 height: 55px;
                 animation: ${ArrowFieldInitResponsive} 3s ease-in-out;

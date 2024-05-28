@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
 export const FooterContainer = styled.footer(
-    () => css`
+    ({ theme }) => css`
         display: flex;
         align-items: center;
         justify-content: center;
@@ -15,7 +15,7 @@ export const FooterContainer = styled.footer(
             font-weight: 400;
         }
 
-        div {
+        .social-media {
             display: flex;
             align-items: center;
             gap: 40px;
@@ -23,6 +23,36 @@ export const FooterContainer = styled.footer(
             svg {
                 width: 20px;
                 height: 20px;
+                color: black;
+            }
+        }
+
+        a {
+            &:hover {
+                transition: all linear 0.1s;
+                text-decoration: underline;
+                color: ${theme.colors.text.accent1};
+
+                svg {
+                    transition: all linear 0.1s;
+                    color: ${theme.colors.text.accent1};
+                }
+            }
+        }
+
+        .contact {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            margin-top: 60px;
+
+            b {
+                font-weight: 400;
+            }
+
+            a {
+                color: ${theme.colors.text.accent1};
             }
         }
     `
