@@ -8,6 +8,8 @@ export const SecurityContainer = styled.section(
 
         .left-side {
             min-width: max-content;
+            display: flex;
+            flex-direction: column;
 
             h3 {
                 color: ${theme.colors.text.accent1};
@@ -17,6 +19,23 @@ export const SecurityContainer = styled.section(
             small {
                 font-size: 20px;
                 font-weight: 500;
+                display: block;
+                margin-bottom: 78px;
+            }
+
+            .person-img {
+                margin: 0 auto;
+                width: 300px;
+                margin-bottom: 98px;
+                display: block;
+            }
+        }
+
+        a {
+            color: ${theme.colors.text.accent1};
+
+            &:hover {
+                text-decoration: underline;
             }
         }
 

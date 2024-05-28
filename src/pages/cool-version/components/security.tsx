@@ -1,5 +1,7 @@
 // Assets
 import { SecurityContainer } from '../css';
+import Person from 'assets/img/person.png';
+import RoadMap from 'assets/img/road-map.png';
 
 const Security = () => {
     return (
@@ -7,45 +9,55 @@ const Security = () => {
             <div className='left-side'>
                 <h3>Securing Your Spot</h3>
                 <small>Navigating Whitelist Tiers for Exclusive Benefits</small>
+                <img src={Person} alt='' className='person-img' />
+                <img src={RoadMap} alt='' className='road-map' />
             </div>
             <article className='right-side'>
                 <p>
-                    This phase features three whitelist tiers: WL1, WL2, and WL3, each with unique entry requirements. WL1 demands 2000
-                    points and WL2 and WL3 need 600 and 400 points, respectively, for entry (You can find more details about the scoring
-                    methods on our Discord server.). In WL1, the top 10 participants with the highest points become our OGs, enjoying
-                    special privileges.
+                    This phase features three whitelist tiers: OGs/Gold Tier participants, Silver Tier and Bronze Tier, each with unique
+                    entry requirements.
+                </p>
+                <b>Ranking System</b>
+                <p>
+                    We have a ranking system in place where participants can earn points by completing tasks on <a href=''>Guild</a> Here's
+                    how the tiers are structured based on your ranking.
                 </p>
                 <b className='mt'>Minting Details</b>
                 <ul>
                     <li>
-                        <p className='accent-1'>WL1 Minting</p>
+                        <p className='accent-1'>OG/GOLD Tier Minting</p>
                         <small>1st Day / Each participant can mint 1 JRI Contract for 0.005 ETH.</small>
                     </li>
                     <li>
-                        <p className='accent-1'>WL2 Minting</p>
+                        <p className='accent-1'>Silver Minting</p>
                         <small>2nd Day / Each participant can mint 1 JRI Contract for 0.01 ETH.</small>
                     </li>
                     <li>
-                        <p className='accent-1'>WL3 Minting</p>
+                        <p className='accent-1'>Bronze Minting</p>
                         <small>3rd Day / Each participant can mint 1 JRI Contract for 0.02 ETH.</small>
                     </li>
                 </ul>
-                <b className='mt'>Day 1 Floor-Swiping Strategy</b>
+                <b className='mt'>1st Day Floor-Sweeping Strategy</b>
                 <p>
-                    WL1 participants will play a crucial role in stabilizing the market and enhancing the value of our collection through
-                    our innovative floor-swiping strategy. Upon the minting on day one, the project treasury will already have accumulated
-                    0.5 ETH. With this initial earning, the treasury's total funds will amount to 1 ETH. This entire sum will then be
-                    allocated among a team of 10 OGs. These select individuals will strategically purchase JRI Contracts listed below the
-                    WL2 minting price of 0.01 ETH, effectively contributing to market stabilization and bolstering the floor price. The team
-                    will focus on swiping the first 100 contracts listed below the designated price.
+                    OGs and Gold tier participants will play a crucial role in stabilizing the market and enhancing the value of our
+                    collection through our innovative floor-sweeping strategy. Upon the minting on day one, the project treasury will
+                    already have accumulated 0.5 ETH. With this initial earning, the treasury's total funds will amount to 1 ETH. This
+                    entire sum will then be allocated among a team of 10 OGs. These select individuals will strategically purchase JRI
+                    Contracts listed below the Silver Tier minting price of 0.01 ETH, effectively contributing to market stabilization and
+                    bolstering the floor price. The OG team will focus on sweeping the first 100 contracts listed below the designated
+                    price. At this stage, all participants who minted JRI Contracts can sell them at twice the mint price, reflecting the
+                    increased market value. At this point, the collection will have the first 1 ETH total volume on the market and a floor
+                    price of 0.01 ETH.
                 </p>
-                <b className='mt'>Day 2 Floor-Swiping Strategy</b>
+                <b className='mt'>2nd Day Floor-Sweeping Strategy</b>
                 <p>
-                    As day two of minting begins, the treasury will earn an additional 10 ETH from the minting of 1,000 contracts priced at
-                    0.01 ETH each.This entire sum of 10 ETH will be distributed among all WL1 participants, ensuring each individual
-                    receives 0.1 ETH. Participants are encouraged to utilize this ETH to engage in floor-swiping activities by purchasing
-                    any JRI Contracts listed below the WL3 minting price of 0.02 ETH. The team will focus on swiping the first 500 contracts
-                    listed below the designated price, ensuring a swift and impactful implementation of the floor-swiping strategy.
+                    As day two of minting begins, the treasury will earn an additional 10 ETH from the minting of 1000 contracts priced at
+                    0.01 ETH each. This entire sum of 10 ETH will be distributed among all Gold Tier participants, ensuring each individual
+                    receives 0.1 ETH. Participants are encouraged to utilize this ETH to engage in floor-sweeping activities by purchasing
+                    any JRI Contracts listed below the Bronze minting price of 0.02 ETH. The team will focus on sweeping the first 500
+                    contracts listed below the designated price, ensuring a swift and impactful implementation of the floor-sweeping
+                    strategy. By this time, the collection in the market will have a total volume of 11 ETH and a floor price of 0.02 ETH,
+                    allowing participants to sell their NFTs for about 2x to 4x the initial mint price.
                 </p>
             </article>
         </SecurityContainer>

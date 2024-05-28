@@ -10,3 +10,4 @@ export { default as LittleArrow } from './littleArrow.svg?react';
 export { default as Castle } from './castle.svg?react';
 export { default as FarCaster } from './farcaster.svg?react';
 export { default as Linkedin } from './linkedin.svg?react';
+export { default as Hat } from './hat.svg?react';

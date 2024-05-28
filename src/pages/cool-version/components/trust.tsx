@@ -10,9 +10,9 @@ const Trust = () => {
             <GradientContainer className='gradient-field'>
                 <div className='container'>
                     <p>
-                        By actively participating in this floor-swiping endeavor, WL1 participants not only contribute to market
-                        stabilization but also increase their chances of acquiring more JRI Contracts, thereby enhancing their opportunities
-                        to obtain Gold (0.5 ETH) & Silver (0.1 ETH) Tier contracts during the reveal phase.
+                        By actively participating in this floor-swiping endeavor, OGs and Gold Tier participants not only contribute to
+                        market stabilization but also increase their chances of acquiring more JRI Contracts, thereby enhancing their
+                        opportunities to obtain more of special NFTs with guaranteed values during the reveal phase.
                     </p>
                 </div>
             </GradientContainer>
@@ -43,8 +43,8 @@ const Trust = () => {
                 <br />
                 <p>After a week, the NFTs' metadata will be refreshed, revealing their unique characteristics.</p>
                 <div className='next-Phase'>
-                    <h2>Phase 2</h2>
-                    <p>There is no cool version of this one :)</p>
+                    <h2>Phase 1</h2>
+                    <p>There is no short cool version of this one :)</p>
                     <Button radius='rounded'>Just Read It</Button>
                 </div>
             </TrustContainer>

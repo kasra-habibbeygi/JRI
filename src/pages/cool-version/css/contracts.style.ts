@@ -43,6 +43,7 @@ export const ContractsContainer = styled.section(
                 display: block;
                 padding: 24px 12px;
                 text-align: center;
+                position: relative;
 
                 b {
                     display: block;
@@ -74,9 +75,23 @@ export const ContractsContainer = styled.section(
             border-color: #8d8c8c;
         }
 
+        .bronze-one {
+            background-color: #f9e0c7;
+            color: #b18456;
+            border-color: #b18456;
+        }
+
+        svg {
+            position: absolute;
+            top: -30px;
+            left: -32px;
+            width: 60px;
+            height: auto;
+        }
+
         @media (max-width: 1400px) {
             ol {
-                grid-template-columns: auto auto auto;
+                grid-template-columns: auto auto;
             }
         }
 
@@ -130,6 +145,12 @@ export const ContractsContainer = styled.section(
                         display: flex;
                     }
                 }
+            }
+
+            svg {
+                top: -20px;
+                left: -20px;
+                width: 40px;
             }
         }
     `
