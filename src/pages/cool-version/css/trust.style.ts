@@ -59,7 +59,7 @@ export const TrustContainer = styled.section(
                 color: ${theme.colors.text.accent2};
                 font-size: 36px;
                 font-weight: 500;
-                margin-bottom: 80px;
+                margin-bottom: 40px;
             }
 
             button {

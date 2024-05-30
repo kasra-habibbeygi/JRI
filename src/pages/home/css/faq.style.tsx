@@ -6,7 +6,7 @@ export const FAQContainer = styled.section(
         display: flex;
         gap: 74px;
         padding-top: 148px;
-        padding-bottom: 200px;
+        padding-bottom: 120px;
 
         h3 {
             min-width: max-content;

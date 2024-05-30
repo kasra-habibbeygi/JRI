@@ -35,7 +35,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='right-side'>
-                    <Button radius='rounded' variant='accent2' buttonType='outline'>
+                    <Button disabled radius='rounded' variant='accent2' buttonType='outline'>
                         Connect Wallet
                     </Button>
                 </div>

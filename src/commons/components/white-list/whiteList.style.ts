@@ -83,7 +83,7 @@ export const WhiteListContainer = styled.section(
                 justify-content: center;
                 font-size: 16px;
                 font-weight: 400;
-                width: 150px;
+                width: 170px;
                 height: 28px;
                 border-radius: 50px;
                 margin: auto;
@@ -91,11 +91,6 @@ export const WhiteListContainer = styled.section(
                 &.black-outline {
                     color: black;
                     border: 2px solid #0f0f0f;
-                }
-
-                &.black-filled {
-                    color: white;
-                    background-color: #0f0f0f;
                 }
 
                 &.gold {
@@ -108,6 +103,12 @@ export const WhiteListContainer = styled.section(
                     color: #8d8c8c;
                     background-color: #f5f5f5;
                     border: 2px solid #8d8c8c;
+                }
+
+                &.bronze {
+                    color: #b18456;
+                    background-color: #f9e0c7;
+                    border: 2px solid #b18456;
                 }
             }
         }

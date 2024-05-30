@@ -6,12 +6,11 @@ const Header = () => {
     return (
         <HeaderContainer className='container'>
             <header>
-                <h3>No Easy Money, But Assured Gains</h3>
+                <h3>No Easy Money, Assured Gains</h3>
                 <p>
-                    Dear crypto enthusiasts, Today, we’re thrilled to extend an exclusive invitation to join JUST READ IT: (JRI), which will
-                    serve as a groundbreaking platform akin to Kickstarter. An innovative NFT project that promises to redefine the
-                    landscape of crowdfunding and empower creators worldwide to bring their visions to life in a decentralized and
-                    community-driven ecosystem.
+                    Dear crypto enthusiasts, JUST READ IT: (JRI), will serve as a groundbreaking platform akin to Kickstarter. An innovative
+                    NFT project that promises to redefine the landscape of crowdfunding and empower creators worldwide to bring their
+                    visions to life in a decentralized and community-driven ecosystem.
                 </p>
             </header>
             <div className='card-container'>

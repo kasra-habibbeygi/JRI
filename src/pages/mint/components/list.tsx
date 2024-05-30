@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 // Assets
 import { ListContainer } from '../css';
 import { BigArrow } from 'assets/icons';
@@ -12,10 +10,10 @@ const List = () => {
         <ListContainer className='container'>
             <h3>Where It All Begins !!</h3>
             <p>
-                The mint date will be announced soon, check your stats on
-                <Link to='/'>
-                    Discord <BigArrow />
-                </Link>
+                The mint date will be announced soon, Check your stats on
+                <a href='https://guild.xyz/justreadit' target='_blank'>
+                    Guild <BigArrow />
+                </a>
             </p>
             <WhiteList />
         </ListContainer>

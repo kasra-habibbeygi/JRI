@@ -19,8 +19,11 @@ const Security = () => {
                 </p>
                 <b>Ranking System</b>
                 <p>
-                    We have a ranking system in place where participants can earn points by completing tasks on <a href=''>Guild</a> Here's
-                    how the tiers are structured based on your ranking.
+                    We have a ranking system in place where participants can earn points by completing tasks on{' '}
+                    <a href='https://www.guild.xyz/justreadit' target='_blank'>
+                        Guild
+                    </a>{' '}
+                    <br /> Here's how the tiers are structured based on your ranking.
                 </p>
                 <b className='mt'>Minting Details</b>
                 <ul>
@@ -58,6 +61,14 @@ const Security = () => {
                     contracts listed below the designated price, ensuring a swift and impactful implementation of the floor-sweeping
                     strategy. By this time, the collection in the market will have a total volume of 11 ETH and a floor price of 0.02 ETH,
                     allowing participants to sell their NFTs for about 2x to 4x the initial mint price.
+                </p>
+                <b className='mt'>3rd Day Boosting Market Growth:</b>
+                <p>
+                    At this point, the market floor price is already above the 0.02 ETH Bronze Tier minting price. For each 25 mints, we are
+                    making an unlimited time offer to Gold Tier members worth 0.5 ETH. This will force the market to grow in volume by 65
+                    ETH, reaching a total of 76 ETH. This strategy will push the floor price above 0.5 ETH, enhancing the overall market
+                    value and providing substantial returns for participants. This offer is designed to encourage continuous participation
+                    and market activity, ensuring sustained growth and stability.
                 </p>
             </article>
         </SecurityContainer>

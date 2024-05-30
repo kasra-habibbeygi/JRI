@@ -7,7 +7,7 @@ export const SecurityContainer = styled.section(
         gap: 100px;
 
         .left-side {
-            min-width: max-content;
+            min-width: 550px;
             display: flex;
             flex-direction: column;
 
@@ -28,6 +28,10 @@ export const SecurityContainer = styled.section(
                 width: 300px;
                 margin-bottom: 98px;
                 display: block;
+            }
+
+            .road-map {
+                width: 100%;
             }
         }
 
@@ -65,8 +69,23 @@ export const SecurityContainer = styled.section(
             }
         }
 
+        @media (max-width: 1200px) {
+            .left-side {
+                min-width: 300px;
+            }
+        }
+
         @media (max-width: 992px) {
             flex-direction: column;
+
+            .left-side .road-map {
+                width: 50%;
+                margin: auto;
+            }
+
+            .left-side {
+                min-width: unset;
+            }
         }
 
         @media (max-width: 760px) {

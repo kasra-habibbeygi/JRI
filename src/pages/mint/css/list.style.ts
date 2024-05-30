@@ -3,6 +3,8 @@ import styled from '@emotion/styled';
 
 export const ListContainer = styled.section(
     ({ theme }) => css`
+        margin-bottom: 80px;
+
         h3 {
             font-size: 36px;
             margin-bottom: 6px;

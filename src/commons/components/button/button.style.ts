@@ -2,8 +2,8 @@ import { Button } from '@mui/material';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const ButtonContainer = styled(Button)(
-    ({ theme }) => css`
+export const ButtonContainer = styled(Button)<{ disabled: boolean }>(
+    ({ theme, disabled }) => css`
         font-size: 14px;
         font-weight: 500;
         padding: 6px 16px;
@@ -15,6 +15,8 @@ export const ButtonContainer = styled(Button)(
         color: ${theme.colors.text.primary} !important;
         font-weight: 400 !important;
         text-transform: capitalize !important;
+        opacity: ${disabled ? '0.4' : '1'};
+        pointer-events: ${disabled ? 'none' : 'initial'};
 
         &.filled {
             &.accent1-color {

@@ -16,6 +16,7 @@ interface IButton {
     onClick?: () => void;
     className?: string;
     type?: 'submit' | 'button';
+    disabled?: boolean;
 }
 
 const Button: FC<IButton> = ({
@@ -26,12 +27,13 @@ const Button: FC<IButton> = ({
     variant = 'success',
     onClick,
     className,
-    type
+    type,
+    disabled = false
 }) => {
     return (
         <ButtonContainer
             className={`${buttonType} radius-${radius} ${variant}-color ${className ? className : ''}`}
-            disabled={loading}
+            disabled={loading || disabled}
             onClick={onClick}
             type={type}
         >

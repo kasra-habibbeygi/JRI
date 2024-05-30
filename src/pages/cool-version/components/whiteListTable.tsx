@@ -10,19 +10,25 @@ const WhiteListTable = () => {
             <h3>The Three Whitelist Tiers</h3>
             <ul>
                 <li>
-                    <b>Whitelist1</b>
+                    <b>OG/GOLD</b>
                     <p>
-                        Reserved for our OGs, consisting of the top 10 participants with the highest points, alongside 90 Black Tier
-                        members.
+                        Reserved for the top 100 participants with the highest points. First 24 hours Each participant can mint 1 JRI
+                        Contract 0.005 ETH.
                     </p>
                 </li>
                 <li>
-                    <b>Whitelist2</b>
-                    <p>Comprising 1,000 individuals who join through the invitations of WL1 participants.</p>
+                    <b>Silver</b>
+                    <p>
+                        Comprising 1000 individuals ranked 101st to 1100th. Following 24 hours Each participant can mint 1 JRI Contract for
+                        0.01 ETH.
+                    </p>
                 </li>
                 <li>
-                    <b>Whitelist3</b>
-                    <p>Open to 10,000 participants who join through the invitations of WL2 participants.</p>
+                    <b>Bronze</b>
+                    <p>
+                        Open to 10,000 participants ranked 1101st to 11,100th. Final 24 hours Each participant can mint 1 JRI Contract for
+                        0.02 ETH.
+                    </p>
                 </li>
             </ul>
             <WhiteList />
