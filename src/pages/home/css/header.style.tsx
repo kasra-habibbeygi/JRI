@@ -35,6 +35,15 @@ const ArrowFieldInit = keyframes`
     }
 `;
 
+const gradientAnimation = keyframes`
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+`;
+
 const ArrowFieldInitResponsive = keyframes`
     0% {
         width: 56px;
@@ -75,11 +84,21 @@ export const HeaderContainer = styled.section(
 
         h2 {
             font-size: 92px;
-            background: -webkit-linear-gradient(0deg, ${theme.colors.background.accent2} 50%, ${theme.colors.background.accent1});
+            background: -webkit-linear-gradient(
+                0deg,
+                ${theme.colors.background.accent2} 30%,
+                ${theme.colors.background.accent1} 80%,
+                ${theme.colors.background.accent2}
+            );
             background-clip: text;
             -webkit-text-fill-color: transparent;
+            background-size: 200% 200%;
             opacity: 0;
-            animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 3s forwards;
+            animation: ${gradientAnimation} 3s ease infinite;
+            animation:
+                ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 3s forwards,
+                ${gradientAnimation} 5s linear infinite;
+
             position: relative;
             top: 3px;
         }
