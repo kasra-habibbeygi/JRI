@@ -1,8 +1,8 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-export const FullVersionContainer = styled.section(
-    () => css`
+export const FullVersionContainer = styled.section<{ status: boolean }>(
+    ({ theme, status }) => css`
         display: flex;
         gap: 80px;
         margin-top: 80px;
@@ -14,6 +14,10 @@ export const FullVersionContainer = styled.section(
 
         aside {
             min-width: 350px;
+
+            .active {
+                color: ${theme.colors.text.accent2};
+            }
 
             .main-list {
                 list-style: none;
@@ -29,7 +33,7 @@ export const FullVersionContainer = styled.section(
                     cursor: initial;
                     font-size: 16px;
 
-                    &:first-child {
+                    &:first-of-type {
                         margin: 0;
                         margin-bottom: 6px;
                     }
@@ -41,6 +45,11 @@ export const FullVersionContainer = styled.section(
                     margin-bottom: 6px;
                     transition: all linear 0.1s;
                     width: 100%;
+
+                    a {
+                        display: block;
+                        width: 100%;
+                    }
 
                     svg {
                         width: 12px;
@@ -114,6 +123,38 @@ export const FullVersionContainer = styled.section(
                 margin-bottom: 26px;
                 font-weight: 300;
             }
+
+            .team-field {
+                li {
+                    a {
+                        color: ${theme.colors.text.accent1};
+                        font-weight: 500;
+                        text-decoration: underline;
+                        display: inline-block;
+                        margin-left: 6px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 992px) {
+            aside {
+                position: fixed;
+                top: 0;
+                left: ${status ? '0' : '-350px'};
+                min-width: 300px;
+                width: 300px;
+                height: 100vh;
+                background-color: white;
+                z-index: 999;
+                transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+
+                .main-list {
+                    top: 40px;
+                    max-height: 100%;
+                    padding: 20px;
+                }
+            }
         }
     `
 );
@@ -138,5 +179,22 @@ export const MainList = styled.ol(
         .field {
             border-radius: 0 4px 4px 0;
         }
+    `
+);
+
+export const LayerContainer = styled.span<{ status: boolean }>(
+    ({ status }) => css`
+        position: fixed;
+        transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+        top: 0;
+        left: 0;
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        opacity: ${status ? '0.6' : '0'};
+        pointer-events: ${status ? 'initial' : 'none'};
+        cursor: pointer;
+        z-index: 999;
     `
 );

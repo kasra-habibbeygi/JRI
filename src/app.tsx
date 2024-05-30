@@ -14,9 +14,6 @@ import { useAppSelector } from 'commons/hooks';
 import { LayoutManipulation } from 'commons/components';
 import NotFound from 'pages/not-found';
 
-// Assets
-import GlobalStyles from 'assets/css/global.styled';
-
 const App = () => {
     const theme = useAppSelector(state => state.ThemeProvider.theme);
     const themeObject = designToken(theme, 'ltr');
@@ -31,7 +28,6 @@ const App = () => {
                 }}
             />
             <ThemeProvider theme={createTheme(themeObject)}>
-                <GlobalStyles theme={createTheme(themeObject)} direction='ltr' />
                 <BrowserRouter>
                     <Routes>
                         <Route>

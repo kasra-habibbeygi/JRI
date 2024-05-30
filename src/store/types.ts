@@ -6,6 +6,7 @@ interface IReduxState {
     App: {
         sideBarStatus: boolean;
         contentLoader: boolean;
+        fullPageTitleMenu: boolean;
     };
 }
 

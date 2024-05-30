@@ -41,7 +41,7 @@ export const HeaderContainer = styled.section(
                         font-size: 20px;
                         background-color: #f0f2f5;
 
-                        &:first-child {
+                        &:first-of-type {
                             width: 80%;
                         }
 

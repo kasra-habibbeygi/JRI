@@ -126,6 +126,7 @@ article {
 
 ::-webkit-scrollbar-thumb:hover {
     border-radius: 50px;
+    background: #767676;
 }
 
 ::-webkit-scrollbar-thumb:hover {

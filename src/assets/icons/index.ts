@@ -11,3 +11,4 @@ export { default as Castle } from './castle.svg?react';
 export { default as FarCaster } from './farcaster.svg?react';
 export { default as Linkedin } from './linkedin.svg?react';
 export { default as Hat } from './hat.svg?react';
+export { default as Document } from './document.svg?react';

@@ -1,10 +1,10 @@
 import { NavLink } from 'react-router-dom';
-import { toggleSideBarStatus } from 'store/reducers/app';
+import { toggleFullVersionTitleMenu, toggleSideBarStatus } from 'store/reducers/app';
 import { useDispatch } from 'react-redux';
 
 // Assets
 import { NavbarContainer } from './navbar.style';
-import { Logo, Menu } from 'assets/icons';
+import { Document, Logo, Menu } from 'assets/icons';
 
 // Components
 import { Button } from 'commons/components';
@@ -39,8 +39,9 @@ const Navbar = () => {
                         Connect Wallet
                     </Button>
                 </div>
-                <div className='sandwich-menu' onClick={() => dispatch(toggleSideBarStatus())}>
-                    <Menu />
+                <div className='sandwich-menu'>
+                    <Document className='doc-icon' onClick={() => dispatch(toggleFullVersionTitleMenu())} />
+                    <Menu onClick={() => dispatch(toggleSideBarStatus())} />
                 </div>
             </div>
         </NavbarContainer>

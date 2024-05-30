@@ -99,10 +99,16 @@ export const NavbarContainer = styled.nav(
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                gap: 20px;
 
                 svg {
-                    color: red;
+                    color: black;
                     width: 28px;
+                    height: auto;
+                }
+
+                .doc-icon {
+                    width: 22px;
                 }
             }
 

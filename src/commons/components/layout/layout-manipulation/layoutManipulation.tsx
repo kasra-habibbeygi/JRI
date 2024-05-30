@@ -1,4 +1,4 @@
-import { FC, ReactNode, useEffect } from 'react';
+import { FC, ReactNode } from 'react';
 
 // Assets
 
@@ -6,7 +6,6 @@ import { FC, ReactNode, useEffect } from 'react';
 import Footer from '../footer';
 import Navbar from '../navbar';
 import MobileNavbar from '../mobile-navbar';
-import { useLocation } from 'react-router-dom';
 
 // Types
 interface IMainLayout {
@@ -14,12 +13,6 @@ interface IMainLayout {
 }
 
 const MainLayout: FC<IMainLayout> = ({ children }) => {
-    const { pathname } = useLocation();
-
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, [pathname]);
-
     return (
         <>
             <Navbar />
