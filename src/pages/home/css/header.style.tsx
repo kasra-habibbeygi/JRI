@@ -24,13 +24,14 @@ const H2Init = keyframes`
 const ArrowFieldInit = keyframes`
     0% {
         width: 80px;
-        transform: rotate(-180deg);
     }
     90% {
         width: 80px;
+        transform: rotate(0);
     }
     100% {
         width: 192px;
+        transform: rotate(0);
     }
 `;
 
@@ -78,20 +79,22 @@ export const HeaderContainer = styled.section(
             background-clip: text;
             -webkit-text-fill-color: transparent;
             opacity: 0;
-            animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 2s forwards;
+            animation: ${H2Init} 1s cubic-bezier(0.33, 1.24, 0.91, 0.96) 3s forwards;
             position: relative;
             top: 3px;
         }
 
         .arrow-button {
             background-color: ${theme.colors.background.accent1};
-            width: 192px;
+            width: 80px;
             height: 78px;
             display: flex;
             align-items: center;
             justify-content: center;
             border-radius: 200px !important;
-            animation: ${ArrowFieldInit} 2s ease-in-out;
+            animation: ${ArrowFieldInit} 2s ease-in-out forwards;
+            transform: rotate(-180deg);
+            animation-delay: 1s;
             overflow: hidden;
             position: relative;
 

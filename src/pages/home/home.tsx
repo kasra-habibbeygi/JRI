@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 // Components
 import { FAQ, Header, Versions } from './components';
+import { Helmet } from 'commons/components';
 
 const Home = () => {
     useEffect(() => {
@@ -10,6 +11,7 @@ const Home = () => {
 
     return (
         <main>
+            <Helmet title='Just Read It' />
             <Header />
             <Versions />
             <FAQ />

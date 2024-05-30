@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 // Components
 import { Header, List } from './components';
+import { Helmet } from 'commons/components';
 
 const Mint = () => {
     useEffect(() => {
@@ -9,10 +10,11 @@ const Mint = () => {
     }, []);
 
     return (
-        <>
+        <main>
+            <Helmet title='JRI | Mint' />
             <Header />
             <List />
-        </>
+        </main>
     );
 };
 

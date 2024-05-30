@@ -4,6 +4,9 @@ import { useAppSelector } from 'commons/hooks';
 import { toggleFullVersionTitleMenu } from 'store/reducers/app';
 import { useDispatch } from 'react-redux';
 
+// Components
+import { Helmet } from 'commons/components';
+
 // Assets
 import { LittleArrow } from 'assets/icons';
 import { FullVersionContainer, LayerContainer, MainList } from './fullVersion.style';
@@ -47,6 +50,7 @@ const FullVersion = () => {
 
     return (
         <FullVersionContainer className='container' status={sidebarStatus}>
+            <Helmet title='JRI | Full Version' />
             <LayerContainer
                 className='layer'
                 status={sidebarStatus}

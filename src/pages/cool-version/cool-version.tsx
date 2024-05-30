@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 
 // Components
 import { Contracts, Header, Security, Trust, WhiteListTable } from './components';
+import { Helmet } from 'commons/components';
 
 const CoolVersion = () => {
     useEffect(() => {
@@ -10,6 +11,7 @@ const CoolVersion = () => {
 
     return (
         <main>
+            <Helmet title='JRI | Cool Version' />
             <Header />
             <Contracts />
             <WhiteListTable />
