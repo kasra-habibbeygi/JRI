@@ -11,6 +11,12 @@ const HelmetTmp: FC<IHelmetTmp> = ({ title }) => {
     return (
         <Helmet>
             <title>{title}</title>
+            <meta property='og:title' content='Just Read It' />
+            <meta
+                property='og:description'
+                content='Join us to support innovative projects and become part of a decentralized funding revolution!'
+            />
+            <meta property='og:image' content='link.jpg' />
         </Helmet>
     );
 };

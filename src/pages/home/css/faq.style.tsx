@@ -44,6 +44,7 @@ export const FAQContainer = styled.section(
             svg {
                 width: 20px;
                 height: auto;
+                transform: rotate(180deg);
             }
         }
 

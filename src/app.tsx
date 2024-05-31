@@ -20,7 +20,6 @@ const App = () => {
     const RoutesJSON = routesConfig();
 
     // if (window.location.protocol !== 'https:') {
-    //     console.log(1);
     //     window.location.href = `https:${window.location.href.substring(window.location.protocol.length)}`;
     // }
 

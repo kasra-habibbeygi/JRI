@@ -146,7 +146,7 @@ export const VersionsContainer = styled.section(
             }
 
             .looper {
-                top: 100px;
+                top: 0px;
                 right: -250px;
             }
         }

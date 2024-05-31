@@ -26,19 +26,10 @@ const Footer = () => {
             <div className='contact'>
                 <b>Contact Us</b>
                 <p>
-                    <a href='mailto:info@justreadit.build'>info@justreadit.build</a> - General inquiries and information.
+                    <a href='mailto:support@justreadit.build'>support@justreadit.build</a> - Customer support and technical assistance.
                 </p>
                 <p>
                     <a href='mailto:partners@justreadit.build'>partners@justreadit.build</a> - Partnerships and collaborations.
-                </p>
-                <p>
-                    <a href='mailto:feedback@justreadit.build'>feedback@justreadit.build</a> - User feedback and suggestions.
-                </p>
-                <p>
-                    <a href='mailto:careers@justreadit.build'>careers@justreadit.build</a> - Job applications and career opportunities.
-                </p>
-                <p>
-                    <a href='mailto:support@justreadit.build'>support@justreadit.build</a> - Customer support and technical assistance.
                 </p>
             </div>
         </FooterContainer>

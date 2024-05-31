@@ -127,13 +127,12 @@ export const HeaderContainer = styled.section(
         }
 
         button {
-            border: 1px solid ${theme.colors.text.accent2};
-            color: ${theme.colors.text.accent2} !important;
-            width: 276px;
+            width: max-content;
             height: 32px;
             font-size: 16px !important;
             font-weight: 300 !important;
-            margin-bottom: 15px;
+            padding: 0;
+            font-weight: 500 !important;
         }
 
         .arrow-field {
