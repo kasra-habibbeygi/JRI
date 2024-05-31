@@ -491,7 +491,7 @@ const FullVersion = () => {
                 </p>
                 <h4 id='minting-details'>Minting Details:</h4>
                 <ul>
-                    <li>OG/Gold Tier Minting: Reserved for the top 100 participants with the highest points. Minting price: 0.005 ETH.</li>
+                    <li>Gold Tier Minting: Reserved for the top 100 participants with the highest points. Minting price: 0.005 ETH.</li>
                     <li>Silver Minting: For individuals ranked 101st to 1100th. Minting price: 0.01 ETH.</li>
                     <li>Bronze Minting: For participants ranked 1001st to 11,100th. Minting price: 0.02 ETH.</li>
                 </ul>

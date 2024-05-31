@@ -9,7 +9,7 @@ export const MobileNavbarContainer = styled.aside<{ status: boolean }>(
         width: 280px;
         height: 100vh;
         background-color: white;
-        z-index: 999;
+        z-index: 99999;
         transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
 
         ul {
@@ -41,6 +41,6 @@ export const LayerContainer = styled.span<{ status: boolean }>(
         opacity: ${status ? '0.6' : '0'};
         pointer-events: ${status ? 'initial' : 'none'};
         cursor: pointer;
-        z-index: 999;
+        z-index: 99999;
     `
 );

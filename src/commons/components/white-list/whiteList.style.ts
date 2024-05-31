@@ -54,6 +54,7 @@ export const WhiteListContainer = styled.section(
                 font-weight: 500;
                 max-width: 200px;
                 min-width: 200px;
+                text-align: left !important;
             }
         }
 

@@ -28,7 +28,7 @@ const Security = () => {
                 <b className='mt'>Minting Details</b>
                 <ul>
                     <li>
-                        <p className='accent-1'>OG/GOLD Tier Minting</p>
+                        <p className='accent-1'>Gold Tier Minting</p>
                         <small>1st Day / Each participant can mint 1 JRI Contract for 0.005 ETH.</small>
                     </li>
                     <li>

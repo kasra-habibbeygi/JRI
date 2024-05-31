@@ -41,7 +41,7 @@ const Trust = () => {
                 <div className='next-Phase'>
                     <h2>Phase 1</h2>
                     <p>There is no short cool version of this one :)</p>
-                    <Link to='/full-version'>
+                    <Link to='/full-version' onClick={() => window.scrollTo(0, 0)}>
                         <Button radius='rounded'>Just Read It</Button>
                     </Link>
                 </div>

@@ -21,10 +21,10 @@ const WhiteList = () => {
                     </div>
                     <div className='tbody'>
                         <div className='tr'>
-                            <div className='title td'>OG/Gold</div>
+                            <div className='title td'>Gold</div>
                             <div className='td'>1st Day</div>
                             <div className='td'>0.005 ETH</div>
-                            <div className='td'>2000</div>
+                            <div className='td'>1-100</div>
                             <div className='td u-item'>65 ETH, 100 Pcs</div>
                             <td className='pill-field roles'>
                                 <div>
@@ -45,7 +45,7 @@ const WhiteList = () => {
                             <div className='title td'>Silver</div>
                             <div className='td'>2st Day</div>
                             <div className='td'>0.01 ETH</div>
-                            <div className='td'>600</div>
+                            <div className='td'>101-1100</div>
                             <div className='td u-item'>18 ETH, 90 Pcs</div>
                             <td className='pill-field roles'>
                                 <span className='silver'>1000 Silver Tier</span>
@@ -63,7 +63,7 @@ const WhiteList = () => {
                             <div className='title td'>Bronze</div>
                             <div className='td'>3st Day</div>
                             <div className='td'>0.02 ETH</div>
-                            <div className='td'>400</div>
+                            <div className='td'>1101-11100</div>
                             <div className='td u-item'>90 ETH, 900 Pcs</div>
                             <td className='pill-field roles'>
                                 <span className='bronze'>10000 Bronze Tier</span>

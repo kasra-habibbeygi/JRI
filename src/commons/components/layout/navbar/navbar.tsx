@@ -23,16 +23,24 @@ const Navbar = () => {
                     </Link>
                     <ul>
                         <li>
-                            <NavLink to='/'>Home</NavLink>
+                            <NavLink to='/' onClick={() => window.scrollTo(0, 0)}>
+                                Home
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/full-version'>Full Version BP</NavLink>
+                            <NavLink to='/full-version' onClick={() => window.scrollTo(0, 0)}>
+                                Full Version BP
+                            </NavLink>
                         </li>
                         <li className='accent'>
-                            <NavLink to='/cool-version'>Cool Version BP</NavLink>
+                            <NavLink to='/cool-version' onClick={() => window.scrollTo(0, 0)}>
+                                Cool Version BP
+                            </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/Mint'>Mint</NavLink>
+                            <NavLink to='/Mint' onClick={() => window.scrollTo(0, 0)}>
+                                Mint
+                            </NavLink>
                         </li>
                     </ul>
                 </div>

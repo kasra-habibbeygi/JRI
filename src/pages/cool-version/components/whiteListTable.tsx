@@ -10,7 +10,7 @@ const WhiteListTable = () => {
             <h3>The Three Whitelist Tiers</h3>
             <ul>
                 <li>
-                    <b>OG/GOLD</b>
+                    <b>Gold</b>
                     <p>
                         Reserved for the top 100 participants with the highest points. First 24 hours Each participant can mint 1 JRI
                         Contract 0.005 ETH.

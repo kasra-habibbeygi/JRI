@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import toast from 'react-hot-toast';
 
 // Assets
@@ -6,8 +8,43 @@ import { HeaderContainer } from '../css';
 
 // Components
 import { Button } from 'commons/components';
+import { useEffect } from 'react';
 
 const Header = () => {
+    useEffect(() => {
+        // @ts-ignore
+        const w = c.width;
+        // @ts-ignore
+        const h = c.height;
+        const ocanvas = document.createElement('canvas');
+        ocanvas.width = w << 1;
+        ocanvas.height = h << 1;
+
+        const octx = ocanvas.getContext('2d', { alpha: false });
+        // @ts-ignore
+        const idata = octx.createImageData(ocanvas.width, ocanvas.height);
+        const buffer32 = new Uint32Array(idata.data.buffer);
+
+        noise(octx);
+
+        // @ts-ignore
+        const ctx = c.getContext('2d', { alpha: false });
+        (function loop() {
+            const x = (w * Math.random()) | 0;
+            const y = (h * Math.random()) | 0;
+            ctx.drawImage(ocanvas, -x, -y);
+            requestAnimationFrame(loop);
+        })();
+
+        function noise(ctx: any) {
+            let len = buffer32.length - 1;
+            while (len--) {
+                buffer32[len] = Math.random() < 0.5 ? 0 : -1 >> 0;
+            }
+            ctx.putImageData(idata, 0, 0);
+        }
+    }, []);
+
     return (
         <HeaderContainer className='container'>
             <div className='left-field'>
@@ -76,6 +113,7 @@ const Header = () => {
                     <span className='animated-text'>
                         <CurveText />
                     </span>
+                    <canvas id='c' width='750' height='200'></canvas>
                 </div>
                 <Button
                     className='min-button'
