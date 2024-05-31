@@ -33,14 +33,6 @@ const WhiteList = () => {
                                 </div>
                             </td>
                         </div>
-                        <ProgressBar percent={100}>
-                            <span className='progress-line'></span>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td roles'>100/100</div>
-                        </ProgressBar>
                         <div className='tr'>
                             <div className='title td'>Silver</div>
                             <div className='td'>2st Day</div>
@@ -51,15 +43,7 @@ const WhiteList = () => {
                                 <span className='silver'>1000 Silver Tier</span>
                             </td>
                         </div>
-                        <ProgressBar percent={40}>
-                            <span className='progress-line'></span>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td roles'>98/1000</div>
-                        </ProgressBar>
-                        <div className='tr'>
+                        <div className='tr last-one'>
                             <div className='title td'>Bronze</div>
                             <div className='td'>3st Day</div>
                             <div className='td'>0.02 ETH</div>
@@ -69,13 +53,9 @@ const WhiteList = () => {
                                 <span className='bronze'>10000 Bronze Tier</span>
                             </td>
                         </div>
-                        <ProgressBar percent={0}>
+                        <ProgressBar percent={(88 * 100) / 11100}>
                             <span className='progress-line'></span>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td'></div>
-                            <div className='td roles'>0/10000</div>
+                            <div className='text'>88/11100</div>
                         </ProgressBar>
                     </div>
                 </div>

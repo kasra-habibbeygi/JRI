@@ -11,6 +11,7 @@ export const WhiteListContainer = styled.section(
             width: 100%;
             overflow-x: auto;
             overflow-y: hidden;
+            padding-bottom: 20px;
         }
 
         .table {
@@ -38,10 +39,15 @@ export const WhiteListContainer = styled.section(
                 .tr {
                     display: flex;
                     align-items: center;
+                    border-bottom: 1px solid black;
+                }
+
+                .last-one {
+                    border: none;
                 }
 
                 .td {
-                    padding: 20px 16px;
+                    padding: 30px 16px;
                     flex-grow: 1;
                     text-align: center;
                     width: 100%;
@@ -176,11 +182,13 @@ export const ProgressBar = styled.div<{ percent: number }>(
             z-index: 1;
         }
 
-        .td {
+        .text {
             padding: 0 !important;
             position: relative;
             z-index: 2;
-            color: ${percent <= 87 ? theme.colors.text.accent1 : 'white'};
+            color: ${theme.colors.text.accent1};
+            width: 100%;
+            text-align: center;
         }
     `
 );
