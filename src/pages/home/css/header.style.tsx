@@ -36,27 +36,28 @@ const ArrowFieldInit = keyframes`
 `;
 
 const gradientAnimation = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 200% 50%;
-  }
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 200% 50%;
+    }
 `;
 
 const ArrowFieldInitResponsive = keyframes`
     0% {
         width: 56px;
         min-width: 56px;
-        transform: rotate(-180deg);
     }
     90% {
         width: 56px;
         min-width: 56px;
+        transform: rotate(0);
     }
     100% {
         width: 140px;
         min-width: 140px;
+        transform: rotate(0);
     }
 `;
 
@@ -166,9 +167,10 @@ export const HeaderContainer = styled.section(
             }
 
             .arrow-button {
-                width: 140px;
                 height: 55px;
-                animation: ${ArrowFieldInitResponsive} 3s ease-in-out;
+                animation: ${ArrowFieldInitResponsive} 2s ease-in-out forwards;
+                animation-delay: 1s;
+                width: 56px;
 
                 svg {
                     width: 84px;

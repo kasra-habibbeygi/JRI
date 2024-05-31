@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { toggleFullVersionTitleMenu, toggleSideBarStatus } from 'store/reducers/app';
 import { useDispatch } from 'react-redux';
 
@@ -12,6 +12,9 @@ import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const dispatch = useDispatch();
+    const { pathname } = useLocation();
+
+    console.log(pathname);
 
     return (
         <NavbarContainer>
@@ -49,7 +52,10 @@ const Navbar = () => {
                     </Button>
                 </div>
                 <div className='sandwich-menu'>
-                    <Document className='doc-icon' onClick={() => dispatch(toggleFullVersionTitleMenu())} />
+                    {pathname === '/full-version' && (
+                        <Document className='doc-icon' onClick={() => dispatch(toggleFullVersionTitleMenu())} />
+                    )}
+
                     <Menu onClick={() => dispatch(toggleSideBarStatus())} />
                 </div>
             </div>
