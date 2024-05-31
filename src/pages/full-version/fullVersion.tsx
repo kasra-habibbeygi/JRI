@@ -12,6 +12,8 @@ import { FullVersionContainer, LayerContainer, MainList } from './fullVersion.st
 import FV01 from 'assets/img/FV01.png';
 import Persons from 'assets/img/person.png';
 import RoadMap from 'assets/img/road-map.png';
+import { Clone } from 'assets/icons';
+import toast from 'react-hot-toast';
 
 const FullVersion = () => {
     const { hash } = useLocation();
@@ -549,6 +551,31 @@ const FullVersion = () => {
                     floor price at the moment of reveal and the closest guess will win 1 ETH! 💰
                 </p>
                 <p>Submit your guess in the Discord general chat with this format:</p>
+                <div className='mini-terminal'>
+                    <header
+                        onClick={() => {
+                            navigator.clipboard.writeText('easteregg001 (your guess) eth');
+                            toast.success('Copied successfuly', { style: { zIndex: 2000 } });
+                        }}
+                    >
+                        <Clone />
+                        Copy
+                    </header>
+                    <div>easteregg001 (your guess) eth</div>
+                </div>
+                <p>Example : </p>
+                <div className='mini-terminal'>
+                    <header
+                        onClick={() => {
+                            navigator.clipboard.writeText('easteregg001 1.23 eth');
+                            toast.success('Copied successfuly', { style: { zIndex: 2000 } });
+                        }}
+                    >
+                        <Clone />
+                        Copy
+                    </header>
+                    <div>easteregg001 1.23 eth</div>
+                </div>
                 <p>Happy guessing and good luck! 🚀</p>
                 <h4 id='ensuring-trust'>Ensuring Trust</h4>
                 <p>

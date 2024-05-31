@@ -1,5 +1,4 @@
 // Assets
-import { Hat } from 'assets/icons';
 import { ContractsContainer } from '../css/contracts.style';
 
 const Contracts = () => {
@@ -16,7 +15,6 @@ const Contracts = () => {
             </header>
             <ol>
                 <li>
-                    <Hat />
                     <b>1 x 5 ETH OG Tier Contract</b>
                     <small>
                         This exclusive JRI Contract guarantees a minimum value of 5 ETH. It will be awarded to the top-ranking OG with the
@@ -24,19 +22,16 @@ const Contracts = () => {
                     </small>
                 </li>
                 <li>
-                    <Hat />
                     <b>1 x 4 ETH OG Tier Contract</b>
                     <small>
                         This exclusive JRI Contract guarantees a minimum value of 4 ETH. It will be awarded to the second-rank OG.
                     </small>
                 </li>
                 <li>
-                    <Hat />
                     <b>1 x 3 ETH OG Tier Contract</b>
                     <small>This exclusive JRI Contract guarantees a minimum value of 3 ETH. It will be awarded to the third-rank OG.</small>
                 </li>
                 <li>
-                    <Hat />
                     <b>1 x 2 ETH OG Tier Contract</b>
                     <small>
                         This exclusive JRI Contract guarantees a minimum value of 2 ETH. It will be awarded to the fourth-rank OG.
@@ -45,7 +40,6 @@ const Contracts = () => {
             </ol>
             <ol>
                 <li>
-                    <Hat />
                     <b>6 x 1 ETH OG Tier Contract</b>
                     <small>
                         Each of these exclusive JRI Contracts guarantees a minimum value of 1 ETH. They will be awarded to the individuals

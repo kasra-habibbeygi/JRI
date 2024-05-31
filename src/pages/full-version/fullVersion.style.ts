@@ -146,6 +146,34 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
             }
         }
 
+        .mini-terminal {
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+
+            header {
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                color: #c1c1c1;
+                background-color: #2f2f2f;
+                padding: 10px 25px;
+                font-size: 14px;
+                cursor: pointer;
+
+                svg {
+                    width: 16px;
+                    height: auto;
+                }
+            }
+
+            div {
+                background-color: #0d0d0d;
+                color: white;
+                padding: 16px 25px;
+            }
+        }
+
         @media (max-width: 1200px) {
             aside {
                 padding: 16px;
