@@ -50,8 +50,9 @@ export const NavbarContainer = styled.nav(
                         transition: all linear 0.1s;
 
                         &:hover {
-                            color: #1031fb !important;
-                            text-decoration: underline;
+                            color: ${theme.colors.text.accent2} !important;
+                            border-bottom: 2px solid ${theme.colors.text.accent2};
+                            text-decoration: none;
                         }
 
                         &.active {
@@ -78,6 +79,10 @@ export const NavbarContainer = styled.nav(
                     box-shadow: none;
                     border: none;
                 }
+            }
+
+            .connect-wallet {
+                opacity: 0.6;
             }
         }
 

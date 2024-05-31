@@ -8,6 +8,7 @@ import { Document, Logo, Menu } from 'assets/icons';
 
 // Components
 import { Button } from 'commons/components';
+import toast from 'react-hot-toast';
 
 const Navbar = () => {
     const dispatch = useDispatch();
@@ -35,7 +36,15 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='right-side'>
-                    <Button disabled radius='rounded' variant='accent2' buttonType='outline'>
+                    <Button
+                        radius='rounded'
+                        variant='accent2'
+                        buttonType='outline'
+                        className='connect-wallet'
+                        onClick={() =>
+                            toast.error('Wallet connection is currently unavailable. Please check back soon when we launch this feature!')
+                        }
+                    >
                         Connect Wallet
                     </Button>
                 </div>

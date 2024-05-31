@@ -1,5 +1,6 @@
 // Components
 import { Button } from 'commons/components';
+import MatrixRainingLetters from './matrix';
 
 // Assets
 import { VersionsContainer } from '../css';
@@ -10,6 +11,7 @@ const Versions = () => {
         <VersionsContainer>
             <Link to='/full-version' className='left-side'>
                 <h3>Full Version BP</h3>
+                <MatrixRainingLetters />
             </Link>
             <Link to='/cool-version' className='right-side'>
                 <h3>Cool Version BP</h3>

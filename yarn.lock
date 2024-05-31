@@ -1441,6 +1441,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@babel/runtime@npm:^7.16.3":
+  version: 7.24.6
+  resolution: "@babel/runtime@npm:7.24.6"
+  dependencies:
+    regenerator-runtime: "npm:^0.14.0"
+  checksum: 10c0/224ad205de33ea28979baaec89eea4c4d4e9482000dd87d15b97859365511cdd4d06517712504024f5d33a5fb9412f9b91c96f1d923974adf9359e1575cde049
+  languageName: node
+  linkType: hard
+
 "@babel/template@npm:^7.22.15, @babel/template@npm:^7.24.0":
   version: 7.24.0
   resolution: "@babel/template@npm:7.24.0"
@@ -5084,6 +5093,7 @@ __metadata:
     react-hot-toast: "npm:^2.4.1"
     react-lottie: "npm:^1.2.4"
     react-lottie-player: "npm:^2.0.0"
+    react-mdr: "npm:^0.1.5"
     react-redux: "npm:^9.1.2"
     react-router-dom: "npm:^6.23.1"
     typescript: "npm:^5.2.2"
@@ -5979,6 +5989,18 @@ __metadata:
   peerDependencies:
     react: ">=15.0.0"
   checksum: 10c0/1a97c11a50a5ef7ca067b55ead45aa69817b4122f277744f98cb9b617a9dea5030b4fcbf0c59240909c3b685b025d538b6f558d54a76ebbd4beafdd0cc03c9d6
+  languageName: node
+  linkType: hard
+
+"react-mdr@npm:^0.1.5":
+  version: 0.1.5
+  resolution: "react-mdr@npm:0.1.5"
+  dependencies:
+    "@babel/runtime": "npm:^7.16.3"
+  peerDependencies:
+    react: ">=17.0.1"
+    react-dom: ">=17.0.1"
+  checksum: 10c0/e319bbbbbe994669a7fa58d6bde4ec7aa8b394c79438afeeaf8b611845fcadce1242750e74b3112a98b26f0b06e6909dc540f21d1a8895ea84e1f37c046ef1dc
   languageName: node
   linkType: hard
 

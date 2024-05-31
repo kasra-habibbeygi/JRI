@@ -33,6 +33,11 @@ export const VersionsContainer = styled.section(
             }
         }
 
+        .mrl-container {
+            width: 100%;
+            height: 500px;
+        }
+
         @media (max-width: 1200px) {
             .left-side {
                 padding: 30px 20px;

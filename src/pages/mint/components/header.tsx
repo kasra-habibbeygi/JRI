@@ -1,3 +1,5 @@
+import toast from 'react-hot-toast';
+
 // Assets
 import { CurveText } from 'assets/icons';
 import { HeaderContainer } from '../css';
@@ -75,7 +77,13 @@ const Header = () => {
                         <CurveText />
                     </span>
                 </div>
-                <Button className='min-button' buttonType='outline' radius='rounded' variant='accent1'>
+                <Button
+                    className='min-button'
+                    buttonType='outline'
+                    radius='rounded'
+                    variant='accent1'
+                    onClick={() => toast.error('Minting is not available yet. Please check back later when the Minting phase starts!')}
+                >
                     Mint Now
                 </Button>
             </div>
