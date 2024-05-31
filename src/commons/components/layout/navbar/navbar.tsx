@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { toggleFullVersionTitleMenu, toggleSideBarStatus } from 'store/reducers/app';
 import { useDispatch } from 'react-redux';
 
@@ -14,15 +14,13 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const { pathname } = useLocation();
 
-    console.log(pathname);
-
     return (
         <NavbarContainer>
             <div className='container'>
                 <div className='left-side'>
-                    <p className='logo'>
+                    <Link to='/' className='logo'>
                         <Logo />
-                    </p>
+                    </Link>
                     <ul>
                         <li>
                             <NavLink to='/'>Home</NavLink>

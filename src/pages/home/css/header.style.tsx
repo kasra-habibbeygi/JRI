@@ -180,8 +180,22 @@ export const HeaderContainer = styled.section(
         }
 
         @media (max-width: 400px) {
+            h1 {
+                svg {
+                    right: 110px;
+                }
+            }
+        }
+
+        @media (max-width: 400px) {
             h2 {
                 font-size: 40px;
+            }
+
+            h1 {
+                svg {
+                    right: 0;
+                }
             }
         }
     `

@@ -8,7 +8,6 @@ import { useDispatch } from 'react-redux';
 import { Helmet } from 'commons/components';
 
 // Assets
-import { LittleArrow } from 'assets/icons';
 import { FullVersionContainer, LayerContainer, MainList } from './fullVersion.style';
 import FV01 from 'assets/img/FV01.png';
 import Persons from 'assets/img/person.png';
@@ -18,15 +17,6 @@ const FullVersion = () => {
     const { hash } = useLocation();
     const dispatch = useDispatch();
     const sidebarStatus = useAppSelector(state => state.App.fullPageTitleMenu);
-    // const [collapseStatus, setCollapseStatus] = useState<string | null>(null);
-
-    // const onCollapseStatusChange = (name: string) => {
-    //     if (collapseStatus === 'name') {
-    //         setCollapseStatus(null);
-    //     } else {
-    //         setCollapseStatus(name);
-    //     }
-    // };
 
     useEffect(() => {
         if (hash) {
@@ -57,322 +47,320 @@ const FullVersion = () => {
                 onClick={() => dispatch(toggleFullVersionTitleMenu())}
             ></LayerContainer>
             <aside>
-                <ol className='main-list'>
-                    <li className='category'>Just Read It (JRI) Business Plan</li>
-                    <li>
-                        <MainList>
-                            <a href='#executive-summary' className='field'>
-                                Executive Summary <LittleArrow />
-                            </a>
-                            <MainList>
-                                <li className='field'>
-                                    <a href='#introduction'>Introduction</a>
-                                </li>
-                                <li className='field'>
-                                    <a href='#mission-statement'>Mission Statement</a>
-                                </li>
-                                <li className='field'>
-                                    <a href='#vision-statement'>Vision Statement</a>
-                                </li>
-                            </MainList>
-                        </MainList>
-                        <MainList>
-                            <a href='#business-model' className='field'>
-                                Business Model <LittleArrow />
-                            </a>
-                            <MainList>
-                                <li className='field'>
-                                    <a href='#key-objectives'>Key Objectives</a>
-                                </li>
-                                <li className='field'>
-                                    <a href='#services-overview'>Services Overview</a>
-                                </li>
-                            </MainList>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a className='field' href='#market-position'>
-                                    Market Position
-                                </a>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a className='field' href='#financial-projections'>
-                                    Financial Projections
-                                </a>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a className='field' href='#company-description'>
-                                    Company Description <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li>
-                                        <a href='#goals' className='field'>
-                                            Goals <LittleArrow />
-                                        </a>
-                                        <MainList>
-                                            <li className='field'>
-                                                <a href='#short-term-goals'>Short-Term Goals</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#long-term-goals'>Long-Term Goals</a>
-                                            </li>
-                                        </MainList>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a className='field' href='#conclusion'>
-                                    Conclusion
-                                </a>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a href='#phase-0' className='field'>
-                                    Phase 0: Distribution of JRI Contracts NFTs <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li className='field'>
-                                        <a href='#whitelist-tiers-and-OG-rewards'>Whitelist Tiers and OG Rewards</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#ranking-system'>Ranking System</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#minting-details'>Minting Details</a>
-                                    </li>
-                                    <li>
-                                        <a href='#floor-sweeping-strategy' className='field'>
-                                            Floor-Sweeping Strategy <LittleArrow />
-                                        </a>
-                                        <MainList>
-                                            <li className='field'>
-                                                <a href='#1st-day-floor-sweeping-strategy'>1st Day Floor-Sweeping Strategy</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#2nd-day-floor-sweeping-strategy'>2nd Day Floor-Sweeping Strategy</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#3rd-Day-boosting-market-growth'>3rd Day Boosting Market Growth</a>
-                                            </li>
-                                        </MainList>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#the-day'>The Day</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#ensuring-trust'>Ensuring Trust</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#reveal-date'>Reveal Date</a>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a href='#market-analysis' className='field'>
-                                    Market Analysis <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li className='field'>
-                                        <a href='#industry-overview'>Industry Overview</a>
-                                    </li>
-                                    <li>
-                                        <a href='#target-market' className='field'>
-                                            Target Market <LittleArrow />
-                                        </a>
-                                        <MainList>
-                                            <li className='field'>
-                                                <a href='#perspective-of-project-funders'>Perspective of Project Funders</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#perspective-of-individuals'>Perspective of Individuals with Ideas</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#perspective-of-skilled-individuals'>Perspective of Skilled Individuals</a>
-                                            </li>
-                                        </MainList>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#market-needs'>Market Needs</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#market-trends'>Market Trends</a>
-                                    </li>
-                                    <li>
-                                        <li>
-                                            <a href='#Competitive-Analysis' className='field'>
-                                                Competitive Analysis <LittleArrow />
-                                            </a>
-                                            <MainList>
-                                                <li>
-                                                    <a href='#SWOT-Analysis' className='field'>
-                                                        SWOT Analysis <LittleArrow />
-                                                    </a>
-                                                    <MainList>
-                                                        <li className='field'>
-                                                            <a href='#Strengths'>Strengths</a>
-                                                        </li>
-                                                        <li className='field'>
-                                                            <a href='#Weaknesses'>Weaknesses</a>
-                                                        </li>
-                                                        <li className='field'>
-                                                            <a href='#Opportunities'>Opportunities</a>
-                                                        </li>
-                                                        <li className='field'>
-                                                            <a href='#Threats'>Threats</a>
-                                                        </li>
-                                                    </MainList>
-                                                </li>
-                                            </MainList>
-                                        </li>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a href='#Marketing-Strategy' className='field'>
-                                    Marketing Strategy <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li>
-                                        <a href='#Marketing-Objectives' className='field'>
-                                            Marketing Objectives <LittleArrow />
-                                        </a>
-                                        <MainList>
-                                            <li className='field'>
-                                                <a href='#Brand-Awareness'>Brand Awareness</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#Community-Building'>Community Building</a>
-                                            </li>
-                                        </MainList>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Target-Audience'>Target Audience</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Marketing Channels'>Marketing Channels</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Growth Strategy'>Growth Strategy</a>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a href='#Financial-Plan' className='field'>
-                                    Financial Plan <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li className='field'>
-                                        <a href='#Revenue-Model'>Revenue Model</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Financial-Projections'>Financial Projections</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Funding-Requirements'>Funding Requirements</a>
-                                    </li>
-                                    <li>
-                                        <a href='#Use-of-Funds' className='field'>
-                                            Use of Funds <LittleArrow />
-                                        </a>
-                                        <MainList>
-                                            <li className='field'>
-                                                <a href='#Platform-Development'>Platform Development</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#Marketing-and-Community-Building'></a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#Operational-Costs'>Operational Costs</a>
-                                            </li>
-                                            <li className='field'>
-                                                <a href='#Research-and-Development'>Research and Development</a>
-                                            </li>
-                                        </MainList>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Explanation'>Explanation of Revenue Generation</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Net-Revenue-Calculation'>Net Revenue Calculation</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Risk-Analysis'>Risk Analysis</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Conclusion'>Conclusion</a>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a href='#Organization-and-Management' className='field'>
-                                    Organization and Management <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li>
-                                        <a href='#Organizational-Structure' className='field'>
-                                            Organizational Structure <LittleArrow />
-                                        </a>
-                                        <MainList>
-                                            <li className='field'>
-                                                <a href='#Team-Members'>Team Members</a>
-                                            </li>
-                                        </MainList>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
-                        <MainList>
-                            <li>
-                                <a href='#Legal-and-Regulatory' className='field'>
-                                    Legal and Regulatory Compliance <LittleArrow />
-                                </a>
-                                <MainList>
-                                    <li className='field'>
-                                        <a href='#Blockchain-and-Legal-Compliance'>Blockchain and Legal Compliance</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#KYC'>Know Your Customer (KYC) and Anti-Money Laundering (AML) Compliance</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Data-Protection'>Data Protection and Privacy Regulations</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Smart-Contract-Audits'>Smart Contract Audits</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Intellectual'>Intellectual Property Rights</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Jurisdictional'>Jurisdictional Considerations</a>
-                                    </li>
-                                    <li className='field'>
-                                        <a href='#Legal-Counsel'>Legal Counsel and Compliance Oversight</a>
-                                    </li>
-                                </MainList>
-                            </li>
-                        </MainList>
+                <b className='title'>Read It (JRI) Business Plan</b>
+                <div className='main-list'>
+                    <div className='main-category'>
+                        <a href='#executive-summary' className='field'>
+                            Executive Summary
+                        </a>
                         <MainList>
                             <li className='field'>
-                                <a href='#Final-Thoughts'>Final Thoughts</a>
+                                <a href='#introduction'>Introduction</a>
+                            </li>
+                            <li className='field'>
+                                <a href='#mission-statement'>Mission Statement</a>
+                            </li>
+                            <li className='field'>
+                                <a href='#vision-statement'>Vision Statement</a>
                             </li>
                         </MainList>
-                    </li>
-                </ol>
+                    </div>
+                    <div className='main-category'>
+                        <a href='#business-model' className='field'>
+                            Business Model
+                        </a>
+                        <MainList>
+                            <li className='field'>
+                                <a href='#key-objectives'>Key Objectives</a>
+                            </li>
+                            <li className='field'>
+                                <a href='#services-overview'>Services Overview</a>
+                            </li>
+                        </MainList>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a className='field' href='#market-position'>
+                                Market Position
+                            </a>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a className='field' href='#financial-projections'>
+                                Financial Projections
+                            </a>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a className='field' href='#company-description'>
+                                Company Description
+                            </a>
+                            <MainList>
+                                <li>
+                                    <a href='#goals' className='field'>
+                                        Goals
+                                    </a>
+                                    <MainList>
+                                        <li className='field'>
+                                            <a href='#short-term-goals'>Short-Term Goals</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#long-term-goals'>Long-Term Goals</a>
+                                        </li>
+                                    </MainList>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a className='field' href='#conclusion'>
+                                Conclusion
+                            </a>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a href='#phase-0' className='field'>
+                                Phase 0: Distribution of JRI Contracts NFTs
+                            </a>
+                            <MainList>
+                                <li className='field'>
+                                    <a href='#whitelist-tiers-and-OG-rewards'>Whitelist Tiers and OG Rewards</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#ranking-system'>Ranking System</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#minting-details'>Minting Details</a>
+                                </li>
+                                <li>
+                                    <a href='#floor-sweeping-strategy' className='field'>
+                                        Floor-Sweeping Strategy
+                                    </a>
+                                    <MainList>
+                                        <li className='field'>
+                                            <a href='#1st-day-floor-sweeping-strategy'>1st Day Floor-Sweeping Strategy</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#2nd-day-floor-sweeping-strategy'>2nd Day Floor-Sweeping Strategy</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#3rd-Day-boosting-market-growth'>3rd Day Boosting Market Growth</a>
+                                        </li>
+                                    </MainList>
+                                </li>
+                                <li className='field'>
+                                    <a href='#the-day'>The Day</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#ensuring-trust'>Ensuring Trust</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#reveal-date'>Reveal Date</a>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a href='#market-analysis' className='field'>
+                                Market Analysis
+                            </a>
+                            <MainList>
+                                <li className='field'>
+                                    <a href='#industry-overview'>Industry Overview</a>
+                                </li>
+                                <li>
+                                    <a href='#target-market' className='field'>
+                                        Target Market
+                                    </a>
+                                    <MainList>
+                                        <li className='field'>
+                                            <a href='#perspective-of-project-funders'>Perspective of Project Funders</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#perspective-of-individuals'>Perspective of Individuals with Ideas</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#perspective-of-skilled-individuals'>Perspective of Skilled Individuals</a>
+                                        </li>
+                                    </MainList>
+                                </li>
+                                <li className='field'>
+                                    <a href='#market-needs'>Market Needs</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#market-trends'>Market Trends</a>
+                                </li>
+                                <li>
+                                    <li>
+                                        <a href='#Competitive-Analysis' className='field'>
+                                            Competitive Analysis
+                                        </a>
+                                        <MainList>
+                                            <li>
+                                                <a href='#SWOT-Analysis' className='field'>
+                                                    SWOT Analysis
+                                                </a>
+                                                <MainList>
+                                                    <li className='field'>
+                                                        <a href='#Strengths'>Strengths</a>
+                                                    </li>
+                                                    <li className='field'>
+                                                        <a href='#Weaknesses'>Weaknesses</a>
+                                                    </li>
+                                                    <li className='field'>
+                                                        <a href='#Opportunities'>Opportunities</a>
+                                                    </li>
+                                                    <li className='field'>
+                                                        <a href='#Threats'>Threats</a>
+                                                    </li>
+                                                </MainList>
+                                            </li>
+                                        </MainList>
+                                    </li>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a href='#Marketing-Strategy' className='field'>
+                                Marketing Strategy
+                            </a>
+                            <MainList>
+                                <li>
+                                    <a href='#Marketing-Objectives' className='field'>
+                                        Marketing Objectives
+                                    </a>
+                                    <MainList>
+                                        <li className='field'>
+                                            <a href='#Brand-Awareness'>Brand Awareness</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#Community-Building'>Community Building</a>
+                                        </li>
+                                    </MainList>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Target-Audience'>Target Audience</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Marketing Channels'>Marketing Channels</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Growth Strategy'>Growth Strategy</a>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a href='#Financial-Plan' className='field'>
+                                Financial Plan
+                            </a>
+                            <MainList>
+                                <li className='field'>
+                                    <a href='#Revenue-Model'>Revenue Model</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Financial-Projections'>Financial Projections</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Funding-Requirements'>Funding Requirements</a>
+                                </li>
+                                <li>
+                                    <a href='#Use-of-Funds' className='field'>
+                                        Use of Funds
+                                    </a>
+                                    <MainList>
+                                        <li className='field'>
+                                            <a href='#Platform-Development'>Platform Development</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#Marketing-and-Community-Building'></a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#Operational-Costs'>Operational Costs</a>
+                                        </li>
+                                        <li className='field'>
+                                            <a href='#Research-and-Development'>Research and Development</a>
+                                        </li>
+                                    </MainList>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Explanation'>Explanation of Revenue Generation</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Net-Revenue-Calculation'>Net Revenue Calculation</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Risk-Analysis'>Risk Analysis</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Conclusion'>Conclusion</a>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a href='#Organization-and-Management' className='field'>
+                                Organization and Management
+                            </a>
+                            <MainList>
+                                <li>
+                                    <a href='#Organizational-Structure' className='field'>
+                                        Organizational Structure
+                                    </a>
+                                    <MainList>
+                                        <li className='field'>
+                                            <a href='#Team-Members'>Team Members</a>
+                                        </li>
+                                    </MainList>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li>
+                            <a href='#Legal-and-Regulatory' className='field'>
+                                Legal and Regulatory Compliance
+                            </a>
+                            <MainList>
+                                <li className='field'>
+                                    <a href='#Blockchain-and-Legal-Compliance'>Blockchain and Legal Compliance</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#KYC'>Know Your Customer (KYC) and Anti-Money Laundering (AML) Compliance</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Data-Protection'>Data Protection and Privacy Regulations</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Smart-Contract-Audits'>Smart Contract Audits</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Intellectual'>Intellectual Property Rights</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Jurisdictional'>Jurisdictional Considerations</a>
+                                </li>
+                                <li className='field'>
+                                    <a href='#Legal-Counsel'>Legal Counsel and Compliance Oversight</a>
+                                </li>
+                            </MainList>
+                        </li>
+                    </div>
+                    <div className='main-category'>
+                        <li className='field'>
+                            <a href='#Final-Thoughts'>Final Thoughts</a>
+                        </li>
+                    </div>
+                </div>
             </aside>
             <article>
                 <h3 id='executive-summary'>Executive Summary</h3>

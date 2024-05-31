@@ -52,13 +52,14 @@ export const WhiteListContainer = styled.section(
                 color: ${theme.colors.text.accent2};
                 font-size: 36px;
                 font-weight: 500;
-                min-width: max-content;
+                max-width: 200px;
+                min-width: 200px;
             }
         }
 
         .roles {
-            max-width: 182px;
-            min-width: 182px;
+            max-width: 220px;
+            min-width: 220px;
         }
 
         .u-item {
@@ -113,9 +114,9 @@ export const WhiteListContainer = styled.section(
             }
         }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             .table {
-                min-width: 1100px;
+                min-width: 1200px;
 
                 .title {
                     font-size: 20px;
@@ -167,9 +168,9 @@ export const ProgressBar = styled.div<{ percent: number }>(
             background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
             content: '';
             position: absolute;
-            width: calc(${percent}% + 6px);
-            height: 116%;
-            top: -2px;
+            width: ${percent === 0 ? '0' : `calc(${percent}% + 6px)`};
+            height: 110%;
+            top: -1px;
             left: -5px;
             z-index: 1;
         }

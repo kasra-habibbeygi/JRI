@@ -3,8 +3,6 @@ import styled from '@emotion/styled';
 
 export const FullVersionContainer = styled.section<{ status: boolean }>(
     ({ theme, status }) => css`
-        display: flex;
-        gap: 80px;
         margin-top: 80px;
         margin-bottom: 120px;
 
@@ -12,8 +10,16 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
             color: black;
         }
 
+        .title {
+            margin-bottom: 10px;
+            display: block;
+        }
+
         aside {
-            min-width: 350px;
+            width: 300px;
+            position: relative;
+            position: fixed;
+            top: 100px;
 
             .active {
                 color: ${theme.colors.text.accent2};
@@ -21,10 +27,8 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
 
             .main-list {
                 list-style: none;
-                position: sticky;
-                top: 40px;
                 overflow: auto;
-                max-height: 82vh;
+                max-height: 80vh;
                 padding-right: 10px;
 
                 .category {
@@ -69,14 +73,19 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
                     width: 100%;
 
                     &:hover {
-                        background-color: #ededed;
+                        background-color: #8a63d21f;
+
+                        a {
+                            color: ${theme.colors.text.accent2};
+                        }
                     }
                 }
             }
         }
 
         article {
-            width: 100%;
+            width: calc(100% - 350px);
+            margin-left: auto;
             display: block;
 
             h3 {
@@ -137,7 +146,7 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
             }
         }
 
-        @media (max-width: 992px) {
+        @media (max-width: 1200px) {
             aside {
                 position: fixed;
                 top: 0;
@@ -146,7 +155,7 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
                 width: 300px;
                 height: 100vh;
                 background-color: white;
-                z-index: 999;
+                z-index: 99999;
                 transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
 
                 .main-list {
@@ -154,6 +163,10 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
                     max-height: 100%;
                     padding: 20px;
                 }
+            }
+
+            article {
+                width: 100%;
             }
         }
     `
@@ -195,6 +208,6 @@ export const LayerContainer = styled.span<{ status: boolean }>(
         opacity: ${status ? '0.6' : '0'};
         pointer-events: ${status ? 'initial' : 'none'};
         cursor: pointer;
-        z-index: 999;
+        z-index: 99999;
     `
 );

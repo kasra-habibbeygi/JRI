@@ -8,6 +8,10 @@ export const NavbarContainer = styled.nav(
         border-bottom: 1px solid ${theme.colors.text.accent2};
         display: flex;
         align-items: center;
+        position: sticky;
+        top: 0;
+        background-color: white;
+        z-index: 9999;
 
         .container {
             display: flex;

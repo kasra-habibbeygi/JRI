@@ -31,7 +31,8 @@ export const SecurityContainer = styled.section(
             }
 
             .road-map {
-                width: 100%;
+                width: 90%;
+                margin: 0 auto;
             }
         }
 
@@ -77,11 +78,6 @@ export const SecurityContainer = styled.section(
 
         @media (max-width: 992px) {
             flex-direction: column;
-
-            .left-side .road-map {
-                width: 50%;
-                margin: auto;
-            }
 
             .left-side {
                 min-width: unset;

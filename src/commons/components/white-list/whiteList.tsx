@@ -11,7 +11,7 @@ const WhiteList = () => {
                 <div className='table'>
                     <div className='thead'>
                         <div className='tr'>
-                            <div className='th'></div>
+                            <div className='th title'></div>
                             <div className='th'>Mint Time</div>
                             <div className='th'>Mint Price</div>
                             <div className='th'>Ranking</div>
@@ -26,7 +26,7 @@ const WhiteList = () => {
                             <div className='td'>0.005 ETH</div>
                             <div className='td'>2000</div>
                             <div className='td u-item'>65 ETH, 100 Pcs</div>
-                            <td className='pill-field'>
+                            <td className='pill-field roles'>
                                 <div>
                                     <span className='black-outline'>10 OG</span>
                                     <span className='gold'>90 Gold Tier</span>
@@ -47,7 +47,7 @@ const WhiteList = () => {
                             <div className='td'>0.01 ETH</div>
                             <div className='td'>600</div>
                             <div className='td u-item'>18 ETH, 90 Pcs</div>
-                            <td className='pill-field'>
+                            <td className='pill-field roles'>
                                 <span className='silver'>1000 Silver Tier</span>
                             </td>
                         </div>
@@ -65,7 +65,7 @@ const WhiteList = () => {
                             <div className='td'>0.02 ETH</div>
                             <div className='td'>400</div>
                             <div className='td u-item'>90 ETH, 900 Pcs</div>
-                            <td className='pill-field'>
+                            <td className='pill-field roles'>
                                 <span className='bronze'>10000 Bronze Tier</span>
                             </td>
                         </div>
