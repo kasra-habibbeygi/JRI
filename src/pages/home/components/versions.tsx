@@ -16,11 +16,11 @@ const Versions = () => {
         <VersionsContainer>
             <Link to='/full-version' className='left-side'>
                 <h3>
-                    Full Version BP <span className='question'>??</span>
+                    Full Version BP
                     <Swiper
                         className='mySwiper'
                         autoplay={{
-                            delay: 3000
+                            delay: 1500
                         }}
                         effect={'fade'}
                         modules={[Autoplay, EffectFade]}

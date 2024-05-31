@@ -148,20 +148,22 @@ export const FullVersionContainer = styled.section<{ status: boolean }>(
 
         @media (max-width: 1200px) {
             aside {
+                padding: 16px;
                 position: fixed;
                 top: 0;
-                left: ${status ? '0' : '-350px'};
+                transform: ${status ? 'translateX(-14px)' : 'translateX(-350px)'};
                 min-width: 300px;
                 width: 300px;
                 height: 100vh;
                 background-color: white;
                 z-index: 99999;
                 transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s;
+                padding-bottom: 50px;
 
                 .main-list {
                     top: 40px;
                     max-height: 100%;
-                    padding: 20px;
+                    padding-right: 4px;
                 }
             }
 

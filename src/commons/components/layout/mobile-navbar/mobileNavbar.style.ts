@@ -5,7 +5,7 @@ export const MobileNavbarContainer = styled.aside<{ status: boolean }>(
     ({ theme, status }) => css`
         position: fixed;
         top: 0;
-        left: ${status ? '0' : '-300px'};
+        transform: ${status ? 'translateX(0)' : 'translateX(-300px)'};
         width: 280px;
         height: 100vh;
         background-color: white;

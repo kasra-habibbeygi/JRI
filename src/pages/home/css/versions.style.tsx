@@ -30,21 +30,6 @@ export const VersionsContainer = styled.section(
             color: white;
             display: block;
 
-            .question {
-                position: relative;
-                left: -50px;
-                opacity: 0;
-                transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
-                z-index: 20;
-            }
-
-            &:hover {
-                .question {
-                    left: 0;
-                    opacity: 1;
-                }
-            }
-
             .slider-inner-text {
                 opacity: 0.5;
                 font-size: 120px;
@@ -114,12 +99,9 @@ export const VersionsContainer = styled.section(
 
         @media (max-width: 1200px) {
             .looper {
-                position: absolute;
                 top: -100px;
                 right: -150px;
-                animation: ${RotateAnimate} 60s linear infinite;
                 width: 700px;
-                height: auto;
             }
         }
 

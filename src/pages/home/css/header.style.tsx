@@ -77,7 +77,7 @@ export const HeaderContainer = styled.section(
                 width: 48px;
                 height: 48px;
                 position: absolute;
-                top: -30px;
+                top: 0;
                 right: -40px;
                 animation: ${mirror} 2s ease-in infinite;
             }
@@ -124,6 +124,16 @@ export const HeaderContainer = styled.section(
                 width: 120px;
                 color: white;
             }
+        }
+
+        button {
+            border: 1px solid ${theme.colors.text.accent2};
+            color: ${theme.colors.text.accent2} !important;
+            width: 276px;
+            height: 32px;
+            font-size: 16px !important;
+            font-weight: 300 !important;
+            margin-bottom: 15px;
         }
 
         .arrow-field {
