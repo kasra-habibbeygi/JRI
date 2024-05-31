@@ -20,58 +20,30 @@ export const HeaderContainer = styled.section(
         border-bottom: 1px solid black;
 
         .main-noise-field {
-            width: 750px;
-            height: 200px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .mask {
-            position: absolute;
-            mask-image: radial-gradient(ellipse, black 50%, rgba(0, 0, 0, 0.5) 50%);
-            background: red;
-            mask-repeat: no-repeat;
-            width: 750px;
-            mask-size: 20px;
-            height: 200px;
-            width: 200;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #f5f5f5;
-        }
-
-        h1 {
-            cursor: default;
-            background-color: white;
             width: 100%;
-            height: 100%;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .mask-img {
             width: 50%;
             height: auto;
-            position: relative;
-            top: 20px;
-        }
-
-        p {
-            font-size: 2rem;
-        }
-
-        .back-image {
             position: absolute;
-            top: 20px;
-            width: 50%;
-            height: auto;
             opacity: 0.2;
+        }
+
+        .main-noise-field {
+            display: flex;
+            position: relative;
+            align-items: center;
         }
 
         #c {
             width: 100%;
             height: 100%;
+            opacity: 0.6;
         }
 
         .left-field {

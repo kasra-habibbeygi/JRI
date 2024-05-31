@@ -1,14 +1,26 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+
+const RotateAnimate = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 export const VersionsContainer = styled.section(
     () => css`
         background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
         height: 500px;
         display: flex;
+        position: relative;
+        overflow: hidden;
 
         .left-side {
-            width: 40%;
+            min-width: 40%;
+            max-width: 40%;
             border-right: 10px solid white;
             padding: 60px 80px;
             display: flex;
@@ -16,12 +28,62 @@ export const VersionsContainer = styled.section(
             flex-direction: column;
             font-size: 36px;
             color: white;
+            display: block;
+
+            .question {
+                position: relative;
+                left: -50px;
+                opacity: 0;
+                transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+                z-index: 20;
+            }
+
+            &:hover {
+                .question {
+                    left: 0;
+                    opacity: 1;
+                }
+            }
+
+            .slider-inner-text {
+                opacity: 0.5;
+                font-size: 120px;
+                height: 320px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .swiper-slide {
+                opacity: 0 !important;
+            }
+
+            .swiper-slide-active {
+                opacity: 1 !important;
+            }
         }
 
         .right-side {
             padding: 60px 80px;
             font-size: 36px;
             color: white;
+            display: block;
+            width: 100%;
+
+            .smile {
+                position: relative;
+                left: -50px;
+                opacity: 0;
+                transition: all cubic-bezier(0.25, 0.8, 0.25, 1) 0.3s;
+                z-index: 20;
+            }
+
+            &:hover {
+                .smile {
+                    left: 0;
+                    opacity: 1;
+                }
+            }
 
             button {
                 border: 1px solid white;
@@ -31,11 +93,34 @@ export const VersionsContainer = styled.section(
                 font-size: 16px !important;
                 font-weight: 300 !important;
             }
+
+            .content {
+                position: relative;
+                z-index: 50;
+            }
         }
 
         .mrl-container {
             width: 100%;
             height: 500px;
+        }
+
+        .looper {
+            position: absolute;
+            top: -240px;
+            right: -150px;
+            animation: ${RotateAnimate} 60s linear infinite;
+        }
+
+        @media (max-width: 1200px) {
+            .looper {
+                position: absolute;
+                top: -100px;
+                right: -150px;
+                animation: ${RotateAnimate} 60s linear infinite;
+                width: 700px;
+                height: auto;
+            }
         }
 
         @media (max-width: 1200px) {
@@ -58,10 +143,29 @@ export const VersionsContainer = styled.section(
 
             .left-side {
                 align-items: flex-start;
-                width: 100%;
+                min-width: 100%;
+                max-width: 100%;
                 border-right: 0;
                 border-bottom: 8px solid white;
-                height: 200px;
+                height: 230px;
+
+                .slider-inner-text {
+                    font-size: 50px;
+                    height: 150px;
+                }
+
+                .swiper-slide {
+                    opacity: 0 !important;
+                }
+
+                .swiper-slide-active {
+                    opacity: 1 !important;
+                }
+            }
+
+            .looper {
+                top: 100px;
+                right: -250px;
             }
         }
     `

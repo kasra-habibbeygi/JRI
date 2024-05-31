@@ -1,14 +1,15 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { useEffect } from 'react';
 import toast from 'react-hot-toast';
 
 // Assets
 import { CurveText } from 'assets/icons';
 import { HeaderContainer } from '../css';
+import Person from 'assets/img/person.png';
 
 // Components
 import { Button } from 'commons/components';
-import { useEffect } from 'react';
 
 const Header = () => {
     useEffect(() => {
@@ -56,44 +57,44 @@ const Header = () => {
                     </header>
                     <ul>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x90e2…7832</span>
+                            <span>11700</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x9b11…9e9b</span>
+                            <span>11150</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x6bed…9328</span>
+                            <span>11150</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>warpbase.eth</span>
+                            <span>9950</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>greensheep.eth</span>
+                            <span>9900</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x962c…e5ad</span>
+                            <span>9750</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x13e0…a053</span>
+                            <span>9750</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x60e8…d02e</span>
+                            <span>9700</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x9121…c4f8</span>
+                            <span>9350</span>
                         </li>
                         <li>
-                            <span>KSD28190divine</span>
-                            <span>1100</span>
+                            <span>0x56c8…9a69</span>
+                            <span>9350</span>
                         </li>
                     </ul>
                 </div>
@@ -113,14 +114,17 @@ const Header = () => {
                     <span className='animated-text'>
                         <CurveText />
                     </span>
-                    <canvas id='c' width='750' height='200'></canvas>
+                    <div className='main-noise-field'>
+                        <img src={Person} alt='' className='mask-img' />
+                        <canvas id='c' width='750' height='200'></canvas>
+                    </div>
                 </div>
                 <Button
                     className='min-button'
                     buttonType='outline'
                     radius='rounded'
                     variant='accent1'
-                    onClick={() => toast.error('Minting is not available yet. Please check back later when the Minting phase starts!')}
+                    onClick={() => toast.error('You should connect your wallet first, So wait until end of the June :)')}
                 >
                     Mint Now
                 </Button>

@@ -50,9 +50,7 @@ const Navbar = () => {
                         variant='accent2'
                         buttonType='outline'
                         className='connect-wallet'
-                        onClick={() =>
-                            toast.error('Wallet connection is currently unavailable. Please check back soon when we launch this feature!')
-                        }
+                        onClick={() => toast.error('Wait until end of the June!')}
                     >
                         Connect Wallet
                     </Button>
