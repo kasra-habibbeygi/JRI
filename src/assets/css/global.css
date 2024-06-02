@@ -7,55 +7,55 @@
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-Thin.ttf');
+    src: url('../fonts/Nohemi-Thin.ttf');
     font-weight: 100;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-ExtraLight.ttf');
+    src: url('../fonts/Nohemi-ExtraLight.ttf');
     font-weight: 200;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-Light.ttf');
+    src: url('../fonts/Nohemi-Light.ttf');
     font-weight: 300;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-Regular.ttf');
+    src: url('../fonts/Nohemi-Regular.ttf');
     font-weight: 400;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-Medium.ttf');
+    src: url('../fonts/Nohemi-Medium.ttf');
     font-weight: 500;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-Bold.ttf');
+    src: url('../fonts/Nohemi-Bold.ttf');
     font-weight: 600;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-SemiBold.ttf');
+    src: url('../fonts/Nohemi-SemiBold.ttf');
     font-weight: 700;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-ExtraBold.ttf');
+    src: url('../fonts/Nohemi-ExtraBold.ttf');
     font-weight: 800;
 }
 
 @font-face {
     font-family: 'main';
-    src: url('fonts/Nohemi-Black.ttf');
+    src: url('../fonts/Nohemi-Black.ttf');
     font-weight: 900;
 }
 
