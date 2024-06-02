@@ -27,6 +27,31 @@ export const HeaderContainer = styled.section(
             justify-content: center;
         }
 
+        .search-field {
+            position: relative;
+            display: flex;
+            align-items: center;
+            display: none;
+
+            input {
+                width: 100%;
+                height: 46px;
+                color: black;
+                font-size: 16px;
+                background-color: white;
+                border: 2px solid #f0f2f5;
+                padding-left: 52px;
+            }
+
+            svg {
+                width: 24px;
+                height: auto;
+                color: #bababa;
+                position: absolute;
+                left: 16px;
+            }
+        }
+
         .mask-img {
             width: 50%;
             height: auto;

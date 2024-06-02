@@ -1,9 +1,30 @@
+import axios from 'axios';
+import { useEffect, useState } from 'react';
+
+// Components
 import { ProgressBar, WhiteListContainer } from './whiteList.style';
+
+// Types
+interface ILeaderBoardData {
+    leaderboard: {
+        totalPoints: number;
+        address: string;
+    }[];
+    total: number;
+}
 
 // One of the reasons I didn't use the TABLE tag for this table was that it caused a
 // serious bug in Safari due to the gradient and progress, so I had to implement it this way.
 
 const WhiteList = () => {
+    const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData>(null);
+
+    useEffect(() => {
+        axios.get('https://api-jri.com/v1/LeaderBoard').then(res => setLeaderBoardData(res.data));
+    }, []);
+
+    console.log(leaderBoardData?.total);
+
     return (
         <WhiteListContainer>
             <small className='last-update'>This table refreshes automatically every day to provide the latest information</small>
@@ -53,9 +74,9 @@ const WhiteList = () => {
                                 <span className='bronze'>10000 Bronze Tier</span>
                             </td>
                         </div>
-                        <ProgressBar percent={(197 * 100) / 11100}>
+                        <ProgressBar percent={leaderBoardData ? (leaderBoardData?.total * 100) / 11100 : 0}>
                             <span className='progress-line'></span>
-                            <div className='text'>197/11100</div>
+                            <div className='text'>{leaderBoardData?.total}/11100</div>
                         </ProgressBar>
                     </div>
                 </div>

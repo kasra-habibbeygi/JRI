@@ -13,3 +13,4 @@ export { default as Linkedin } from './linkedin.svg?react';
 export { default as Document } from './document.svg?react';
 export { default as Looper } from './Looper.svg?react';
 export { default as Clone } from './clone.svg?react';
+export { default as Search } from './search.svg?react';

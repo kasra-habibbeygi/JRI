@@ -939,14 +939,14 @@ const FullVersion = () => {
                 <h4 id='Team-Members'>Team Members:</h4>
                 <ul className='team-field'>
                     <li>
-                        H. Karimi - CEO
-                        <a href='https://www.linkedin.com/in/karimi-hamid/' target='_blank'>
+                        S. Sepehrnoush - CEO
+                        <a href='https://www.linkedin.com/in/s-sepehrnoush/' target='_blank'>
                             LinkedIn
                         </a>
                     </li>
                     <li>
-                        M. Sepehrnoush - CTO
-                        <a href='https://www.linkedin.com/in/msepehrnoush' target='_blank'>
+                        H. Karimi - CTO
+                        <a href='https://www.linkedin.com/in/karimi-hamid/' target='_blank'>
                             LinkedIn
                         </a>
                     </li>
@@ -963,8 +963,8 @@ const FullVersion = () => {
                         </a>
                     </li>
                     <li>
-                        S. Sepehrnoush - Lead Developer
-                        <a href='https://www.linkedin.com/in/s-sepehrnoush/' target='_blank'>
+                        R. Sepehrnoush - Lead Developer
+                        <a href='https://www.linkedin.com/in/msepehrnoush' target='_blank'>
                             LinkedIn
                         </a>
                     </li>

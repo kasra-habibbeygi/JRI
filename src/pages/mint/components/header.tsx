@@ -5,7 +5,7 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 
 // Assets
-import { CurveText } from 'assets/icons';
+import { CurveText, Search } from 'assets/icons';
 import { HeaderContainer } from '../css';
 import Person from 'assets/img/person.png';
 
@@ -26,6 +26,7 @@ function shortenAddress(address: string) {
 
 const Header = () => {
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
+    const [searchValue, setSearchValue] = useState('');
 
     useEffect(() => {
         // @ts-ignore
@@ -68,6 +69,15 @@ const Header = () => {
             <div className='left-field'>
                 <h3>LEADERBOARD</h3>
                 <div className='table-field'>
+                    <div className='search-field'>
+                        <Search />
+                        <input
+                            type='text'
+                            placeholder='Search your user id'
+                            value={searchValue}
+                            onChange={e => setSearchValue(e.target.value)}
+                        />
+                    </div>
                     <header className='header'>
                         <span>User ID</span>
                         <span>Score</span>
