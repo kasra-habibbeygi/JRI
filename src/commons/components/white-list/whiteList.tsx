@@ -53,9 +53,9 @@ const WhiteList = () => {
                                 <span className='bronze'>10000 Bronze Tier</span>
                             </td>
                         </div>
-                        <ProgressBar percent={(88 * 100) / 11100}>
+                        <ProgressBar percent={(197 * 100) / 11100}>
                             <span className='progress-line'></span>
-                            <div className='text'>88/11100</div>
+                            <div className='text'>197/11100</div>
                         </ProgressBar>
                     </div>
                 </div>

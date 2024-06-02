@@ -81,44 +81,44 @@ const Header = () => {
                                 </li>
                             ))} */}
                         <li>
-                            <span>0x90e2…7832</span>
-                            <span>11700</span>
-                        </li>
-                        <li>
                             <span>0x9b11…9e9b</span>
-                            <span>11150</span>
-                        </li>
-                        <li>
-                            <span>0x6bed…9328</span>
-                            <span>11150</span>
-                        </li>
-                        <li>
-                            <span>warpbase.eth</span>
-                            <span>9950</span>
-                        </li>
-                        <li>
-                            <span>greensheep.eth</span>
-                            <span>9900</span>
-                        </li>
-                        <li>
-                            <span>0x962c…e5ad</span>
-                            <span>9750</span>
+                            <span>33630</span>
                         </li>
                         <li>
                             <span>0x13e0…a053</span>
-                            <span>9750</span>
+                            <span>24930</span>
                         </li>
                         <li>
-                            <span>0x60e8…d02e</span>
-                            <span>9700</span>
+                            <span>warpbase.eth</span>
+                            <span>24930</span>
                         </li>
                         <li>
-                            <span>0x9121…c4f8</span>
-                            <span>9350</span>
+                            <span>iashish.eth</span>
+                            <span>21350</span>
                         </li>
                         <li>
-                            <span>0x56c8…9a69</span>
-                            <span>9350</span>
+                            <span>0x962c…e5ad</span>
+                            <span>19630</span>
+                        </li>
+                        <li>
+                            <span>0x90e2…7832</span>
+                            <span>19630</span>
+                        </li>
+                        <li>
+                            <span>0x944d…4a56</span>
+                            <span>19630</span>
+                        </li>
+                        <li>
+                            <span>0xb56b…e32d</span>
+                            <span>19430</span>
+                        </li>
+                        <li>
+                            <span>0xe6b6…30d0</span>
+                            <span>19080</span>
+                        </li>
+                        <li>
+                            <span>0x123a…bb41</span>
+                            <span>18950</span>
                         </li>
                     </ul>
                 </div>
