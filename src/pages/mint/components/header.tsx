@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
-// import axios from 'axios';
+import axios from 'axios';
 
 // Assets
 import { CurveText } from 'assets/icons';
@@ -13,19 +13,19 @@ import Person from 'assets/img/person.png';
 import { Button } from 'commons/components';
 
 // Types
-// interface ILeaderBoardData {
-//     address: string;
-//     totalPoints: number;
-// }
+interface ILeaderBoardData {
+    address: string;
+    totalPoints: number;
+}
 
-// function shortenAddress(address: string) {
-//     const firstPart = address.slice(0, 6);
-//     const lastPart = address.slice(-4);
-//     return `${firstPart}…${lastPart}`;
-// }
+function shortenAddress(address: string) {
+    const firstPart = address.slice(0, 6);
+    const lastPart = address.slice(-4);
+    return `${firstPart}…${lastPart}`;
+}
 
 const Header = () => {
-    // const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
+    const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
 
     useEffect(() => {
         // @ts-ignore
@@ -60,7 +60,7 @@ const Header = () => {
             ctx.putImageData(idata, 0, 0);
         }
 
-        // axios.get('https://103.75.199.27:4431/LeaderBoard').then(res => setLeaderBoardData(res.data.splice(0, 10)));
+        axios.get('https://api-jri.com/LeaderBoard').then(res => setLeaderBoardData(res.data.splice(0, 10)));
     }, []);
 
     return (
@@ -73,53 +73,13 @@ const Header = () => {
                         <span>Score</span>
                     </header>
                     <ul>
-                        {/* {leaderBoardData &&
+                        {leaderBoardData &&
                             leaderBoardData.map((item, index) => (
                                 <li key={`leader-board-${index}`}>
                                     <span>{shortenAddress(item.address)}</span>
                                     <span>{item.totalPoints.toLocaleString()}</span>
                                 </li>
-                            ))} */}
-                        <li>
-                            <span>0x9b11…9e9b</span>
-                            <span>33630</span>
-                        </li>
-                        <li>
-                            <span>0x13e0…a053</span>
-                            <span>24930</span>
-                        </li>
-                        <li>
-                            <span>warpbase.eth</span>
-                            <span>24930</span>
-                        </li>
-                        <li>
-                            <span>iashish.eth</span>
-                            <span>21350</span>
-                        </li>
-                        <li>
-                            <span>0x962c…e5ad</span>
-                            <span>19630</span>
-                        </li>
-                        <li>
-                            <span>0x90e2…7832</span>
-                            <span>19630</span>
-                        </li>
-                        <li>
-                            <span>0x944d…4a56</span>
-                            <span>19630</span>
-                        </li>
-                        <li>
-                            <span>0xb56b…e32d</span>
-                            <span>19430</span>
-                        </li>
-                        <li>
-                            <span>0xe6b6…30d0</span>
-                            <span>19080</span>
-                        </li>
-                        <li>
-                            <span>0x123a…bb41</span>
-                            <span>18950</span>
-                        </li>
+                            ))}
                     </ul>
                 </div>
             </div>
