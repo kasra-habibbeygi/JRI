@@ -55,5 +55,9 @@ export const FooterContainer = styled.footer(
                 color: ${theme.colors.text.accent1};
             }
         }
+
+        @media (max-width: 1300px) {
+            margin-bottom: 130px;
+        }
     `
 );

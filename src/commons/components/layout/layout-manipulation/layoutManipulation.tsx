@@ -5,6 +5,7 @@ import { FC, ReactNode } from 'react';
 // Components
 import Footer from '../footer';
 import Navbar from '../navbar';
+import Sticker from '../sticker';
 import MobileNavbar from '../mobile-navbar';
 
 // Types
@@ -17,6 +18,7 @@ const MainLayout: FC<IMainLayout> = ({ children }) => {
         <>
             <Navbar />
             <MobileNavbar />
+            <Sticker />
             {children}
             <Footer />
         </>

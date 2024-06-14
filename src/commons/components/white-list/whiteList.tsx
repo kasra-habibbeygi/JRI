@@ -23,8 +23,6 @@ const WhiteList = () => {
         axios.get('https://api-jri.com/v1/LeaderBoard').then(res => setLeaderBoardData(res.data));
     }, []);
 
-    console.log(leaderBoardData?.total);
-
     return (
         <WhiteListContainer>
             <small className='last-update'>This table refreshes automatically every day to provide the latest information</small>
