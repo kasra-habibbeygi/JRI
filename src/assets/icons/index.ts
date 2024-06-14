@@ -14,3 +14,4 @@ export { default as Document } from './document.svg?react';
 export { default as Looper } from './Looper.svg?react';
 export { default as Clone } from './clone.svg?react';
 export { default as Search } from './search.svg?react';
+export { default as NotFound } from './not-found.svg?react';

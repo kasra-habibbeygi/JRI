@@ -20,7 +20,7 @@ const WhiteList = () => {
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData>(null);
 
     useEffect(() => {
-        axios.get('https://api-jri.com/v1/LeaderBoard').then(res => setLeaderBoardData(res.data));
+        axios.get('https://api-jri.com/v2/LeaderBoard').then(res => setLeaderBoardData(res.data));
     }, []);
 
     return (

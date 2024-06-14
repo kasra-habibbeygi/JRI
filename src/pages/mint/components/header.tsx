@@ -1,68 +1,50 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
 import axios from 'axios';
 
 // Assets
-import { CurveText, Search } from 'assets/icons';
+import { CurveText, NotFound, Search } from 'assets/icons';
 import { HeaderContainer } from '../css';
 import Person from 'assets/img/person.png';
 
 // Components
 import { Button } from 'commons/components';
+import { noiseProvider, skeletonProvider } from '../utils';
 
 // Types
 interface ILeaderBoardData {
     address: string;
     totalPoints: number;
-}
-
-function shortenAddress(address: string) {
-    const firstPart = address.slice(0, 6);
-    const lastPart = address.slice(-4);
-    return `${firstPart}…${lastPart}`;
+    displayName: string;
 }
 
 const Header = () => {
+    const [loader, setLoader] = useState(false);
+    const [isEmpty, setIsEmpty] = useState(false);
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
     const [searchValue, setSearchValue] = useState('');
 
     useEffect(() => {
-        // @ts-ignore
-        const w = c.width;
-        // @ts-ignore
-        const h = c.height;
-        const ocanvas = document.createElement('canvas');
-        ocanvas.width = w << 1;
-        ocanvas.height = h << 1;
-
-        const octx = ocanvas.getContext('2d', { alpha: false });
-        // @ts-ignore
-        const idata = octx.createImageData(ocanvas.width, ocanvas.height);
-        const buffer32 = new Uint32Array(idata.data.buffer);
-
-        noise(octx);
-
-        // @ts-ignore
-        const ctx = c.getContext('2d', { alpha: false });
-        (function loop() {
-            const x = (w * Math.random()) | 0;
-            const y = (h * Math.random()) | 0;
-            ctx.drawImage(ocanvas, -x, -y);
-            requestAnimationFrame(loop);
-        })();
-
-        function noise(ctx: any) {
-            let len = buffer32.length - 1;
-            while (len--) {
-                buffer32[len] = Math.random() < 0.5 ? 0 : -1 >> 0;
-            }
-            ctx.putImageData(idata, 0, 0);
-        }
-
-        axios.get('https://api-jri.com/LeaderBoard').then(res => setLeaderBoardData(res.data.splice(0, 10)));
+        noiseProvider();
+        setLoader(true);
+        axios.get(`https://api-jri.com/v2/LeaderBoard?filter=${searchValue}`).then(res => {
+            setLeaderBoardData(res.data.leaderboard);
+            setLoader(false);
+        });
     }, []);
+
+    useEffect(() => {
+        setLoader(true);
+        const delayDebounceFn = setTimeout(() => {
+            axios.get(`https://api-jri.com/v2/LeaderBoard?filter=${searchValue}`).then(res => {
+                setLeaderBoardData(res.data.leaderboard);
+                setIsEmpty(!res.data.leaderboard);
+                setLoader(false);
+            });
+        }, 1500);
+
+        return () => clearTimeout(delayDebounceFn);
+    }, [searchValue]);
 
     return (
         <HeaderContainer className='container'>
@@ -84,12 +66,20 @@ const Header = () => {
                     </header>
                     <ul>
                         {leaderBoardData &&
+                            !loader &&
                             leaderBoardData.map((item, index) => (
                                 <li key={`leader-board-${index}`}>
-                                    <span>{shortenAddress(item.address)}</span>
+                                    <span>{item.displayName}</span>
                                     <span>{item.totalPoints.toLocaleString()}</span>
                                 </li>
                             ))}
+                        {loader && skeletonProvider()}
+                        {isEmpty && (
+                            <div className='not-found-container'>
+                                <NotFound />
+                                <p>No data found !</p>
+                            </div>
+                        )}
                     </ul>
                 </div>
             </div>

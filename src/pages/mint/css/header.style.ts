@@ -27,11 +27,31 @@ export const HeaderContainer = styled.section(
             justify-content: center;
         }
 
+        .not-found-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            height: 300px;
+
+            svg {
+                width: 60px;
+                height: auto;
+                opacity: 0.1;
+                color: black;
+            }
+
+            p {
+                color: darkgrey;
+                font-size: 16px;
+            }
+        }
+
         .search-field {
             position: relative;
             display: flex;
             align-items: center;
-            display: none;
 
             input {
                 width: 100%;
