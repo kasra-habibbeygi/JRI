@@ -3,7 +3,7 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 
 // Assets
-import { CurveText, NotFound, Search } from 'assets/icons';
+import { CurveText } from 'assets/icons';
 import { HeaderContainer } from '../css';
 import Person from 'assets/img/person.png';
 
@@ -20,38 +20,38 @@ interface ILeaderBoardData {
 
 const Header = () => {
     const [loader, setLoader] = useState(false);
-    const [isEmpty, setIsEmpty] = useState(false);
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
-    const [searchValue, setSearchValue] = useState('');
+    // const [isEmpty, setIsEmpty] = useState(false);
+    // const [searchValue, setSearchValue] = useState('');
 
     useEffect(() => {
         noiseProvider();
         setLoader(true);
-        axios.get(`https://api-jri.com/v2/LeaderBoard?filter=${searchValue}`).then(res => {
+        axios.get('https://api-jri.com/v2/LeaderBoard').then(res => {
             setLeaderBoardData(res.data.leaderboard);
             setLoader(false);
         });
     }, []);
 
-    useEffect(() => {
-        setLoader(true);
-        const delayDebounceFn = setTimeout(() => {
-            axios.get(`https://api-jri.com/v2/LeaderBoard?filter=${searchValue}`).then(res => {
-                setLeaderBoardData(res.data.leaderboard);
-                setIsEmpty(!res.data.leaderboard);
-                setLoader(false);
-            });
-        }, 1500);
+    // useEffect(() => {
+    //     setLoader(true);
+    //     const delayDebounceFn = setTimeout(() => {
+    //         axios.get(`https://api-jri.com/v2/LeaderBoard?filter=${searchValue}`).then(res => {
+    //             setLeaderBoardData(res.data.leaderboard);
+    //             setIsEmpty(!res.data.leaderboard);
+    //             setLoader(false);
+    //         });
+    //     }, 1500);
 
-        return () => clearTimeout(delayDebounceFn);
-    }, [searchValue]);
+    //     return () => clearTimeout(delayDebounceFn);
+    // }, [searchValue]);
 
     return (
         <HeaderContainer className='container'>
             <div className='left-field'>
                 <h3>LEADERBOARD</h3>
                 <div className='table-field'>
-                    <div className='search-field'>
+                    {/* <div className='search-field'>
                         <Search />
                         <input
                             type='text'
@@ -59,7 +59,7 @@ const Header = () => {
                             value={searchValue}
                             onChange={e => setSearchValue(e.target.value)}
                         />
-                    </div>
+                    </div> */}
                     <header className='header'>
                         <span>User ID</span>
                         <span>Score</span>
@@ -69,17 +69,19 @@ const Header = () => {
                             !loader &&
                             leaderBoardData.map((item, index) => (
                                 <li key={`leader-board-${index}`}>
-                                    <span>{item.displayName}</span>
+                                    <span>
+                                        {index + 1}-{item.displayName}
+                                    </span>
                                     <span>{item.totalPoints.toLocaleString()}</span>
                                 </li>
                             ))}
                         {loader && skeletonProvider()}
-                        {isEmpty && (
+                        {/* {isEmpty && (
                             <div className='not-found-container'>
                                 <NotFound />
                                 <p>No data found !</p>
                             </div>
-                        )}
+                        )} */}
                     </ul>
                 </div>
             </div>
