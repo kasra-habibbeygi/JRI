@@ -31,7 +31,7 @@ export default (): IRoutesItems[] => {
             component: FullVersion
         },
         {
-            route: 'beta-test',
+            route: 'get-funded',
             component: betaTest
         },
         {

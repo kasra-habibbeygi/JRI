@@ -43,30 +43,33 @@ export const BetaTestContainer = styled.div(
 
         .content-section {
             display: flex;
-            align-items: flex-start;
             gap: 60px;
             margin-top: 80px;
         }
 
         aside {
-            background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
-            padding: 32px;
-            color: white;
-            font-size: 20px;
-            min-width: 340px;
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-
-            p {
+            div {
+                background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+                padding: 32px;
+                color: white;
                 font-size: 20px;
-                line-height: 18px;
-                font-weight: 500;
-            }
+                min-width: 340px;
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+                position: sticky;
+                top: 80px;
 
-            small {
-                font-weight: 300;
-                font-size: 16px;
+                p {
+                    font-size: 20px;
+                    line-height: 18px;
+                    font-weight: 500;
+                }
+
+                small {
+                    font-weight: 300;
+                    font-size: 16px;
+                }
             }
         }
 

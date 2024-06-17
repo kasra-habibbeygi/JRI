@@ -40,11 +40,11 @@ const MobileNavbar = () => {
                             Mint
                         </NavLink>
                     </li>
-                    {/* <li>
-                        <NavLink to='/beta-test' onClick={onLinkClickHandler}>
-                            Beta Test
+                    <li>
+                        <NavLink to='/get-funded' onClick={onLinkClickHandler}>
+                            Get Funded
                         </NavLink>
-                    </li> */}
+                    </li>
                 </ul>
             </MobileNavbarContainer>
         </>

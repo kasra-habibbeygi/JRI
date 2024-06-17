@@ -7,39 +7,41 @@ import { BetaTestContainer } from './betaTest.style';
 
 // Components
 import { Button } from 'commons/components';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 // Types
 interface Errors {
     title: boolean;
-    description: boolean;
+    briefDescription: boolean;
     budget: boolean;
-    members: boolean;
-    links: boolean;
+    teamMember: boolean;
+    linkToPreviousWork: boolean;
 }
 
 interface InputValues {
     title: string;
-    description: string;
+    briefDescription: string;
     budget: string;
-    members: string;
-    links: string;
+    teamMember: string;
+    linkToPreviousWork: string;
 }
 
 const BestTest = () => {
     const [errors, setErrors] = useState<Errors>({
         title: false,
-        description: false,
+        briefDescription: false,
         budget: false,
-        members: false,
-        links: false
+        teamMember: false,
+        linkToPreviousWork: false
     });
 
     const [inputValues, setInputValues] = useState<InputValues>({
         title: '',
-        description: '',
+        briefDescription: '',
         budget: '',
-        members: '',
-        links: ''
+        teamMember: '',
+        linkToPreviousWork: ''
     });
 
     const onInputValueChangeHandler = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -67,11 +69,19 @@ const BestTest = () => {
         setErrors(newErrors);
 
         if (!hasError) {
-            console.log('Form submitted:', inputValues);
+            axios.post('https://api-jri.com/v2/Project', inputValues).then(() => {
+                toast.success('Your project will be reviewed, and we will reach out to you.Join us now and be part of the revolution!');
+
+                setInputValues({
+                    title: '',
+                    briefDescription: '',
+                    budget: '',
+                    teamMember: '',
+                    linkToPreviousWork: ''
+                });
+            });
         }
     };
-
-    console.log(errors);
 
     return (
         <BetaTestContainer className='container'>
@@ -107,18 +117,18 @@ const BestTest = () => {
                         />
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='description'>Brief Description</label>
+                        <label htmlFor='briefDescription'>Description</label>
                         <textarea
-                            name='description'
-                            id='description'
-                            value={inputValues.description}
+                            name='briefDescription'
+                            id='briefDescription'
+                            value={inputValues.briefDescription}
                             onChange={onInputValueChangeHandler}
-                            className={errors.description ? 'error' : ''}
+                            className={errors.briefDescription ? 'error' : ''}
                         ></textarea>
-                        <span className='length-counter'>{inputValues.description.length} / 8000</span>
+                        <span className='length-counter'>{inputValues.briefDescription.length} / 8000</span>
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='budget'>Project Budget ($)</label>
+                        <label htmlFor='budget'>Funding Requirements ($)</label>
                         <input
                             type='number'
                             value={inputValues.budget}
@@ -129,35 +139,37 @@ const BestTest = () => {
                         />
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='members'>Team Members</label>
+                        <label htmlFor='teamMember'>Team Members</label>
                         <input
                             type='text'
-                            value={inputValues.members}
+                            value={inputValues.teamMember}
                             onChange={onInputValueChangeHandler}
-                            name='members'
-                            id='members'
-                            className={errors.members ? 'error' : ''}
+                            name='teamMember'
+                            id='teamMember'
+                            className={errors.teamMember ? 'error' : ''}
                         />
                     </div>
                     <div className='form-group'>
-                        <label htmlFor='links'>
+                        <label htmlFor='linkToPreviousWork'>
                             Links to Previous Work <span>(Optional)</span>
                         </label>
                         <input
                             type='text'
-                            value={inputValues.links}
+                            value={inputValues.linkToPreviousWork}
                             onChange={onInputValueChangeHandler}
-                            name='links'
-                            id='links'
-                            className={errors.links ? 'error' : ''}
+                            name='linkToPreviousWork'
+                            id='linkToPreviousWork'
+                            className={errors.linkToPreviousWork ? 'error' : ''}
                         />
                     </div>
 
                     <Button type='submit'>Submit</Button>
                 </form>
                 <aside>
-                    <p>For More Information You Can Contact us at</p>
-                    <small>support@justreadit.build</small>
+                    <div>
+                        <p>For More Information You Can Contact us at</p>
+                        <small>support@justreadit.build</small>
+                    </div>
                 </aside>
             </section>
         </BetaTestContainer>

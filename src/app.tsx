@@ -26,7 +26,7 @@ const App = () => {
     return (
         <>
             <Toaster
-                position='bottom-right'
+                position='top-left'
                 containerStyle={{
                     zIndex: 9999999999
                 }}
