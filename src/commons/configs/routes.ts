@@ -4,6 +4,7 @@ import home from 'pages/home';
 import mint from 'pages/mint';
 import FullVersion from 'pages/full-version';
 import betaTest from 'pages/beta-test';
+import testTest from 'pages/test-test';
 
 // Types
 interface IRoutesItems {
@@ -32,6 +33,10 @@ export default (): IRoutesItems[] => {
         {
             route: 'beta-test',
             component: betaTest
+        },
+        {
+            route: 'Test-Test',
+            component: testTest
         }
     ];
 };
