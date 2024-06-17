@@ -42,6 +42,11 @@ const Navbar = () => {
                                 Mint
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to='/beta-test' onClick={() => window.scrollTo(0, 0)}>
+                                Beta Test
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className='right-side'>

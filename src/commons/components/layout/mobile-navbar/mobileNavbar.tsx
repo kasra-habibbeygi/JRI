@@ -10,29 +10,39 @@ const MobileNavbar = () => {
     const dispatch = useDispatch();
     const sideBarStatus = useAppSelector(state => state.App.sideBarStatus);
 
+    const onLinkClickHandler = () => {
+        dispatch(toggleSideBarStatus());
+        window.scrollTo(0, 0);
+    };
+
     return (
         <>
-            <LayerContainer className='layer' status={sideBarStatus} onClick={() => dispatch(toggleSideBarStatus())}></LayerContainer>
+            <LayerContainer className='layer' status={sideBarStatus} onClick={onLinkClickHandler}></LayerContainer>
             <MobileNavbarContainer status={sideBarStatus}>
                 <ul>
                     <li>
-                        <NavLink to='/' onClick={() => dispatch(toggleSideBarStatus())}>
+                        <NavLink to='/' onClick={onLinkClickHandler}>
                             Home
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/full-version' onClick={() => dispatch(toggleSideBarStatus())}>
+                        <NavLink to='/full-version' onClick={onLinkClickHandler}>
                             Full Version
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/cool-version' onClick={() => dispatch(toggleSideBarStatus())}>
+                        <NavLink to='/cool-version' onClick={onLinkClickHandler}>
                             Cool Version
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/mint' onClick={() => dispatch(toggleSideBarStatus())}>
+                        <NavLink to='/mint' onClick={onLinkClickHandler}>
                             Mint
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/beta-test' onClick={onLinkClickHandler}>
+                            Beta Test
                         </NavLink>
                     </li>
                 </ul>

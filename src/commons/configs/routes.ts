@@ -3,6 +3,7 @@ import coolVersion from 'pages/cool-version';
 import home from 'pages/home';
 import mint from 'pages/mint';
 import FullVersion from 'pages/full-version';
+import betaTest from 'pages/beta-test';
 
 // Types
 interface IRoutesItems {
@@ -27,6 +28,10 @@ export default (): IRoutesItems[] => {
         {
             route: 'full-version',
             component: FullVersion
+        },
+        {
+            route: 'beta-test',
+            component: betaTest
         }
     ];
 };

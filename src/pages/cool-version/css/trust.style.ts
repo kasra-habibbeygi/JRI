@@ -17,6 +17,7 @@ export const TrustContainer = styled.section(
             background-color: red;
             border-radius: 100%;
             background: radial-gradient(circle, rgba(138, 99, 210, 0.15) 0%, rgb(5 45 255 / 0%) 70%);
+            z-index: -1;
         }
 
         h3 {
