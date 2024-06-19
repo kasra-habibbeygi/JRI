@@ -32,7 +32,7 @@ export default (): IRoutesItems[] => {
             component: FullVersion
         },
         {
-            route: 'get-funded',
+            route: 'beta-test',
             component: betaTest
         },
         {
@@ -40,7 +40,7 @@ export default (): IRoutesItems[] => {
             component: testTest
         },
         {
-            route: 'stake',
+            route: 'jri-token',
             component: stake
         }
     ];

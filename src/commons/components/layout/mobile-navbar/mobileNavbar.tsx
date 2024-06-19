@@ -41,13 +41,13 @@ const MobileNavbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/get-funded' onClick={onLinkClickHandler}>
-                            Get Funded
+                        <NavLink to='/beta-test' onClick={onLinkClickHandler}>
+                            Beta Test
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/stake' onClick={() => window.scrollTo(0, 0)}>
-                            Stake
+                        <NavLink to='/jri-token' onClick={onLinkClickHandler}>
+                            JRI Token
                         </NavLink>
                     </li>
                 </ul>

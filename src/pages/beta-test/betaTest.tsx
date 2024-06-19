@@ -70,7 +70,7 @@ const BestTest = () => {
 
         if (!hasError) {
             axios.post('https://api-jri.com/v2/Project', inputValues).then(() => {
-                toast.success('Your project will be reviewed, and we will reach out to you.Join us now and be part of the revolution!');
+                toast.success('Your project will be reviewed, and we will reach out to you. Join us now and be part of the revolution!');
 
                 setInputValues({
                     title: '',
@@ -87,15 +87,15 @@ const BestTest = () => {
         <BetaTestContainer className='container'>
             <Helmet title='JRI | Beta Test' />
             <header>
-                <h1>Welcome to JRI's Beta Test!</h1>
+                <h1>Make History: Be the First Builder Funded on JRI!</h1>
                 <p>
                     We are JRI and excited to announce the next phase of our journey. After the successful Alpha Test in May, we launched
-                    our marketing efforts on June 1st and now have over 1500 users. It's time to continue and test Phase 1 with our Beta
-                    Test.
+                    our marketing efforts on June 1st and now have over 4000 active users. It's time to continue and test Phase 1 with our
+                    Beta Test.
                 </p>
 
                 <h2>
-                    Join the Beta Test <VIPStar />
+                    Join the Beta Test <VIPStar className='star' />
                 </h2>
                 <p>
                     We're inviting creators to participate in our Beta Test. This phase involves setting up a forum on our website where
@@ -125,7 +125,7 @@ const BestTest = () => {
                             onChange={onInputValueChangeHandler}
                             className={errors.briefDescription ? 'error' : ''}
                         ></textarea>
-                        <span className='length-counter'>{inputValues.briefDescription.length} / 8000</span>
+                        <span className='length-counter'>{inputValues.briefDescription.length} / 4000</span>
                     </div>
                     <div className='form-group'>
                         <label htmlFor='budget'>Funding Requirements ($)</label>

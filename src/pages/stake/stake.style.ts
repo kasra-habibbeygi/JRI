@@ -111,10 +111,6 @@ export const StakeContainer = styled.div(
                 margin-bottom: 70px;
             }
 
-            .MuiChartsLegend-root {
-                display: none;
-            }
-
             .chart-helper {
                 display: flex;
                 align-items: center;
@@ -144,27 +140,19 @@ export const StakeContainer = styled.div(
                 }
 
                 .dark-blue {
-                    background-color: #03008d;
+                    background-color: #020057;
                 }
 
                 .blue {
-                    background-color: #2731c8;
+                    background-color: #055ada;
                 }
 
-                .light-blue {
-                    background-color: #2e96ff;
-                }
-
-                .pink {
-                    background-color: #b800d8;
+                .light-purple {
+                    background-color: #5055d5;
                 }
 
                 .purple {
-                    background-color: #60009b;
-                }
-
-                .green {
-                    background-color: #02b2af;
+                    background-color: #8a63d2;
                 }
             }
         }
@@ -232,6 +220,10 @@ export const StakeContainer = styled.div(
                     p {
                         font-size: 12px;
                     }
+                }
+
+                img {
+                    width: 100%;
                 }
             }
         }

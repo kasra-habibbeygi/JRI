@@ -992,6 +992,12 @@ const FullVersion = () => {
                             LinkedIn
                         </a>
                     </li>
+                    <li>
+                        K. Habibbeygi - Front End Developer
+                        <a href='https://www.linkedin.com/in/kasra-habibbeygi/' target='_blank'>
+                            LinkedIn
+                        </a>
+                    </li>
                 </ul>
                 <h3 id='Legal-and-Regulatory'>Legal and Regulatory Compliance</h3>
                 <p>

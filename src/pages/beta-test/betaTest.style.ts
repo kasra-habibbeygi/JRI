@@ -1,5 +1,14 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+
+const mirror = keyframes`
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+`;
 
 export const BetaTestContainer = styled.div(
     ({ theme }) => css`
@@ -14,7 +23,10 @@ export const BetaTestContainer = styled.div(
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 24px;
-            width: max-content;
+        }
+
+        .star {
+            animation: ${mirror} 5s linear infinite;
         }
 
         h2 {
@@ -93,17 +105,22 @@ export const BetaTestContainer = styled.div(
                     span {
                         color: ${theme.colors.text.accent2};
                         font-size: 18px;
+                        font-weight: 300;
                     }
                 }
 
                 input {
                     padding: 0 32px;
-                    height: 84px;
+                    height: 52px;
                     width: 100%;
                     border-radius: 0;
-                    border: 1px solid #0f0f0f;
+                    border: 1px solid #bababa;
                     font-size: 20px;
                     color: #0f0f0f;
+
+                    &:focus {
+                        border: 1px solid ${theme.colors.text.accent2};
+                    }
                 }
 
                 .error {
@@ -121,10 +138,14 @@ export const BetaTestContainer = styled.div(
                     padding: 32px;
                     width: 100%;
                     border-radius: 0;
-                    border: 1px solid #0f0f0f;
+                    border: 1px solid #bababa;
                     font-size: 20px;
                     color: #0f0f0f;
                     resize: none;
+
+                    &:focus {
+                        border: 1px solid ${theme.colors.text.accent2};
+                    }
                 }
             }
 
@@ -216,6 +237,13 @@ export const BetaTestContainer = styled.div(
                     font-size: 16px;
                     height: 40px;
                     margin-bottom: unset;
+                    width: 100%;
+                }
+            }
+
+            aside {
+                div {
+                    min-width: unset;
                 }
             }
         }

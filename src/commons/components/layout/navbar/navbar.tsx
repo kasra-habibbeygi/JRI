@@ -43,13 +43,13 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/get-funded' onClick={() => window.scrollTo(0, 0)}>
-                                Get Funded
+                            <NavLink to='/beta-test' onClick={() => window.scrollTo(0, 0)}>
+                                Beta Test
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/stake' onClick={() => window.scrollTo(0, 0)}>
-                                Stake
+                            <NavLink to='/jri-token' onClick={() => window.scrollTo(0, 0)}>
+                                JRI Token
                             </NavLink>
                         </li>
                     </ul>

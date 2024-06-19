@@ -1,18 +1,12 @@
-// MUI
-import { PieChart, pieArcLabelClasses } from '@mui/x-charts/PieChart';
-import { useMediaQuery } from '@mui/material';
-
 // Components
 // import { Button } from 'commons/components';
 
 // Assets
 import { StakeContainer } from './stake.style';
 import { LittleArrow } from 'assets/icons';
+import ChartImg from '/chart.svg';
 
 const Stake = () => {
-    const media600 = useMediaQuery('(max-width:600px)');
-    const media420 = useMediaQuery('(max-width:420px)');
-
     return (
         <StakeContainer className='container'>
             <header>
@@ -59,39 +53,9 @@ const Stake = () => {
                     We initially created 1 billion tokens. Out of these, 75% are designated for the community, 15% are set aside to create a
                     liquidity pool, and the remaining 10% are allocated to support our team, investors, and the broader ecosystem.
                 </p>
-                <PieChart
-                    height={400}
-                    series={[
-                        {
-                            data: [
-                                { value: 10, label: 'Airdrop 1' },
-                                { value: 15, label: 'Airdrop 2' },
-                                { value: 20, label: 'Airdrop 3' },
-                                { value: 15, label: 'Liq. Mining' },
-                                { value: 30, label: 'Lig. Pool' },
-                                { value: 10, label: 'Ecosystem' }
-                            ],
-                            arcLabel: item => `${item.label}`,
-                            arcLabelMinAngle: 0,
-                            innerRadius: 30,
-                            outerRadius: media420 ? 130 : 180,
-                            paddingAngle: 2,
-                            cornerRadius: 6,
-                            startAngle: 0,
-                            endAngle: 360,
-                            cx: media600 ? '65%' : media420 ? '80%' : '53%',
-                            cy: '50%',
-                            highlightScope: { faded: 'global', highlighted: 'item' },
-                            faded: { innerRadius: 30, additionalRadius: -10, color: 'gray' }
-                        }
-                    ]}
-                    sx={{
-                        [`& .${pieArcLabelClasses.root}`]: {
-                            fill: 'white',
-                            fontSize: '12px'
-                        }
-                    }}
-                />
+
+                <img src={ChartImg} alt='' />
+
                 <div className='chart-helper'>
                     <div>
                         <span className='dark-blue'></span>
@@ -102,19 +66,19 @@ const Stake = () => {
                         <p>Lig. Pool</p>
                     </div>
                     <div>
-                        <span className='purple'></span>
+                        <span className='light-purple'></span>
                         <p>Liq. Mining</p>
                     </div>
                     <div>
-                        <span className='pink'></span>
+                        <span className='purple'></span>
                         <p>Airdrop 3</p>
                     </div>
                     <div>
-                        <span className='light-blue'></span>
+                        <span className='purple'></span>
                         <p>Airdrop 2</p>
                     </div>
                     <div>
-                        <span className='green'></span>
+                        <span className='purple'></span>
                         <p>Airdrop 1</p>
                     </div>
                 </div>
