@@ -95,6 +95,14 @@ export const NavbarContainer = styled.nav(
             cursor: pointer;
         }
 
+        @media (max-width: 1400px) {
+            .left-side {
+                .logo {
+                    margin-right: 50px;
+                }
+            }
+        }
+
         @media (max-width: 1200px) {
             padding: 0 20px;
 

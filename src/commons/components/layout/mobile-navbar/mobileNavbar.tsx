@@ -45,6 +45,11 @@ const MobileNavbar = () => {
                             Get Funded
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to='/stake' onClick={() => window.scrollTo(0, 0)}>
+                            Stake
+                        </NavLink>
+                    </li>
                 </ul>
             </MobileNavbarContainer>
         </>
