@@ -2,6 +2,7 @@ import { ComponentType } from 'react';
 
 // Components
 import Login from 'pages/login';
+import BetaTestReport from 'pages/beta-test-report';
 
 // Types
 interface IRoutesItems {
@@ -14,6 +15,10 @@ export default (): IRoutesItems[] => {
         {
             route: 'login',
             component: Login
+        },
+        {
+            route: '/beta-test-report',
+            component: BetaTestReport
         }
     ];
 };

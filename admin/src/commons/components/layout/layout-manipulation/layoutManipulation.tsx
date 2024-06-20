@@ -8,7 +8,7 @@ import { LayoutContainer } from './layoutManipulation.style';
 import LoaderJson from 'assets/json/loader.json';
 
 // Components
-import { Navbar, SideBar } from 'commons/components';
+import { SideBar } from 'commons/components';
 import { useAppSelector } from 'commons/hooks';
 
 // Types
@@ -30,7 +30,6 @@ const MainLayout: FC<IMainLayout> = ({ children }) => {
 
             <SideBar />
             <main className='main-content'>
-                <Navbar />
                 <div className={`loader ${contentLoaderStatus ? 'show' : ''}`}>
                     <Lottie loop animationData={LoaderJson} play style={{ width: 150, height: 150 }} />
                 </div>

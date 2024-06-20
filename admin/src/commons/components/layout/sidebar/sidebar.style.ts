@@ -13,7 +13,35 @@ export const SideBarContainer = styled.aside<{ status: boolean }>(
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            height: calc(100% - 100px);
+            height: calc(100% - 140px);
+
+            .logout-button {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                color: ${theme.colors.text.primary};
+                padding: 12px 20px;
+                transition: all linear 0.1s;
+                font-size: 14px;
+                font-weight: 500;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: ${theme.colors.background.accent};
+                    color: white;
+
+                    svg {
+                        color: white;
+                    }
+                }
+
+                svg {
+                    width: 18px;
+                    height: 18px;
+                    color: ${theme.colors.text.accent};
+                    transition: all linear 0.1s;
+                }
+            }
         }
 
         .side-bar-content {
@@ -36,8 +64,8 @@ export const SideBarContainer = styled.aside<{ status: boolean }>(
         }
 
         .logo-img {
-            width: 40px;
-            height: 40px;
+            width: 60px;
+            height: auto;
             margin: 20px;
         }
 
