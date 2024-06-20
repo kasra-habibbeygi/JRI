@@ -2,12 +2,12 @@
 import { css } from '@emotion/react';
 import { Global } from '@emotion/react';
 
-const GlobalStyles = ({ theme, direction }: { theme: any; direction: 'rtl' | 'ltr' }) => {
+const GlobalStyles = ({ theme }: { theme: any }) => {
     return (
         <Global
             styles={css`
                 * {
-                    font-family: ${direction === 'rtl' ? 'iranSans !important' : 'Product Sans !important'};
+                    font-family: 'Product Sans !important';
                 }
 
                 body {

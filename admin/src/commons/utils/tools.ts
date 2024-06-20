@@ -1,5 +1,4 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { Dayjs } from 'dayjs';
 import { ChangeEvent } from 'react';
 
 class Tools {
@@ -29,34 +28,6 @@ class Tools {
                 [e.target.name]: prev[e.target.name]
             };
         });
-    }
-
-    selectValueHandler(name: string, value: any, setState: (updateFunction: (prev: any) => any) => void): void {
-        setState((prev: any) => ({
-            ...prev,
-            [name]: value
-        }));
-    }
-
-    switchValueHandler(name: string, e: boolean, setState: (updateFunction: (prev: any) => any) => void): void {
-        setState((prev: any) => ({
-            ...prev,
-            [name]: e
-        }));
-    }
-
-    checkboxValueHandler(e: ChangeEvent<HTMLInputElement>, setState: (updateFunction: (prev: any) => any) => void): void {
-        setState((prev: any) => ({
-            ...prev,
-            [e.target.name]: e.target.checked
-        }));
-    }
-
-    dateValueHandler(data: Dayjs, name: string, setState: (updateFunction: (prev: any) => any) => void): void {
-        setState((prev: any) => ({
-            ...prev,
-            [name]: data.toDate().getTime()
-        }));
     }
 }
 

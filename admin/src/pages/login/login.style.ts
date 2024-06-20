@@ -1,11 +1,29 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 
+export const LoginContainer = styled.div(
+    () => css`
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        padding: 30px;
+
+        @media (max-width: 550px) {
+            padding: 16px;
+
+            .forgot-pass {
+                margin-top: 0px;
+            }
+        }
+    `
+);
+
 export const AuthenticateContainer = styled.div(
     ({ theme }) => css`
         .main-content {
-            min-width: 500px;
-            width: 800px;
+            min-width: 400px;
             border-radius: 20px;
             background-color: ${theme.colors.background.secondary};
             box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
@@ -20,10 +38,8 @@ export const AuthenticateContainer = styled.div(
         }
 
         .form-content {
-            padding: 30px;
+            padding: 0;
             border-radius: 0px 20px 20px 0px;
-            max-width: 500px;
-            min-width: 350px;
             display: flex;
             justify-content: center;
             flex-direction: column;
