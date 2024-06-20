@@ -24,7 +24,7 @@ export const TableContainer = styled.div(
 
             th {
                 padding: 22px 10px;
-                text-align: left;
+                text-align: center;
                 color: ${theme.colors.text.secondary};
                 font-size: 16px;
                 font-weight: 500;
@@ -33,10 +33,10 @@ export const TableContainer = styled.div(
 
             td {
                 padding: 22px 10px;
-                text-align: left;
+                text-align: center;
                 color: ${theme.colors.text.primary};
                 font-size: 14px;
-                font-weight: 300;
+                font-weight: 400;
             }
         }
 

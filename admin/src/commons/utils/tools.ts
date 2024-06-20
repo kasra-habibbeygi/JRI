@@ -29,6 +29,29 @@ class Tools {
             };
         });
     }
+
+    tableRowCounter(page: number, index: number) {
+        return 25 * +page - (25 - 1) + index;
+    }
+
+    timeFormatter(date: string, type: 'dateAndHour' | 'date' = 'date') {
+        if (type === 'date') {
+            return new Date(date).toLocaleDateString('en-US', {
+                year: 'numeric',
+                month: 'numeric',
+                day: 'numeric'
+            });
+        }
+
+        return new Date(date).toLocaleDateString('en-US', {
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            hour12: false
+        });
+    }
 }
 
 export default new Tools();
