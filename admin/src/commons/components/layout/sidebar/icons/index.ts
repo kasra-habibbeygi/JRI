@@ -1,0 +1,12 @@
+export { default as Arrow } from './arrow.svg?react';
+export { default as Browser } from './browser.svg?react';
+export { default as ChartView } from './chart-view.svg?react';
+export { default as Chart } from './chart.svg?react';
+export { default as CodeLibrary } from './code-library.svg?react';
+export { default as Dashboard } from './dashboard.svg?react';
+export { default as Phone } from './phone.svg?react';
+export { default as Reports } from './reports.svg?react';
+export { default as Settings } from './setting.svg?react';
+export { default as Clock } from './clock.svg?react';
+export { default as Support } from './support.svg?react';
+export { default as Plus } from './plus.svg?react';
