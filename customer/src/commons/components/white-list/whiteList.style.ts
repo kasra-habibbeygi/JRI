@@ -165,30 +165,50 @@ export const WhiteListContainer = styled.section(
 
 export const ProgressBar = styled.div<{ percent: number }>(
     ({ theme, percent }) => css`
-        height: 25px;
+        height: 27px;
         position: relative;
-        border: 1px solid ${theme.colors.text.accent1};
         display: flex;
+        border: 1px solid ${theme.colors.text.accent1};
         align-items: center;
 
-        .progress-line {
-            background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
-            content: '';
+        .contents {
             position: absolute;
-            width: ${percent === 0 ? '0' : `calc(${percent}% + 6px)`};
-            height: 110%;
-            top: -1px;
-            left: -5px;
-            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            color: white;
+            mix-blend-mode: difference;
         }
 
-        .text {
-            padding: 0 !important;
-            position: relative;
-            z-index: 2;
-            color: ${theme.colors.text.accent1};
+        .progress-container {
             width: 100%;
-            text-align: center;
+        }
+
+        .contents,
+        .bar {
+            height: 25px;
+        }
+
+        .backdrop {
+            position: relative;
+            background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+        }
+
+        .source {
+            mix-blend-mode: screen;
+        }
+
+        .barBg {
+            background-color: white;
+        }
+
+        .bar {
+            background-color: black;
+            width: ${percent === 0 ? '0' : `calc(${percent}% + 6px)`};
         }
     `
 );

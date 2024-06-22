@@ -44,7 +44,7 @@ const BetaTestReport = () => {
                             <td>{item.budget}</td>
                             <td>{item.teamMember}</td>
                             <td>{item.linkToPreviousWork}</td>
-                            <td>{item.briefDescription}</td>
+                            <td style={{ maxWidth: '400px' }}>{item.briefDescription}</td>
                             <td>{Tools.timeFormatter(item.createDateTime, 'dateAndHour')}</td>
                             <td></td>
                             <td></td>

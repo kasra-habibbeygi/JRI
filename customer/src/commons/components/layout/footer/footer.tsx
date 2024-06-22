@@ -13,7 +13,7 @@ const Footer = () => {
                 <a href='https://www.guild.xyz/justreadit' target='_blank'>
                     <Castle />
                 </a>
-                <a href='https://discord.gg/9ZkGdjVpnk' target='_blank'>
+                <a href='https://discord.gg/snQBQDRBjP' target='_blank'>
                     <Discord />
                 </a>
                 <a href='https://x.com/jri_justreadit' target='_blank'>

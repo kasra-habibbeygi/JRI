@@ -13,7 +13,7 @@ const Sticker = () => {
                             <Castle />
                             Join Guild
                         </a>
-                        <a href='https://discord.gg/9ZkGdjVpnk' target='_blank'>
+                        <a href='https://discord.gg/snQBQDRBjP' target='_blank'>
                             <Discord />
                             Join Discord
                         </a>

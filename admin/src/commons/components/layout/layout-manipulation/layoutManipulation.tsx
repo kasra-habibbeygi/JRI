@@ -1,6 +1,5 @@
 'use client';
 import { FC, ReactNode } from 'react';
-import { Toaster } from 'react-hot-toast';
 import Lottie from 'react-lottie-player';
 
 // Assets
@@ -21,13 +20,6 @@ const MainLayout: FC<IMainLayout> = ({ children }) => {
 
     return (
         <LayoutContainer>
-            <Toaster
-                position='bottom-left'
-                containerStyle={{
-                    zIndex: 9999
-                }}
-            />
-
             <SideBar />
             <main className='main-content'>
                 <div className={`loader ${contentLoaderStatus ? 'show' : ''}`}>

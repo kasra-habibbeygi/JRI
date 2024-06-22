@@ -22,11 +22,37 @@ export const StakeContainer = styled.div(
         }
 
         .card-section {
-            display: flex;
-            gap: 20px;
-            border-bottom: 1px solid #0f0f0f;
-            padding-bottom: 80px;
-            margin-bottom: 120px;
+            .content {
+                display: flex;
+                gap: 20px;
+                border-bottom: 1px solid #0f0f0f;
+                padding-bottom: 80px;
+                margin-bottom: 120px;
+            }
+
+            .token {
+                margin-bottom: 20px;
+                font-weight: 600;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                flex-wrap: wrap;
+
+                a {
+                    color: ${theme.colors.text.accent1};
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    word-wrap: break-word !important;
+                    word-break: break-word !important;
+
+                    svg {
+                        width: 32px;
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
 
             .card {
                 padding: 24px 0;
@@ -159,7 +185,9 @@ export const StakeContainer = styled.div(
 
         @media (max-width: 992px) {
             .card-section {
-                flex-wrap: wrap;
+                .content {
+                    flex-wrap: wrap;
+                }
 
                 .card,
                 .item {
@@ -184,15 +212,17 @@ export const StakeContainer = styled.div(
             }
 
             .card-section {
-                padding-bottom: 60px;
-                margin-bottom: 80px;
+                .content {
+                    padding-bottom: 60px;
+                    margin-bottom: 80px;
 
-                .card {
-                    flex: 1 0 100%;
-                }
+                    .card {
+                        flex: 1 0 100%;
+                    }
 
-                .item {
-                    flex: 1 0 100%;
+                    .item {
+                        flex: 1 0 100%;
+                    }
                 }
             }
 

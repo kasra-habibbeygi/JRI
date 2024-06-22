@@ -3,7 +3,7 @@
 
 // Assets
 import { StakeContainer } from './stake.style';
-import { LittleArrow } from 'assets/icons';
+import { BigArrow, LittleArrow } from 'assets/icons';
 import ChartImg from '/chart.svg';
 
 const Stake = () => {
@@ -14,37 +14,46 @@ const Stake = () => {
                 <p>Stake Your LP Tokens and Get JRI Points to be Unique Airdrop Eligible</p>
             </header>
             <section className='card-section'>
-                <div className='item'>
-                    <div className='card'>
-                        <b>LP Token Balance</b>
-                        <p>
-                            Connect wallet to see <LittleArrow className='arrow' />
-                        </p>
-                    </div>
-                    {/* <input type='text' placeholder='Stake Amount' value='' onChange={() => {}} />
+                <p className='token'>
+                    JRI Token CA :{' '}
+                    <a href='https://app.uniswap.org/swap?outputCurrency=0x2C4aE47A033A7c651e2502c46E703150621Cd861&chain=base'>
+                        0x2C4aE47A033A7c651e2502c46E703150621Cd861
+                        <BigArrow />
+                    </a>
+                </p>
+                <div className='content'>
+                    <div className='item'>
+                        <div className='card'>
+                            <b>LP Token Balance</b>
+                            <p>
+                                Connect wallet to see <LittleArrow className='arrow' />
+                            </p>
+                        </div>
+                        {/* <input type='text' placeholder='Stake Amount' value='' onChange={() => {}} />
                     <Button radius='rounded'>Stake</Button> */}
-                </div>
-                <div className='card'>
-                    <b>JRI Points Balance</b>
-                    <p>
-                        Connect wallet to see <LittleArrow className='arrow' />
-                    </p>
-                </div>
-                <div className='item'>
+                    </div>
                     <div className='card'>
-                        <b>Staked amount</b>
+                        <b>JRI Points Balance</b>
                         <p>
                             Connect wallet to see <LittleArrow className='arrow' />
                         </p>
                     </div>
-                    {/* <input type='text' placeholder='Stake Amount' value='' onChange={() => {}} />
+                    <div className='item'>
+                        <div className='card'>
+                            <b>Staked amount</b>
+                            <p>
+                                Connect wallet to see <LittleArrow className='arrow' />
+                            </p>
+                        </div>
+                        {/* <input type='text' placeholder='Stake Amount' value='' onChange={() => {}} />
                     <Button radius='rounded'>Unstake</Button> */}
-                </div>
-                <div className='card'>
-                    <b>Current Points</b>
-                    <p>
-                        Connect wallet to see <LittleArrow className='arrow' />
-                    </p>
+                    </div>
+                    <div className='card'>
+                        <b>Current Points</b>
+                        <p>
+                            Connect wallet to see <LittleArrow className='arrow' />
+                        </p>
+                    </div>
                 </div>
             </section>
             <section className='chart-section'>

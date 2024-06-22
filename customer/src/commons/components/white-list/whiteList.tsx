@@ -73,8 +73,20 @@ const WhiteList = () => {
                             </td>
                         </div>
                         <ProgressBar percent={leaderBoardData ? (leaderBoardData?.total * 100) / 11100 : 0}>
-                            <span className='progress-line'></span>
-                            <div className='text'>{leaderBoardData?.total}/11100</div>
+                            {/* <span className='progress-line'></span>
+                            <div className='text'>{leaderBoardData?.total}/11100</div> */}
+                            <div className='progress-container'>
+                                <div className='backdrop'>
+                                    <div className='source'>
+                                        <div className='barBg'>
+                                            <div className='bar' id='bar'></div>
+                                        </div>
+                                        <div className='contents'>
+                                            <span id='percent'>{leaderBoardData?.total}/11100</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </ProgressBar>
                     </div>
                 </div>

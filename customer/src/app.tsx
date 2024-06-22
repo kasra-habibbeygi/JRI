@@ -27,6 +27,9 @@ const App = () => {
         <>
             <Toaster
                 position='top-left'
+                toastOptions={{
+                    duration: 5000
+                }}
                 containerStyle={{
                     zIndex: 9999999999
                 }}
