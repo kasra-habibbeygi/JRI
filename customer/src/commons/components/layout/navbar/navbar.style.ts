@@ -24,7 +24,7 @@ export const NavbarContainer = styled.nav(
             align-items: center;
 
             .logo {
-                margin-right: 180px;
+                margin-right: 110px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -99,6 +99,12 @@ export const NavbarContainer = styled.nav(
             .left-side {
                 .logo {
                     margin-right: 50px;
+                }
+            }
+
+            .left-side {
+                ul {
+                    gap: 30px;
                 }
             }
         }

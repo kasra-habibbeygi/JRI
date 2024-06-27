@@ -76,6 +76,7 @@ const WhiteList = () => {
                             {/* <span className='progress-line'></span>
                             <div className='text'>{leaderBoardData?.total}/11100</div> */}
                             <div className='progress-container'>
+                                <div className='border-field'></div>
                                 <div className='backdrop'>
                                     <div className='source'>
                                         <div className='barBg'>

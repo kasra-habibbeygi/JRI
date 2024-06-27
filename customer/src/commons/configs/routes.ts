@@ -6,6 +6,7 @@ import FullVersion from 'pages/full-version';
 import betaTest from 'pages/beta-test';
 import testTest from 'pages/test-test';
 import stake from 'pages/stake';
+import onLoad from 'pages/on-load';
 
 // Types
 interface IRoutesItems {
@@ -42,6 +43,10 @@ export default (): IRoutesItems[] => {
         {
             route: 'jri-token',
             component: stake
+        },
+        {
+            route: 'on-load',
+            component: onLoad
         }
     ];
 };

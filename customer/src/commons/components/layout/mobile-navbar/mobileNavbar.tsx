@@ -50,6 +50,11 @@ const MobileNavbar = () => {
                             JRI Token
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to='/on-load' onClick={onLinkClickHandler}>
+                            Airdrop
+                        </NavLink>
+                    </li>
                 </ul>
             </MobileNavbarContainer>
         </>

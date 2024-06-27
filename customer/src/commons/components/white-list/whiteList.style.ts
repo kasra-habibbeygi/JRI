@@ -168,7 +168,6 @@ export const ProgressBar = styled.div<{ percent: number }>(
         height: 27px;
         position: relative;
         display: flex;
-        border: 1px solid ${theme.colors.text.accent1};
         align-items: center;
 
         .contents {
@@ -182,6 +181,7 @@ export const ProgressBar = styled.div<{ percent: number }>(
             gap: 20px;
             color: white;
             mix-blend-mode: difference;
+            border: 1px solid ${theme.colors.text.accent1};
         }
 
         .progress-container {

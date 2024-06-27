@@ -52,6 +52,11 @@ const Navbar = () => {
                                 JRI Token
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink to='/on-load' onClick={() => window.scrollTo(0, 0)}>
+                                Airdrop
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <div className='right-side'>
