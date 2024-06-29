@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom';
 const OnLoad = () => {
     useEffect(() => {
         injectGlobal`
-            footer , nav{
+            footer {
                 display: none !important;
             }
         `;
