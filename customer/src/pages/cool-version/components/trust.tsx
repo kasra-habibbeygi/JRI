@@ -38,6 +38,7 @@ const Trust = () => {
                 </p>
                 <br />
                 <p>After a week, the NFTs' metadata will be refreshed, revealing their unique characteristics.</p>
+                <img src='/road-map.png' className='road-map-img' alt='' />
                 <div className='next-Phase'>
                     <h2>Phase 1</h2>
                     <p>There is no short cool version of this one :)</p>

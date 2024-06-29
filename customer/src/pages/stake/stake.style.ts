@@ -143,7 +143,7 @@ export const StakeContainer = styled.div(
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 30px;
-                margin-bottom: 212px;
+                margin-bottom: 120px;
                 margin-top: 50px;
 
                 div {

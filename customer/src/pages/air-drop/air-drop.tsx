@@ -7,6 +7,7 @@ import { AirDropContainer } from './air-drop.style';
 // Components
 import { Button } from 'commons/components';
 import { skeletonProvider } from 'pages/mint/utils';
+import { Airdrop } from 'assets/icons';
 
 // Types
 interface ILeaderBoardData {
@@ -28,6 +29,10 @@ const AirDrop = () => {
 
     return (
         <AirDropContainer className='container'>
+            <Airdrop className='icon-1 air-drop-img' />
+            <Airdrop className='icon-2 air-drop-img' />
+            <Airdrop className='icon-3 air-drop-img' />
+            <Airdrop className='icon-4 air-drop-img' />
             <h1>Welcome to the JRI Airdrop Claim Portal!</h1>
             <h2>Airdrop 1.1</h2>
             <p>Check your eligibility and claim your rewards!</p>

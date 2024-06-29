@@ -27,6 +27,11 @@ export const TrustContainer = styled.section(
             margin-bottom: 32px;
         }
 
+        .road-map-img {
+            width: 100%;
+            margin-top: 135px;
+        }
+
         p {
             text-align: center;
 
@@ -44,6 +49,7 @@ export const TrustContainer = styled.section(
 
         .next-Phase {
             margin-top: 120px;
+            width: 100%;
             padding-top: 80px;
             border-top: 1px solid #0f0f0f;
             display: flex;

@@ -142,7 +142,7 @@ export const HeaderContainer = styled.section(
                     align-items: center;
 
                     span {
-                        &:first-child {
+                        &:first-of-type {
                             width: 80%;
                         }
 

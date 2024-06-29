@@ -1,10 +1,29 @@
-import { css } from '@emotion/react';
+import { css, keyframes } from '@emotion/react';
 import styled from '@emotion/styled';
+
+const drop = keyframes`
+    from {
+        top: -10%;
+    }
+    to {
+        top: 50%;
+    }
+`;
+
+const shake = keyframes`
+    from {
+        transform: rotate(-30deg);
+    }
+    to {
+        transform: rotate(30deg);
+    }
+`;
 
 export const AirDropContainer = styled.section(
     ({ theme }) => css`
-        margin-top: 120px;
-        margin-bottom: 120px;
+        padding-top: 120px;
+        padding-bottom: 120px;
+        position: relative;
 
         h1 {
             color: ${theme.colors.text.accent1};
@@ -12,6 +31,8 @@ export const AirDropContainer = styled.section(
             text-align: center;
             font-weight: 400;
             line-height: 80px;
+            position: relative;
+            z-index: 1;
         }
 
         h2 {
@@ -67,6 +88,10 @@ export const AirDropContainer = styled.section(
         }
 
         .table {
+            position: relative;
+            background-color: white;
+            z-index: 3;
+
             header {
                 width: 100%;
                 background-color: #f0f2f5;
@@ -107,7 +132,7 @@ export const AirDropContainer = styled.section(
                 align-items: center;
 
                 span {
-                    &:first-child {
+                    &:first-of-type {
                         width: 80%;
                     }
 
@@ -119,9 +144,43 @@ export const AirDropContainer = styled.section(
             }
         }
 
+        .air-drop-img {
+            position: absolute;
+            top: 0;
+            z-index: 2;
+        }
+
+        .icon-1 {
+            left: 6%;
+            animation:
+                ${drop} 10s linear forwards infinite,
+                ${shake} 2s linear alternate infinite;
+        }
+
+        .icon-2 {
+            left: 16%;
+            animation:
+                ${drop} 6s linear forwards infinite,
+                ${shake} 2s linear alternate infinite;
+        }
+
+        .icon-3 {
+            left: 70%;
+            animation:
+                ${drop} 12s linear forwards infinite,
+                ${shake} 2s linear alternate infinite;
+        }
+
+        .icon-4 {
+            left: 90%;
+            animation:
+                ${drop} 8s linear forwards infinite,
+                ${shake} 2s linear alternate infinite;
+        }
+
         @media (max-width: 768px) {
-            margin-top: 60px;
-            margin-bottom: 80px;
+            padding-top: 60px;
+            padding-bottom: 80px;
 
             h1 {
                 font-size: 40px;
@@ -140,6 +199,13 @@ export const AirDropContainer = styled.section(
                 li {
                     font-size: 12px;
                 }
+            }
+
+            .icon-4 {
+                left: 50%;
+                animation:
+                    ${drop} 8s linear forwards infinite,
+                    ${shake} 2s linear alternate infinite;
             }
         }
 

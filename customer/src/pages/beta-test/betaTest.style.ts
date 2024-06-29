@@ -13,7 +13,7 @@ const mirror = keyframes`
 export const BetaTestContainer = styled.div(
     ({ theme }) => css`
         margin-top: 80px;
-        margin-bottom: 140px;
+        margin-bottom: 120px;
 
         h1 {
             background: -webkit-linear-gradient(0deg, #8a63d2 50%, #052dff);
@@ -155,7 +155,6 @@ export const BetaTestContainer = styled.div(
                 font-size: 20px;
                 width: 240px;
                 height: 48px;
-                margin-bottom: 121px;
                 border-radius: 500px !important;
                 box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
 

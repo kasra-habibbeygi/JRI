@@ -16,3 +16,4 @@ export { default as Clone } from './clone.svg?react';
 export { default as Search } from './search.svg?react';
 export { default as NotFound } from './not-found.svg?react';
 export { default as VIPStar } from './vip-star.svg?react';
+export { default as Airdrop } from './airdrop.svg?react';
