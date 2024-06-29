@@ -76,12 +76,6 @@ const Header = () => {
                                 </li>
                             ))}
                         {loader && skeletonProvider()}
-                        {/* {isEmpty && (
-                            <div className='not-found-container'>
-                                <NotFound />
-                                <p>No data found !</p>
-                            </div>
-                        )} */}
                     </ul>
                 </div>
             </div>
