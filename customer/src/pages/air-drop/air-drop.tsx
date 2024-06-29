@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import toast from 'react-hot-toast';
 
 // Assets
 import { AirDropContainer } from './air-drop.style';
+import { Airdrop } from 'assets/icons';
 
 // Components
 import { Button } from 'commons/components';
 import { skeletonProvider } from 'pages/mint/utils';
-import { Airdrop } from 'assets/icons';
 
 // Types
 interface ILeaderBoardData {
@@ -40,10 +41,10 @@ const AirDrop = () => {
             <p>Airdrop 1.2: July 30 - Farcaster Tips</p>
 
             <div className='button-group'>
-                <Button radius='rounded' className='gradient'>
+                <Button radius='rounded' className='gradient' onClick={() => toast.error('Wait until 15th July!')}>
                     Check Eligibility
                 </Button>
-                <Button radius='rounded' className='ghost'>
+                <Button radius='rounded' className='ghost' onClick={() => toast.error('Wait until 15th July!')}>
                     Claim
                 </Button>
             </div>

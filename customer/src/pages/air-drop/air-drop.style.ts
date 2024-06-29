@@ -55,6 +55,10 @@ export const AirDropContainer = styled.section(
             gap: 32px;
             margin-bottom: 120px;
 
+            button {
+                opacity: 0.6;
+            }
+
             .ghost {
                 box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
                 font-size: 20px;
