@@ -13,6 +13,9 @@ const RotateAnimate = keyframes`
 export const VersionsContainer = styled.section(
     () => css`
         background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+
+        background: radial-gradient(ellipse at 10% 71%, rgb(137 98 209 / 1) 30.9%, rgb(5 47 255 / 1) 100%) 0% 0%/100% 99.8% no-repeat
+            no-repeat;
         height: 500px;
         display: flex;
         position: relative;
