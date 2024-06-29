@@ -51,7 +51,7 @@ const MobileNavbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/on-load' onClick={onLinkClickHandler}>
+                        <NavLink to='/airdrop' onClick={onLinkClickHandler}>
                             Airdrop
                         </NavLink>
                     </li>

@@ -53,7 +53,7 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink to='/on-load' onClick={() => window.scrollTo(0, 0)}>
+                            <NavLink to='/airdrop' onClick={() => window.scrollTo(0, 0)}>
                                 Airdrop
                             </NavLink>
                         </li>
