@@ -54,6 +54,13 @@ export const AirDropContainer = styled.section(
             justify-content: center;
             gap: 32px;
             margin-bottom: 120px;
+            position: relative;
+            z-index: 1;
+
+            div {
+                background-color: white;
+                border-radius: 500px;
+            }
 
             button {
                 opacity: 0.6;
@@ -66,6 +73,7 @@ export const AirDropContainer = styled.section(
                 height: 48px;
                 color: ${theme.colors.text.accent2} !important;
                 border: 1px solid ${theme.colors.text.accent2};
+                background-color: white;
 
                 &:hover {
                     background: linear-gradient(90deg, ${theme.colors.background.accent2} 21%, ${theme.colors.background.accent1} 100%);
@@ -151,7 +159,7 @@ export const AirDropContainer = styled.section(
         .air-drop-img {
             position: absolute;
             top: 0;
-            z-index: 2;
+            z-index: -1;
         }
 
         .icon-1 {
@@ -231,6 +239,10 @@ export const AirDropContainer = styled.section(
                 flex-direction: column;
                 gap: 20px;
                 margin-bottom: 60px;
+
+                div {
+                    width: 100%;
+                }
 
                 .ghost {
                     width: 100%;

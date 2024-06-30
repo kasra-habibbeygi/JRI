@@ -969,12 +969,6 @@ const FullVersion = () => {
                         </a>
                     </li>
                     <li>
-                        A. Karimloo - Product Manager
-                        <a href='https://www.linkedin.com/in/ali-karimloo-8b6215217/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
                         D. Sharifi - Designer
                         <a href='https://www.linkedin.com/in/danialsharifi/' target='_blank'>
                             LinkedIn

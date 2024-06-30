@@ -20,6 +20,7 @@ interface ILeaderBoardData {
 const AirDrop = () => {
     const [loader, setLoader] = useState(false);
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
+
     useEffect(() => {
         setLoader(true);
         axios.get('https://api-jri.com/v2/LeaderBoard').then(res => {
@@ -41,12 +42,16 @@ const AirDrop = () => {
             <p>Airdrop 1.2: July 30 - Farcaster Tips</p>
 
             <div className='button-group'>
-                <Button radius='rounded' className='gradient' onClick={() => toast.error('Wait until 15th July!')}>
-                    Check Eligibility
-                </Button>
-                <Button radius='rounded' className='ghost' onClick={() => toast.error('Wait until 15th July!')}>
-                    Claim
-                </Button>
+                <div>
+                    <Button radius='rounded' className='gradient' onClick={() => toast.error('Wait until 15th July!')}>
+                        Check Eligibility
+                    </Button>
+                </div>
+                <div>
+                    <Button radius='rounded' className='ghost' onClick={() => toast.error('Wait until 15th July!')}>
+                        Claim
+                    </Button>
+                </div>
             </div>
             <div className='table'>
                 <header className='header'>
