@@ -106,10 +106,10 @@ const BestTest = () => {
             toast.error('Please enter your wallet address first !');
             setAddressResult(null);
         } else {
-            if (findKeyByValue(usersData, addressSearch) === 'cant-find') {
+            if (findKeyByValue(usersData, addressSearch.toLowerCase()) === 'cant-find') {
                 toast.error('Seems like you are not a the list yet, Contact support');
             } else {
-                setAddressResult(findKeyByValue(usersData, addressSearch));
+                setAddressResult(findKeyByValue(usersData, addressSearch.toLowerCase()));
             }
         }
     };
