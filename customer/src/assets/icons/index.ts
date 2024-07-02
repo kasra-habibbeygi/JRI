@@ -17,3 +17,7 @@ export { default as Search } from './search.svg?react';
 export { default as NotFound } from './not-found.svg?react';
 export { default as VIPStar } from './vip-star.svg?react';
 export { default as Airdrop } from './airdrop.svg?react';
+export { default as HumanBronze } from './human-bronze.svg?react';
+export { default as HumanGold } from './human-gold.svg?react';
+export { default as HumanOG } from './human-og.svg?react';
+export { default as HumanSilver } from './human-silver.svg?react';

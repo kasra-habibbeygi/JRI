@@ -1,14 +1,17 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Helmet } from 'react-helmet';
+import { usersData } from './users';
+import axios from 'axios';
+import toast from 'react-hot-toast';
 
 // Assets
-import { VIPStar } from 'assets/icons';
+import { LittleArrow, VIPStar } from 'assets/icons';
 import { BetaTestContainer } from './betaTest.style';
 
 // Components
 import { Button } from 'commons/components';
-import axios from 'axios';
-import toast from 'react-hot-toast';
 
 // Types
 interface Errors {
@@ -28,6 +31,8 @@ interface InputValues {
 }
 
 const BestTest = () => {
+    const [addressSearch, setAddressSearch] = useState('');
+    const [addressResult, setAddressResult] = useState<string | number | null>(null);
     const [errors, setErrors] = useState<Errors>({
         title: false,
         briefDescription: false,
@@ -80,6 +85,32 @@ const BestTest = () => {
                     linkToPreviousWork: ''
                 });
             });
+        }
+    };
+
+    const findKeyByValue = (data: any, value: string): number | string => {
+        for (let i = 0; i < data.length; i++) {
+            const obj = data[i];
+            for (const key in obj) {
+                if (obj[key] === value) {
+                    // @ts-ignore
+                    return obj.allowance as number;
+                }
+            }
+        }
+        return 'cant-find';
+    };
+
+    const onCheckAddress = () => {
+        if (addressSearch === '') {
+            toast.error('Please enter your wallet address first !');
+            setAddressResult(null);
+        } else {
+            if (findKeyByValue(usersData, addressSearch) === 'cant-find') {
+                toast.error('Seems like you are not a the list yet, Contact support');
+            } else {
+                setAddressResult(findKeyByValue(usersData, addressSearch));
+            }
         }
     };
 
@@ -167,8 +198,21 @@ const BestTest = () => {
                 </form>
                 <aside>
                     <div>
-                        <p>For More Information You Can Contact us at</p>
-                        <small>support@justreadit.build</small>
+                        <div className='content'>
+                            <p>Check Daily Allowance</p>
+                            <small>
+                                Paste Wallet Address <LittleArrow />
+                            </small>
+                        </div>
+
+                        <input
+                            type='text'
+                            placeholder='Your wallet address'
+                            value={addressSearch}
+                            onChange={e => setAddressSearch(e.target.value)}
+                        />
+                        <Button onClick={onCheckAddress}>Check</Button>
+                        {addressResult !== null && <p className='final-result'>Your daily allowance is : {addressResult}</p>}
                     </div>
                 </aside>
             </section>

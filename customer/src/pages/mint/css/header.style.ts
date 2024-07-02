@@ -10,8 +10,8 @@ const rotate = keyframes`
     }
 `;
 
-export const HeaderContainer = styled.section(
-    ({ theme }) => css`
+export const HeaderContainer = styled.section<{ addressResult: boolean }>(
+    ({ theme, addressResult }) => css`
         display: flex;
         gap: 70px;
         margin-top: 80px;
@@ -162,7 +162,7 @@ export const HeaderContainer = styled.section(
                 display: flex;
                 align-items: center;
                 flex-wrap: wrap;
-                gap: 5px;
+                gap: 10px;
                 font-size: 36px;
                 margin-bottom: 24px;
 
@@ -171,7 +171,7 @@ export const HeaderContainer = styled.section(
                         color: ${theme.colors.text.accent1};
                     }
                     &:nth-child(2) {
-                        color: #bababa;
+                        color: #00d100;
                     }
                     &:nth-child(3) {
                         color: ${theme.colors.text.accent2};
@@ -189,7 +189,7 @@ export const HeaderContainer = styled.section(
                 position: relative;
                 height: 200px;
                 width: 100%;
-                background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+                background: ${addressResult ? '#F0F2F5' : 'linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%)'};
 
                 .animated-text {
                     position: absolute;
@@ -203,21 +203,19 @@ export const HeaderContainer = styled.section(
 
             .min-button {
                 margin: auto;
-                width: 240px;
+                width: max-content;
 
                 button {
                     margin-top: 48px;
                     font-size: 20px;
-                    width: 240px;
+                    width: max-content;
                     height: 48px;
                     color: #fff !important;
                     border: 2px solid #fff;
                     box-shadow: #fff 0px 0px 13px 0px;
-
                     background: linear-gradient(90deg, ${theme.colors.background.accent2} 21%, ${theme.colors.background.accent1} 100%);
                     color: white !important;
                     font-size: 20px;
-                    width: 240px;
                     height: 48px;
                     margin-bottom: 121px;
 
@@ -227,6 +225,57 @@ export const HeaderContainer = styled.section(
                         border: 1px solid ${theme.colors.background.accent2};
                         box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
                     }
+                }
+            }
+        }
+
+        .search-result-field {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 64px;
+            font-size: 20px;
+
+            b {
+                color: ${theme.colors.text.accent2};
+            }
+        }
+
+        .address-search-field {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-top: 26px;
+            margin-bottom: 48px;
+
+            input {
+                width: 100%;
+                height: 46px;
+                color: black;
+                font-size: 20px;
+                background-color: white;
+                border: 2px solid #f0f2f5;
+                padding-left: 32px;
+
+                &::placeholder {
+                    color: #bababa;
+                }
+            }
+
+            button {
+                background: linear-gradient(90deg, ${theme.colors.background.accent2} 21%, ${theme.colors.background.accent1} 100%);
+                color: white !important;
+                font-size: 20px;
+                min-width: 240px;
+                height: 48px;
+                border-radius: 500px;
+
+                &:hover {
+                    background: transparent;
+                    color: ${theme.colors.background.accent2} !important;
+                    border: 1px solid ${theme.colors.background.accent2};
+                    box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
                 }
             }
         }
@@ -247,6 +296,7 @@ export const HeaderContainer = styled.section(
             margin-top: 60px;
             margin-bottom: 80px;
             padding-bottom: 60px;
+            gap: 150px;
 
             .right-field {
                 h3 {
@@ -296,6 +346,18 @@ export const HeaderContainer = styled.section(
                         font-size: 12px;
                     }
                 }
+            }
+
+            .address-search-field {
+                flex-direction: column;
+            }
+
+            .min-button {
+                margin-top: 8px !important;
+            }
+
+            .search-result-field {
+                padding: 0 20px;
             }
         }
     `

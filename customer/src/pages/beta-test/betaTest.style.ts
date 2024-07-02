@@ -60,8 +60,13 @@ export const BetaTestContainer = styled.div(
         }
 
         aside {
-            div {
-                background: linear-gradient(90deg, rgba(137, 99, 209, 1) 21%, rgba(5, 45, 255, 1) 100%);
+            & > div {
+                position: sticky;
+                top: 80px;
+            }
+
+            .content {
+                background: #f0f2f5;
                 padding: 32px;
                 color: white;
                 font-size: 20px;
@@ -69,18 +74,57 @@ export const BetaTestContainer = styled.div(
                 display: flex;
                 flex-direction: column;
                 gap: 12px;
-                position: sticky;
-                top: 80px;
 
                 p {
                     font-size: 20px;
                     line-height: 18px;
                     font-weight: 500;
+                    color: black;
+                    text-align: center;
                 }
 
                 small {
                     font-weight: 300;
                     font-size: 16px;
+                    color: #052dff;
+                    text-align: center;
+                    margin-bottom: 76px;
+                    margin-top: 56px;
+                    font-weight: 500;
+                    text-decoration: underline;
+
+                    svg {
+                        width: 20px;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+
+            input {
+                width: 100%;
+                height: 46px;
+                color: black;
+                font-size: 16px;
+                background-color: white;
+                border: 2px solid #f0f2f5;
+                padding-left: 20px;
+                margin-top: 52px;
+            }
+
+            button {
+                background: linear-gradient(90deg, ${theme.colors.background.accent2} 21%, ${theme.colors.background.accent1} 100%);
+                color: white !important;
+                font-size: 20px;
+                width: 240px;
+                height: 48px;
+                border-radius: 500px !important;
+                box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
+                margin-top: 24px;
+
+                &:hover {
+                    background: transparent;
+                    color: ${theme.colors.background.accent2} !important;
+                    border: 1px solid ${theme.colors.background.accent2};
                 }
             }
         }
@@ -166,6 +210,10 @@ export const BetaTestContainer = styled.div(
             }
         }
 
+        .final-result {
+            margin-top: 10px;
+        }
+
         @media (max-width: 760px) {
             margin-top: 60px;
             margin-bottom: 80px;
@@ -243,6 +291,13 @@ export const BetaTestContainer = styled.div(
             aside {
                 div {
                     min-width: unset;
+                }
+
+                button {
+                    font-size: 16px;
+                    height: 40px;
+                    margin-bottom: unset;
+                    width: 100%;
                 }
             }
         }

@@ -1,13 +1,18 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 // Assets
-import { CurveText } from 'assets/icons';
+import { CurveText, HumanBronze, HumanGold, HumanOG, HumanSilver } from 'assets/icons';
 import { HeaderContainer } from '../css';
 import Person from 'assets/img/person.png';
 
 // Components
 import { noiseProvider, skeletonProvider } from '../utils';
+import { Button } from 'commons/components';
+
+import { usersData } from './users';
+import toast from 'react-hot-toast';
 
 // Types
 interface ILeaderBoardData {
@@ -19,9 +24,10 @@ interface ILeaderBoardData {
 const Header = () => {
     const [loader, setLoader] = useState(false);
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
+    const [addressSearch, setAddressSearch] = useState('');
+    const [addressResult, setAddressResult] = useState<'og' | 'gold' | 'silver' | 'bronze' | null>(null);
 
     useEffect(() => {
-        noiseProvider();
         setLoader(true);
         axios.get('https://api-jri.com/v2/LeaderBoard').then(res => {
             setLeaderBoardData(res.data.leaderboard);
@@ -39,15 +45,46 @@ const Header = () => {
             container.appendChild(script);
         }
 
+        // Clean up function
         return () => {
-            if (container) {
+            if (container && container.contains(script)) {
                 container.removeChild(script);
             }
         };
     }, []);
 
+    useEffect(() => {
+        if (addressResult === null) {
+            noiseProvider();
+        }
+    }, [addressResult]);
+
+    const findKeyByValue = (data: any, value: string): 'og' | 'gold' | 'silver' | 'bronze' => {
+        for (let i = 0; i < data.length; i++) {
+            const obj = data[i];
+            for (const key in obj) {
+                if (obj[key] === value) {
+                    return key as 'og' | 'gold' | 'silver';
+                }
+            }
+        }
+        return 'bronze';
+    };
+
+    const onCheckAddress = () => {
+        if (addressSearch === '') {
+            toast.error('Please enter your wallet address first !');
+            setAddressResult(null);
+        } else if (!addressSearch.startsWith('0x') || addressSearch.length < 38 || addressSearch.length > 42) {
+            toast.error('Please enter correct address wallet');
+            setAddressResult(null);
+        } else {
+            setAddressResult(findKeyByValue(usersData, addressSearch));
+        }
+    };
+
     return (
-        <HeaderContainer className='container'>
+        <HeaderContainer className='container' addressResult={!!addressResult}>
             <div className='left-field'>
                 <h3>LEADERBOARD</h3>
                 <div className='table-field'>
@@ -82,21 +119,50 @@ const Header = () => {
             <div className='right-field'>
                 <h3>
                     <span>The Mint is</span>
-                    <span>NOT live</span>
+                    <span className='green'>live</span>
                     <span>Right Now</span>
                 </h3>
                 <p className='sub-title'>
-                    The mint button will soon be available to access our minting event, where you can acquire your JRI Contracts. Stay tuned
-                    for updates on when the minting process will begin. Get ready to be part of the future of crowdfunding with JUST READ
-                    IT!
+                    Thanks for all your support in June. We are finally at the end of Phase 0. Check your spot here and meet back on your
+                    minting date. We build together, we celebrate together.
                 </p>
+                <div className='address-search-field'>
+                    <input
+                        type='text'
+                        placeholder='Your wallet address'
+                        value={addressSearch}
+                        onChange={e => setAddressSearch(e.target.value)}
+                    />
+                    <Button onClick={onCheckAddress}>Check</Button>
+                </div>
                 <div className='content'>
                     <span className='animated-text'>
                         <CurveText />
                     </span>
                     <div className='main-noise-field'>
-                        <img src={Person} alt='' className='mask-img' />
-                        <canvas id='c' width='750' height='200'></canvas>
+                        {addressResult !== null ? (
+                            <div className='search-result-field'>
+                                <div>
+                                    <b>Congratulations!</b>
+                                    <p>You are in the {addressResult} tier.</p>
+                                    <p>Mint Date: July 5th.</p>
+                                </div>
+                                {addressResult === 'bronze' ? (
+                                    <HumanBronze />
+                                ) : addressResult === 'gold' ? (
+                                    <HumanOG />
+                                ) : addressResult === 'og' ? (
+                                    <HumanGold />
+                                ) : (
+                                    addressResult === 'silver' && <HumanSilver />
+                                )}
+                            </div>
+                        ) : (
+                            <>
+                                <img src={Person} alt='' className='mask-img' />
+                                <canvas id='c' width='750' height='200'></canvas>
+                            </>
+                        )}
                     </div>
                 </div>
 
