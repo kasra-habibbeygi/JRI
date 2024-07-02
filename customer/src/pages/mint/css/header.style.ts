@@ -203,13 +203,31 @@ export const HeaderContainer = styled.section(
 
             .min-button {
                 margin: auto;
-                margin-top: 48px;
-                font-size: 20px;
                 width: 240px;
-                height: 48px;
-                color: #bababa !important;
-                border: 2px solid #bababa;
-                box-shadow: #bababa 0px 0px 13px 0px;
+
+                button {
+                    margin-top: 48px;
+                    font-size: 20px;
+                    width: 240px;
+                    height: 48px;
+                    color: #fff !important;
+                    border: 2px solid #fff;
+                    box-shadow: #fff 0px 0px 13px 0px;
+
+                    background: linear-gradient(90deg, ${theme.colors.background.accent2} 21%, ${theme.colors.background.accent1} 100%);
+                    color: white !important;
+                    font-size: 20px;
+                    width: 240px;
+                    height: 48px;
+                    margin-bottom: 121px;
+
+                    &:hover {
+                        background: transparent;
+                        color: #fff !important;
+                        border: 1px solid ${theme.colors.background.accent2};
+                        box-shadow: ${theme.colors.text.accent2} 0px 0px 11px -1px;
+                    }
+                }
             }
         }
 

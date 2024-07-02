@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import toast from 'react-hot-toast';
 import axios from 'axios';
 
 // Assets
@@ -8,7 +7,6 @@ import { HeaderContainer } from '../css';
 import Person from 'assets/img/person.png';
 
 // Components
-import { Button } from 'commons/components';
 import { noiseProvider, skeletonProvider } from '../utils';
 
 // Types
@@ -21,8 +19,6 @@ interface ILeaderBoardData {
 const Header = () => {
     const [loader, setLoader] = useState(false);
     const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData[]>(null);
-    // const [isEmpty, setIsEmpty] = useState(false);
-    // const [searchValue, setSearchValue] = useState('');
 
     useEffect(() => {
         noiseProvider();
@@ -31,20 +27,24 @@ const Header = () => {
             setLeaderBoardData(res.data.leaderboard);
             setLoader(false);
         });
+
+        const script = document.createElement('script');
+        script.src = 'https://launchpad.heymint.xyz/embed.js';
+        script.defer = true;
+        script.setAttribute('data-project-id', '30400');
+        script.setAttribute('data-chain', 'BASE');
+
+        const container = document.querySelector('.min-button');
+        if (container) {
+            container.appendChild(script);
+        }
+
+        return () => {
+            if (container) {
+                container.removeChild(script);
+            }
+        };
     }, []);
-
-    // useEffect(() => {
-    //     setLoader(true);
-    //     const delayDebounceFn = setTimeout(() => {
-    //         axios.get(`https://api-jri.com/v2/LeaderBoard?filter=${searchValue}`).then(res => {
-    //             setLeaderBoardData(res.data.leaderboard);
-    //             setIsEmpty(!res.data.leaderboard);
-    //             setLoader(false);
-    //         });
-    //     }, 1500);
-
-    //     return () => clearTimeout(delayDebounceFn);
-    // }, [searchValue]);
 
     return (
         <HeaderContainer className='container'>
@@ -99,15 +99,8 @@ const Header = () => {
                         <canvas id='c' width='750' height='200'></canvas>
                     </div>
                 </div>
-                <Button
-                    className='min-button'
-                    buttonType='outline'
-                    radius='rounded'
-                    variant='accent1'
-                    onClick={() => toast.error('You should connect your wallet first, So wait until end of the June :)')}
-                >
-                    Mint Now
-                </Button>
+
+                <div className='min-button'></div>
             </div>
         </HeaderContainer>
     );

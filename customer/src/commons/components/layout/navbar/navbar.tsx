@@ -6,10 +6,6 @@ import { useDispatch } from 'react-redux';
 import { NavbarContainer } from './navbar.style';
 import { Document, Logo, Menu } from 'assets/icons';
 
-// Components
-import { Button } from 'commons/components';
-import toast from 'react-hot-toast';
-
 const Navbar = () => {
     const dispatch = useDispatch();
     const { pathname } = useLocation();
@@ -59,17 +55,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <div className='right-side'>
-                    <Button
-                        radius='rounded'
-                        variant='accent2'
-                        buttonType='outline'
-                        className='connect-wallet'
-                        onClick={() => toast.error('Wait until end of the June!')}
-                    >
-                        Connect Wallet
-                    </Button>
-                </div>
+                {/* <div className='right-side'></div> */}
                 <div className='sandwich-menu'>
                     {pathname === '/full-version' && (
                         <Document className='doc-icon' onClick={() => dispatch(toggleFullVersionTitleMenu())} />
