@@ -162,9 +162,9 @@ const Header = () => {
                                 {addressResult === 'bronze' ? (
                                     <HumanBronze />
                                 ) : addressResult === 'gold' ? (
-                                    <HumanOG />
-                                ) : addressResult === 'og' ? (
                                     <HumanGold />
+                                ) : addressResult === 'og' ? (
+                                    <HumanOG />
                                 ) : (
                                     addressResult === 'silver' && <HumanSilver />
                                 )}
