@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -145,8 +146,18 @@ const Header = () => {
                             <div className='search-result-field'>
                                 <div>
                                     <b>Congratulations!</b>
-                                    <p>You are in the {addressResult} tier.</p>
-                                    <p>Mint Date: July 5th.</p>
+                                    <p>{addressResult === 'og' ? 'You are one of the JRI OGs' : `You are in the ${addressResult} tier.`}</p>
+                                    <p>
+                                        Mint Date: July{' '}
+                                        {addressResult === 'og'
+                                            ? '3rd'
+                                            : addressResult === 'gold'
+                                                ? '3rd'
+                                                : addressResult === 'silver'
+                                                    ? '4th'
+                                                    : addressResult === 'bronze' && '5th'}
+                                        .
+                                    </p>
                                 </div>
                                 {addressResult === 'bronze' ? (
                                     <HumanBronze />
