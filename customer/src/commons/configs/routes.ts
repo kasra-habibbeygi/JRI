@@ -2,9 +2,8 @@
 import coolVersion from 'pages/cool-version';
 import home from 'pages/home';
 import mint from 'pages/mint';
-import FullVersion from 'pages/full-version';
+// import FullVersion from 'pages/full-version';
 import betaTest from 'pages/beta-test';
-import testTest from 'pages/test-test';
 import stake from 'pages/stake';
 import onLoad from 'pages/on-load';
 import AirDrop from 'pages/air-drop';
@@ -31,15 +30,11 @@ export default (): IRoutesItems[] => {
         },
         {
             route: 'full-version',
-            component: FullVersion
+            component: onLoad
         },
         {
             route: 'beta-test',
             component: betaTest
-        },
-        {
-            route: 'Test-Test',
-            component: testTest
         },
         {
             route: 'jri-token',
