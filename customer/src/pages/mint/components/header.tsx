@@ -64,6 +64,7 @@ const Header = () => {
             const obj = data[i];
             for (const key in obj) {
                 if (obj[key] === value) {
+                    console.log(obj);
                     return key as 'og' | 'gold' | 'silver';
                 }
             }
@@ -79,7 +80,7 @@ const Header = () => {
             toast.error('Please enter correct address wallet');
             setAddressResult(null);
         } else {
-            setAddressResult(findKeyByValue(usersData, addressSearch));
+            setAddressResult(findKeyByValue(usersData, addressSearch.toLowerCase()));
         }
     };
 

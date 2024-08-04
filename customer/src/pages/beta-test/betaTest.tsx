@@ -109,7 +109,7 @@ const BestTest = () => {
             if (findKeyByValue(usersData, addressSearch) === 'cant-find') {
                 toast.error('Seems like you are not a the list yet, Contact support');
             } else {
-                setAddressResult(findKeyByValue(usersData, addressSearch));
+                setAddressResult(findKeyByValue(usersData, addressSearch.toLowerCase()));
             }
         }
     };
