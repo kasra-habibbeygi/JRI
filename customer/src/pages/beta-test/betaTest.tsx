@@ -12,6 +12,7 @@ import { BetaTestContainer } from './betaTest.style';
 
 // Components
 import { Button } from 'commons/components';
+import OnLoad from 'pages/on-load';
 
 // Types
 interface Errors {
@@ -116,6 +117,7 @@ const BestTest = () => {
 
     return (
         <BetaTestContainer className='container'>
+            <OnLoad isCover={true} />
             <Helmet title='JRI | Beta Test' />
             <header>
                 <h1>Make History: Be the First Builder Funded on JRI!</h1>

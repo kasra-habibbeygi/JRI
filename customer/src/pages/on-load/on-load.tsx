@@ -10,7 +10,7 @@ import 'swiper/css/effect-fade';
 import { Button } from 'commons/components';
 import { Link } from 'react-router-dom';
 
-const OnLoad = () => {
+const OnLoad = ({ isCover = false }: { isCover?: boolean }) => {
     useEffect(() => {
         injectGlobal`
             footer {
@@ -22,7 +22,7 @@ const OnLoad = () => {
     }, []);
 
     return (
-        <OnLoadContainer>
+        <OnLoadContainer className={`${isCover ? 'on-load-container' : ''}`}>
             <img src='monkey.gif' alt='Description of GIF' />
             <Swiper
                 className='mySwiper'

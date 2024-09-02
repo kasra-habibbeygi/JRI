@@ -9,11 +9,11 @@ const Sticker = () => {
                 <div className='sticky-field'>
                     <p>Check Eligibility & Join</p>
                     <div>
-                        <a href='https://www.guild.xyz/justreadit' target='_blank'>
+                        <a className='disabled' href='https://www.guild.xyz/justreadit' target='_blank'>
                             <Castle />
                             Join Guild
                         </a>
-                        <a href='https://discord.gg/snQBQDRBjP' target='_blank'>
+                        <a className='disabled' href='https://discord.gg/snQBQDRBjP' target='_blank'>
                             <Discord />
                             Join Discord
                         </a>

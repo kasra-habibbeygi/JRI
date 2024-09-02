@@ -14,6 +14,7 @@ export const BetaTestContainer = styled.div(
     ({ theme }) => css`
         margin-top: 80px;
         margin-bottom: 120px;
+        position: relative;
 
         h1 {
             background: -webkit-linear-gradient(0deg, #8a63d2 50%, #052dff);

@@ -17,6 +17,11 @@ export const StickerContainer = styled.div(
             max-height: 0;
         }
 
+        .disabled {
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
         .sticky-field {
             border-radius: 20px 20px 0 0;
             background-color: white;

@@ -1,5 +1,6 @@
 // Components
 // import { Button } from 'commons/components';
+import OnLoad from 'pages/on-load';
 
 // Assets
 import { StakeContainer } from './stake.style';
@@ -9,6 +10,7 @@ import ChartImg from '/chart.svg';
 const Stake = () => {
     return (
         <StakeContainer className='container'>
+            <OnLoad isCover={true} />
             <header>
                 <h1>Turning Donations Into Profit</h1>
                 <p>Stake Your LP Tokens and Get JRI Points to be Unique Airdrop Eligible</p>

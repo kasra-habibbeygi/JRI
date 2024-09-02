@@ -1,8 +1,9 @@
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
 // Components
-import { ProgressBar, WhiteListContainer } from './whiteList.style';
+import { WhiteListContainer } from './whiteList.style';
 
 // Types
 interface ILeaderBoardData {
@@ -72,9 +73,9 @@ const WhiteList = () => {
                                 <span className='bronze'>10000 Bronze Tier</span>
                             </td>
                         </div>
-                        <ProgressBar percent={leaderBoardData ? (leaderBoardData?.total * 100) / 11100 : 0}>
-                            {/* <span className='progress-line'></span>
-                            <div className='text'>{leaderBoardData?.total}/11100</div> */}
+                        {/* <ProgressBar percent={leaderBoardData ? (leaderBoardData?.total * 100) / 11100 : 0}>
+                            <span className='progress-line'></span>
+                            <div className='text'>{leaderBoardData?.total}/11100</div>
                             <div className='progress-container'>
                                 <div className='border-field'></div>
                                 <div className='backdrop'>
@@ -88,7 +89,7 @@ const WhiteList = () => {
                                     </div>
                                 </div>
                             </div>
-                        </ProgressBar>
+                        </ProgressBar> */}
                     </div>
                 </div>
             </div>

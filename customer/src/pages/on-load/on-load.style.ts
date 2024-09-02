@@ -11,6 +11,25 @@ export const OnLoadContainer = styled.div(
         font-size: 20px;
         height: calc(100vh - 68px);
 
+        &.on-load-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            left: 0;
+            z-index: 998;
+
+            &::before {
+                backdrop-filter: blur(6px);
+                background-color: #ffffffb5;
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
         img {
             width: 300px;
             border-radius: 12px;

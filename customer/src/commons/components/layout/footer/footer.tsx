@@ -26,10 +26,7 @@ const Footer = () => {
             <div className='contact'>
                 <b>Contact Us</b>
                 <p>
-                    <a href='mailto:support@justreadit.build'>support@justreadit.build</a> - Customer support and technical assistance.
-                </p>
-                <p>
-                    <a href='mailto:partners@justreadit.build'>partners@justreadit.build</a> - Partnerships and collaborations.
+                    <a href='mailto:support@justreadit.build'>info@justreadit.xyz</a> - Customer support and technical assistance.
                 </p>
             </div>
         </FooterContainer>
