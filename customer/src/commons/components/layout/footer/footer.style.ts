@@ -28,6 +28,9 @@ export const FooterContainer = styled.footer(
         }
 
         a {
+            pointer-events: none;
+            opacity: 0.5;
+
             &:hover {
                 transition: all linear 0.1s;
                 text-decoration: underline;
@@ -53,6 +56,9 @@ export const FooterContainer = styled.footer(
 
             a {
                 color: ${theme.colors.text.accent1};
+
+                pointer-events: initial;
+                opacity: 1;
             }
         }
 

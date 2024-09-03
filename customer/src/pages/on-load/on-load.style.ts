@@ -20,7 +20,7 @@ export const OnLoadContainer = styled.div(
             z-index: 998;
 
             &::before {
-                backdrop-filter: blur(6px);
+                backdrop-filter: blur(1px);
                 background-color: #ffffffb5;
                 content: '';
                 position: absolute;

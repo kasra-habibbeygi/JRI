@@ -1,28 +1,22 @@
-/* eslint-disable no-unused-vars */
-import axios from 'axios';
-import { useEffect, useState } from 'react';
-
 // Components
 import { WhiteListContainer } from './whiteList.style';
 
 // Types
-interface ILeaderBoardData {
-    leaderboard: {
-        totalPoints: number;
-        address: string;
-    }[];
-    total: number;
-}
+// interface ILeaderBoardData {
+//     leaderboard: {
+//         totalPoints: number;
+//         address: string;
+//     }[];
+//     total: number;
+// }
 
 // One of the reasons I didn't use the TABLE tag for this table was that it caused a
 // serious bug in Safari due to the gradient and progress, so I had to implement it this way.
 
 const WhiteList = () => {
-    const [leaderBoardData, setLeaderBoardData] = useState<null | ILeaderBoardData>(null);
-
-    useEffect(() => {
-        axios.get('https://api-jri.com/v2/LeaderBoard').then(res => setLeaderBoardData(res.data));
-    }, []);
+    // useEffect(() => {
+    //     axios.get('https://api-jri.com/v2/LeaderBoard').then(res => setLeaderBoardData(res.data));
+    // }, []);
 
     return (
         <WhiteListContainer>

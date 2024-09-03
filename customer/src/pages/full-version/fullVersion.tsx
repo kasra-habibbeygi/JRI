@@ -9,7 +9,6 @@ import { Helmet } from 'commons/components';
 
 // Assets
 import { FullVersionContainer, LayerContainer, MainList } from './fullVersion.style';
-import FV01 from 'assets/img/FV01.png';
 import Persons from 'assets/img/person.png';
 import RoadMap from 'assets/img/road-map.png';
 import { Clone } from 'assets/icons';
@@ -468,16 +467,11 @@ const FullVersion = () => {
                     1,090 are special NFTs with guaranteed values, including:
                 </p>
                 <ul>
-                    <li>1 x 5 ETH OG Tier Contract: Awarded to the top-ranking OG.</li>
-                    <li>1 x 4 ETH OG Tier Contract: Awarded to the second-rank OG.</li>
-                    <li>1 x 3 ETH OG Tier Contract: Awarded to the third-rank OG.</li>
-                    <li>1 x 2 ETH OG Tier Contract: Awarded to the fourth-rank OG.</li>
-                    <li>6 x 1 ETH OG Tier Contracts: Awarded to the 5th to 10th ranking individuals.</li>
-                    <li>90 x 0.5 ETH Gold Tier Contracts: Awarded to the 11th to 100th ranking individuals.</li>
-                    <li>90 x 0.2 ETH Silver Tier Contracts: Randomly awarded to Silver Tier participants.</li>
-                    <li>900 x 0.1 ETH Bronze Tier Contracts: Randomly awarded to Bronze Tier participants.</li>
+                    <li>10 x 0.3 ETH Gold Tier Contracts</li>
+                    <li>40 x 0.1 ETH Silver Tier Contract: Awarded to the second-rank OG.</li>
+                    <li>950 x 500,000 JRI Token.</li>
                 </ul>
-                <img src={FV01} alt='' />
+                {/* <img src={FV01} alt='' /> */}
                 <p>
                     This phase features three whitelist tiers: OGs and Gold Tier participants, Silver Tier, and Bronze Tier, each with
                     unique entry requirements.
@@ -488,53 +482,56 @@ const FullVersion = () => {
                     <a href='https://www.guild.xyz/justreadit' target='_blank'>
                         www.guild.xyz/justreadit
                     </a>
-                    . Here's how the tiers are structured based on your ranking. We will take a snapshot of the rankings at the end of June
-                    2024.
+                    . Here's how the tiers are structured based on your ranking. We will take a snapshot of the rankings at the end of
+                    September 2024.
                 </p>
                 <h4 id='minting-details'>Minting Details:</h4>
                 <ul>
-                    <li>Gold Tier Minting: Reserved for the top 100 participants with the highest points. Minting price: 0.005 ETH.</li>
-                    <li>Silver Minting: For individuals ranked 101st to 1100th. Minting price: 0.01 ETH.</li>
-                    <li>Bronze Minting: For participants ranked 1001st to 11,100th. Minting price: 0.02 ETH.</li>
+                    <li>
+                        OG/Gold Tier Minting: Reserved for the top 100 participants with the highest points. Minting price: 0.002 ETH. Each
+                        can mint up to 3 Contracts.
+                    </li>
+                    <li>
+                        Silver Minting: For individuals ranked 101st to 1100th. Minting price: 0.002 ETH. Each can mint up to 2 contracts.
+                    </li>
+                    <li>
+                        Bronze Minting: For participants ranked 1101st to 11,100th. Minting price: 0.002 ETH. Each can only mint 1 contract.
+                    </li>
                 </ul>
                 <p>
-                    Following the completion of the three-day minting period for JRI Contracts, if all 11,100 NFTs are not sold out, the
-                    project will open the minting process to the public at the same Bronze Tier mint price of 0.02 ETH for another 24 hours.
-                    If any NFTs remain unsold after this period, they will be burned to ensure exclusivity and maintain the collection's
-                    value.
+                    Following the completion of the three-day minting period for JRI Contracts, if all 12,300 NFTs are not sold out, the
+                    project will open the minting process to the public at the mint price of 0.002 ETH for another 24 hours. If any NFTs
+                    remain unsold after this period, they will be burned to ensure exclusivity and maintain the collection's value.
                 </p>
                 <h4 id='floor-sweeping-strategy'>Floor-Sweeping Strategy:</h4>
                 <h4 id='#1st-day-floor-sweeping-strategy'>1st Day Floor-Sweeping Strategy:</h4>
-                <p>
-                    OGs and Gold tier participants will play a crucial role in stabilizing the market and enhancing the value of our
-                    collection through our innovative floor-sweeping strategy. Upon the minting on day one, the project treasury will
-                    already have accumulated 0.5 ETH. With this initial earning, the treasury's total funds will amount to 1 ETH. This
-                    entire sum will then be allocated among a team of 10 OGs. These select individuals will strategically purchase JRI
-                    Contracts listed below the Silver Tier minting price of 0.01 ETH, effectively contributing to market stabilization and
-                    bolstering the floor price. The OG team will focus on sweeping the first 100 contracts listed below the designated
-                    price. At this stage, all participants who minted JRI Contracts can sell them at twice the mint price, reflecting the
-                    increased market value. At this point, the collection will have the first 1 ETH total volume on the market and a floor
-                    price of 0.01 ETH.
-                </p>
-                <h4 id='2nd-day-floor-sweeping-strategy'>2nd Day Floor-Sweeping Strategy:</h4>
                 <p>
                     As day two of minting begins, the treasury will earn an additional 10 ETH from the minting of 1000 contracts priced at
                     0.01 ETH each. This entire sum of 10 ETH will be distributed among all Gold Tier participants, ensuring each individual
                     receives 0.1 ETH. Participants are encouraged to utilize this ETH to engage in floor-sweeping activities by purchasing
                     any JRI Contracts listed below the Bronze minting price of 0.02 ETH. The team will focus on sweeping the first 500
                     contracts listed below the designated price, ensuring a swift and impactful implementation of the floor-sweeping
-                    strategy. By this time, the collection in the market will have a total volume of 11 ETH and a floor price of 0.02 ETH,
-                    allowing participants to sell their NFTs for about 2x to 4x the initial mint price.
+                    strategy. By this time, the collection in the market will have a total volume of 11 ETH and a floor price of {'>'} 0.02
+                    ETH, allowing participants to sell their NFTs for about 2x to 4x the initial mint price.
+                </p>
+                <h4 id='2nd-day-floor-sweeping-strategy'>2nd Day Floor-Sweeping Strategy:</h4>
+                <p>
+                    As day two of minting begins, the treasury will earn an additional 4 ETH from the minting of 2000 contracts priced at
+                    0.002 ETH each. This entire sum of 4 ETH will be distributed among all Gold Tier participants, ensuring each individual
+                    receives 0.04 ETH. Participants are encouraged to utilize this ETH to engage in floor-sweeping activities by purchasing
+                    any JRI Contracts listed below the 4x minting price of 0.008 ETH. The team will focus on sweeping the first 500
+                    contracts listed below the designated price, ensuring a swift and impactful implementation of the floor-sweeping
+                    strategy. By this time, the collection in the market will have a total volume of 5 ETH and a floor price of 0.008 ETH,
+                    allowing participants to sell their NFTs for more than 4x the initial mint price.
                 </p>
                 <h4 id='3rd-Day-boosting-market-growth'>3rd Day Boosting Market Growth : </h4>
                 <p>
-                    At this point, the market floor price is already above the 0.02 ETH Bronze Tier minting price. The funds earned on the
-                    third day will be used to make an unlimited-time offer to all holders of guaranteed value items, starting with all Gold
-                    Tier contracts. Since all Gold Tier contracts have the same price, this offer will allow participants to sell their NFTs
-                    even before the reveal.For each 25 mints, we are making an unlimited time offer to Gold Tier members worth 0.5 ETH. This
-                    will force the market to grow in volume by 65 ETH, reaching a total of 76 ETH. This strategy will push the floor price
-                    above 0.5 ETH, enhancing the overall market value and providing substantial returns for participants. This offer is
-                    designed to encourage continuous participation and market activity, ensuring sustained growth and stability.
+                    At this point, the market floor price is already above the 0.008 ETH. The funds earned on the third day will be used to
+                    make an unlimited-time offer to all holders of guaranteed value items on reveal. starting with all Gold Tier contracts.
+                    For each 150 mints, we are making an unlimited time offer to Gold Contracts worth 0.3 ETH. This will force the market to
+                    grow in volume by 7 ETH, reaching a total of 12 ETH. This strategy will push the floor price above 0.0.3 ETH, enhancing
+                    the overall market value and providing substantial returns for participants. This offer is designed to encourage
+                    continuous participation and market activity, ensuring sustained growth and stability.
                 </p>
                 <div className='roadmap-field'>
                     <img src={Persons} alt='' />
@@ -542,13 +539,13 @@ const FullVersion = () => {
                 </div>
                 <h3 id='the-day'>The Day</h3>
                 <b>
-                    At this point, we have already made an unlimited-time offer for all 1,090 guaranteed value NFTs, making the collection's
-                    total volume more than 184 ETH.
+                    At this point, we have already made an unlimited-time offer for all 1,000 guaranteed value NFTs, making the collection's
+                    total volume more than 18 ETH.
                 </b>
                 <p>Secret Reward :</p>
                 <p>
                     Attention devs and crypto enthusiasts! 📢 If you're reading this, we’ve got a special Easter egg for you. Guess the
-                    floor price at the moment of reveal and the closest guess will win 1 ETH! 💰
+                    floor price at the moment of reveal and the closest guess will win 0.2 ETH! 💰
                 </p>
                 <p>Submit your guess in the Discord general chat with this format:</p>
                 <div className='mini-terminal'>
@@ -583,13 +580,13 @@ const FullVersion = () => {
                     managed to build trust and ensure the integrity of the minting process.
                 </p>
                 <p>
-                    To establish trust in our guarantees, <b>no team member participates in NFT minting</b>. Prior to the first day of
-                    minting, the treasury holds 0.5 ETH, equivalent to the entire first day allocation of 100 contracts at 0.005 ETH each.
-                    <b>Before minting begins, we allocate this 0.5 ETH to the OGs</b>. As Gold Tier mints progress,
-                    <b>we transfer the additional 0.5 ETH earned from these mints to the OGs</b>. On the second day, as the treasury gains
-                    10 ETH from the minting of 1000 contracts, we allocate this sum to the 100 individuals on Gold Tier. Moving to the third
-                    day, with every 25 contracts minted, the treasury earns 0.5 ETH. We utilize this 0.5 ETH to extend an unlimited-time
-                    offer on Gold Tier NFTs, enabling participants to accept the offer even before the official reveal.
+                    To establish trust in our guarantees, no team member participates in NFT minting. Prior to the first day of minting, the
+                    treasury holds 0.5 ETH, equivalent to the entire first day allocation of 300 contracts at 0.002 ETH each. Before minting
+                    begins, we allocate this 0.5 ETH to the OGs. As Gold Tier mints progress, we transfer the additional 0.5 ETH earned from
+                    these mints to the OGs. On the second day, as the treasury gains 4 ETH from the minting of 2000 contracts, we allocate
+                    this sum to the 100 individuals on Gold Tier. Moving to the third day, with every 150 contracts minted, the treasury
+                    earns 0.3 ETH. We utilize this 0.3 ETH to extend an unlimited-time offer on Gold contract NFTs, enabling participants to
+                    accept the offer even before the official reveal.
                 </p>
                 <h4 id='reveal-date'>Reveal Date:</h4>
                 <p>Post-minting, the NFTs' metadata will be updated 48 hours later, unveiling their unique characteristics.</p>
@@ -826,7 +823,7 @@ const FullVersion = () => {
                 <h4 id='Marketing Channels'>Marketing Channels:</h4>
                 <ul>
                     <li>
-                        Social Media: Utilize platforms such as Farcaster, X, Guild, LinkedIn, and Discord to engage with our audience and
+                        Social Media: Utilize platforms such as Telegram, X, Guild, LinkedIn, and Discord to engage with our audience and
                         build a community.
                     </li>
                     <li>
@@ -878,31 +875,31 @@ const FullVersion = () => {
                     marketing, and operational costs. We will also explore additional funding rounds as we scale and expand our platform.
                 </p>
                 <h4 id='Use-of-Funds'>Use of Funds:</h4>
-                <p id='Platform-Development'>Platform Development: 40% ($80,000)</p>
-                <p id='Marketing-and-Community-Building'>Marketing and Community Building: 30% ($60,000)</p>
-                <p id='Operational-Costs'>Operational Costs: 20% ($40,000)</p>
-                <p id='Research-and-Development'>Research and Development: 10% ($20,000)</p>
+                <p id='Platform-Development'>Platform Development: 40% ($40,000)</p>
+                <p id='Marketing-and-Community-Building'>Marketing and Community Building: 30% ($30,000)</p>
+                <p id='Operational-Costs'>Operational Costs: 20% ($20,000)</p>
+                <p id='Research-and-Development'>Research and Development: 10% ($10,000)</p>
                 <h4 id='Explanation'>Explanation of Revenue Generation:</h4>
                 <p>
-                    Revenue for Phase 0 of the JRI project was generated through the distribution of 11,100 JRI Contracts NFTs across Gold,
+                    Revenue for Phase 0 of the JRI project was generated through the distribution of 12,300 JRI Contracts NFTs across Gold,
                     Silver, and Bronze tiers. Minting these NFTs at varying price points resulted in revenue, which after subtracting
-                    guaranteed payouts, operational costs, and a portion for further development, left a net revenue of 27 ETH, equivalent
-                    to approximately $99,900 USD based on the exchange rate of 1 ETH = $3,700.
+                    guaranteed payouts, operational costs, and a portion for further development, left a net revenue of 12.5 ETH, equivalent
+                    to approximately $46,250 USD based on the exchange rate of 1 ETH = $3,700.
                 </p>
                 <h4 id='Net-Revenue-Calculation'>Net Revenue Calculation:</h4>
                 <ul>
-                    <li>Total Revenue from Minting: 210.5 ETH</li>
-                    <li>Minus Sweeping Strategy Cost: 10.5 ETH</li>
-                    <li>Minus Guaranteed Payouts: 173 ETH</li>
-                    <li>Net Revenue: 210.5 ETH - 10.5 ETH - 173 ETH = 27 ETH</li>
+                    <li>Total Revenue from Minting: 24.6 ETH</li>
+                    <li>Minus Sweeping Strategy Cost: 5.1 ETH</li>
+                    <li>Minus Guaranteed Payouts: 7 ETH</li>
+                    <li>Net Revenue: 210.5 ETH - 10.5 ETH - 173 ETH = 12.5 ETH</li>
                 </ul>
                 <p>Conversion to USD:</p>
                 <ul>
-                    <li>Net Revenue in USD: 27 ETH * $3,700/ETH = $99,900</li>
+                    <li>Net Revenue in USD: 12.5 ETH * $3,700/ETH = $46,250</li>
                 </ul>
                 <p>Additional Financial Insight:</p>
                 <p>
-                    From the total revenue of 210.5 ETH, subtracting the net revenue of 27 ETH leaves us with 183.5 ETH. Converting this to
+                    From the total revenue of 24.6 ETH, subtracting the net revenue of 12.5 ETH leaves us with 12.1 ETH. Converting this to
                     USD:
                 </p>
                 <ul>
@@ -936,63 +933,7 @@ const FullVersion = () => {
                     a strong foundation with key roles in development, human resources, finance, and marketing, with plans to expand as we
                     grow. Below is an overview of our organizational structure:
                 </p>
-                <h4 id='Team-Members'>Team Members:</h4>
-                <ul className='team-field'>
-                    <li>
-                        S. Sepehrnoush - CEO
-                        <a href='https://www.linkedin.com/in/s-sepehrnoush/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        H. Karimi - CTO
-                        <a href='https://www.linkedin.com/in/karimi-hamid/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        S. Ghafouri - CHRO
-                        <a href='https://www.linkedin.com/in/shadi-ghafouri-b64792207/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        H.Jalouti - Business Developer
-                        <a href='https://www.linkedin.com/in/hoomanjt/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        R. Sepehrnoush - Lead Developer
-                        <a href='https://www.linkedin.com/in/msepehrnoush' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        D. Sharifi - Designer
-                        <a href='https://www.linkedin.com/in/danialsharifi/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        N. Ramezani - Designer
-                        <a href='https://www.linkedin.com/in/negin-ramezani-5a5259204/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        S. Shamim - Marketing Specialist
-                        <a href='https://www.linkedin.com/in/shadat-hossain-shamim/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        K. Habibbeygi - Front End Developer
-                        <a href='https://www.linkedin.com/in/kasra-habibbeygi/' target='_blank'>
-                            LinkedIn
-                        </a>
-                    </li>
-                </ul>
+
                 <h3 id='Legal-and-Regulatory'>Legal and Regulatory Compliance</h3>
                 <p>
                     At Just Read It (JRI), we recognize the importance of legal and regulatory compliance in our operations. While
@@ -1047,7 +988,7 @@ const FullVersion = () => {
                 </p>
                 <p>
                     In each of the following areas, we are forming dedicated teams. If you believe we can collaborate, please send your
-                    resume to <a href='mailto:careers@justreadit.build'>careers@justreadit.build</a>
+                    resume to <a href='mailto:careers@justreadit.xyz'>careers@justreadit.xyz</a>
                 </p>
                 <p>
                     While each team currently has an initial setup, we need more individuals and additional funding, which we aim to secure
@@ -1055,7 +996,7 @@ const FullVersion = () => {
                 </p>
                 <p>
                     For companies interested in partnering with us, we are open to forming strategic alliances. Please send your partnership
-                    proposals to <a href='mailto:partners@justreadit.build'>partners@justreadit.build</a>
+                    proposals to <a href='mailto:partners@justreadit.xyz'>partners@justreadit.xyz</a>
                 </p>
                 <p> Together, we can enhance the platform's capabilities and reach new heights in the decentralized crowdfunding space.</p>
             </article>

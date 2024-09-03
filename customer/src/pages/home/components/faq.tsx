@@ -47,12 +47,12 @@ const FAQ = () => {
                     </AccordionSummary>
                     <AccordionDetails>
                         The system consistently proves its reliability by staying one step ahead of its promises.To establish trust in our
-                        guarantees, <b>no team member participates in NFT minting</b>. Before minting begins, we ensure that 0.5 ETH is
-                        allocated to the OGs, equivalent to the entire first day minting earnings. On the following day, we allocate the
-                        entire second day minting earnings of 10 ETH to Gold Tier members for floor-sweeping purposes. Then, on the third
-                        day, for every 25 mints that earn 0.5 ETH, we extend an unlimited-time offer for 0.5 ETH guaranteed Gold Tier
-                        contracts. By the time minting concludes, we've generated approximately <b>200 ETH</b> in market volume through JRI
-                        guaranteed contracts alone, reaffirming the system's trustworthiness and effectiveness.
+                        guarantees, no team member participates in NFT minting. Before minting begins, we ensure that 0.5 ETH is allocated
+                        to the OGs, equivalent to the entire first day minting earnings. On the following day, we allocate the entire second
+                        day minting earnings of 3 ETH to Gold Tier members for floor-sweeping purposes. Then, on the third day, for every
+                        150 mints that earn 0.3 ETH, we extend an unlimited-time offer for 0.3 ETH guaranteed ُSpecial contracts. By the
+                        time minting concludes, we've generated approximately 7 ETH in market volume through JRI guaranteed contracts alone,
+                        reaffirming the system's trustworthiness and effectiveness.
                     </AccordionDetails>
                 </Accordion>
                 <Accordion>
