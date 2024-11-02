@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 // Components
 import { Header, List } from './components';
 import { Helmet } from 'commons/components';
-import OnLoad from 'pages/on-load';
+// import OnLoad from 'pages/on-load';
 
 const Mint = () => {
     useEffect(() => {
@@ -13,7 +13,7 @@ const Mint = () => {
     return (
         <main>
             <Helmet title='JRI | Mint' />
-            <OnLoad isCover={true} />
+            {/* <OnLoad isCover={true} /> */}
             <Header />
             <List />
         </main>

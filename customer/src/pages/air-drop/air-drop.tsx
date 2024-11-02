@@ -43,12 +43,12 @@ const AirDrop = () => {
 
             <div className='button-group'>
                 <div>
-                    <Button radius='rounded' className='gradient' onClick={() => toast.error('Wait until July 15th!')}>
+                    <Button radius='rounded' disabled className='gradient' onClick={() => toast.error('Wait until July 15th!')}>
                         Check Eligibility
                     </Button>
                 </div>
                 <div>
-                    <Button radius='rounded' className='ghost' onClick={() => toast.error('Wait until July 15th!')}>
+                    <Button radius='rounded' disabled className='ghost' onClick={() => toast.error('Wait until July 15th!')}>
                         Claim
                     </Button>
                 </div>
